@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Project Product</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Project Products</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active Product --></label>
+        <name>ActiveProduct__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Annual Volume (1-year) --></label>
+        <name>ActualAnnualVolume1Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Annual Volume (2-year) --></label>
+        <name>ActualAnnualVolume2Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Annual Volume (3-year) --></label>
+        <name>ActualAnnualVolume3year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Annual Volume CM (0-year) --></label>
+        <name>ActualAnnualVolumeCM0Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Annual Volume CM (1-year) --></label>
+        <name>ActualAnnualVolumeCM1Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Annual Volume CM (2-year) --></label>
+        <name>ActualAnnualVolumeCM2Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Annual Volume CM (3-year) --></label>
+        <name>ActualAnnualVolumeCM3Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Volume (0-Year) Imperial --></label>
+        <name>ActualVolume0YearImperial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Volume (0-Year) Metric --></label>
+        <name>ActualVolume0YearMetric__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Volume (1-Year) Imperial --></label>
+        <name>ActualVolume1YearImperial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Volume (1-Year) Metric --></label>
+        <name>ActualVolume1YearMetric__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Volume (2-Year) Imperial --></label>
+        <name>ActualVolume2YearImperial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Volume (2-Year) Metric --></label>
+        <name>ActualVolume2YearMetric__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Volume (3-Year) Imperial --></label>
+        <name>ActualVolume3YearImperial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Volume (3-Year) Metric --></label>
+        <name>ActualVolume3YearMetric__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Volume CM (0-Year) Imperial --></label>
+        <name>ActualVolumeCM0YearImperial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Volume CM (0-Year) Metric --></label>
+        <name>ActualVolumeCM0YearMetric__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Volume CM (1-Year) Imperial --></label>
+        <name>ActualVolumeCM1YearImperial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Volume CM (1-Year) Metric --></label>
+        <name>ActualVolumeCM1YearMetric__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Volume CM (2-Year) Imperial --></label>
+        <name>ActualVolumeCM2YearImperial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Volume CM (2-Year) Metric --></label>
+        <name>ActualVolumeCM2YearMetric__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Volume CM (3-Year) Imperial --></label>
+        <name>ActualVolumeCM3YearImperial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Volume CM (3-Year) [Metric] --></label>
+        <name>ActualVolumeCM3YearMetric__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Annual Volume (0-year) --></label>
+        <name>Actual_Annual_Volume_0year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Application --></label>
+        <name>Application__c</name>
+        <picklistValues>
+            <masterLabel>Bath and Body Care</masterLabel>
+            <translation><!-- Bath and Body Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Beer</masterLabel>
+            <translation><!-- Beer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bread/ bread products</masterLabel>
+            <translation><!-- Bread/ bread products --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Breakfast/Cereal</masterLabel>
+            <translation><!-- Breakfast/Cereal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carbonated Soft Drinks</masterLabel>
+            <translation><!-- Carbonated Soft Drinks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cheese</masterLabel>
+            <translation><!-- Cheese --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chewing Gums</masterLabel>
+            <translation><!-- Chewing Gums --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chips/Crisps</masterLabel>
+            <translation><!-- Chips/Crisps --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chocolate</masterLabel>
+            <translation><!-- Chocolate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Color cosmetics</masterLabel>
+            <translation><!-- Color cosmetics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cooked meats</masterLabel>
+            <translation><!-- Cooked meats --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Creams</masterLabel>
+            <translation><!-- Creams --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dairy Desserts</masterLabel>
+            <translation><!-- Dairy Desserts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dairy Drinks</masterLabel>
+            <translation><!-- Dairy Drinks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dry</masterLabel>
+            <translation><!-- Dry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dry Mixes</masterLabel>
+            <translation><!-- Dry Mixes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dry meats</masterLabel>
+            <translation><!-- Dry meats --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dry pet food</masterLabel>
+            <translation><!-- Dry pet food --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Egg Products</masterLabel>
+            <translation><!-- Egg Products --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Energy snacks</masterLabel>
+            <translation><!-- Energy snacks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Extruded Snacks</masterLabel>
+            <translation><!-- Extruded Snacks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feed</masterLabel>
+            <translation><!-- Feed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fillings &amp; Toppings</masterLabel>
+            <translation><!-- Fillings &amp; Toppings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fillings, Coatings, Toppings</masterLabel>
+            <translation><!-- Fillings, Coatings, Toppings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fish</masterLabel>
+            <translation><!-- Fish --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food ingredients</masterLabel>
+            <translation><!-- Food ingredients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fresh-frozen meats</masterLabel>
+            <translation><!-- Fresh-frozen meats --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Frozen Desserts</masterLabel>
+            <translation><!-- Frozen Desserts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fruit Desserts</masterLabel>
+            <translation><!-- Fruit Desserts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fruit Preparations</masterLabel>
+            <translation><!-- Fruit Preparations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fruit Sauces</masterLabel>
+            <translation><!-- Fruit Sauces --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Functional &amp; Flavored Water</masterLabel>
+            <translation><!-- Functional &amp; Flavored Water --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Glazings, Icings &amp; Pipings</masterLabel>
+            <translation><!-- Glazings, Icings &amp; Pipings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Granola/Museli</masterLabel>
+            <translation><!-- Granola/Museli --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hair Care</masterLabel>
+            <translation><!-- Hair Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industrial</masterLabel>
+            <translation><!-- Industrial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jams &amp; Jellies</masterLabel>
+            <translation><!-- Jams &amp; Jellies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Juice, Juice Drinks, Nectars</masterLabel>
+            <translation><!-- Juice, Juice Drinks, Nectars --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liquid</masterLabel>
+            <translation><!-- Liquid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liquid Concentrates</masterLabel>
+            <translation><!-- Liquid Concentrates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liquid Creamers</masterLabel>
+            <translation><!-- Liquid Creamers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liquid Dosage Forms</masterLabel>
+            <translation><!-- Liquid Dosage Forms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medicated confectionery</masterLabel>
+            <translation><!-- Medicated confectionery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mixes &amp; Doughs</masterLabel>
+            <translation><!-- Mixes &amp; Doughs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nutritional Supplements</masterLabel>
+            <translation><!-- Nutritional Supplements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oils, Fats and Spreads</masterLabel>
+            <translation><!-- Oils, Fats and Spreads --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oral Care</masterLabel>
+            <translation><!-- Oral Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parenteral applications</masterLabel>
+            <translation><!-- Parenteral applications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pasta</masterLabel>
+            <translation><!-- Pasta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pastries/Sweet Goods</masterLabel>
+            <translation><!-- Pastries/Sweet Goods --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Powdered /Dry Mixes</masterLabel>
+            <translation><!-- Powdered /Dry Mixes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RTD Tea/Coffee</masterLabel>
+            <translation><!-- RTD Tea/Coffee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RTE/Breakfast Cereals</masterLabel>
+            <translation><!-- RTE/Breakfast Cereals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready Meals/Kits</masterLabel>
+            <translation><!-- Ready Meals/Kits --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reformed Fruit &amp; Vegetables</masterLabel>
+            <translation><!-- Reformed Fruit &amp; Vegetables --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sauces, Dressings &amp; Condiments</masterLabel>
+            <translation><!-- Sauces, Dressings &amp; Condiments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Savory Biscuits/Crackers</masterLabel>
+            <translation><!-- Savory Biscuits/Crackers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Skin and Sun Care</masterLabel>
+            <translation><!-- Skin and Sun Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Snack Bars</masterLabel>
+            <translation><!-- Snack Bars --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Snack pet food</masterLabel>
+            <translation><!-- Snack pet food --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solid</masterLabel>
+            <translation><!-- Solid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solid Dosage Forms</masterLabel>
+            <translation><!-- Solid Dosage Forms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Soups</masterLabel>
+            <translation><!-- Soups --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Specialty</masterLabel>
+            <translation><!-- Specialty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Specialty &amp; meat Analogs</masterLabel>
+            <translation><!-- Specialty &amp; meat Analogs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Specialty Dairy &amp; Non-Dairy</masterLabel>
+            <translation><!-- Specialty Dairy &amp; Non-Dairy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sports/Energy</masterLabel>
+            <translation><!-- Sports/Energy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sugar Confectionery</masterLabel>
+            <translation><!-- Sugar Confectionery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sweet Biscuits/Cookies</masterLabel>
+            <translation><!-- Sweet Biscuits/Cookies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Syrups &amp; Ripples</masterLabel>
+            <translation><!-- Syrups &amp; Ripples --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tortilla / Corn Chips</masterLabel>
+            <translation><!-- Tortilla / Corn Chips --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Water Jellies</masterLabel>
+            <translation><!-- Water Jellies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wet pet food</masterLabel>
+            <translation><!-- Wet pet food --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wine, spirits and alc flavored drinks</masterLabel>
+            <translation><!-- Wine, spirits and alc flavored drinks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yogurt &amp; Quark</masterLabel>
+            <translation><!-- Yogurt &amp; Quark --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>Bakery</masterLabel>
+            <translation><!-- Bakery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Beverage</masterLabel>
+            <translation><!-- Beverage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Confectionery</masterLabel>
+            <translation><!-- Confectionery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Convenience foods</masterLabel>
+            <translation><!-- Convenience foods --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dairy</masterLabel>
+            <translation><!-- Dairy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feed</masterLabel>
+            <translation><!-- Feed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food ingredients</masterLabel>
+            <translation><!-- Food ingredients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fruit</masterLabel>
+            <translation><!-- Fruit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industrial</masterLabel>
+            <translation><!-- Industrial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Infant &amp; baby food</masterLabel>
+            <translation><!-- Infant &amp; baby food --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meat</masterLabel>
+            <translation><!-- Meat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal care</masterLabel>
+            <translation><!-- Personal care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pet food</masterLabel>
+            <translation><!-- Pet food --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharma</masterLabel>
+            <translation><!-- Pharma --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Snacks &amp; cereals</masterLabel>
+            <translation><!-- Snacks &amp; cereals --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Core Product --></label>
+        <name>CoreProduct__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Annual Price  --></label>
+        <name>CurrentAnnualPrice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current FY Annual Volume --></label>
+        <name>CurrentFYAnnualVolume__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Annual Margin --></label>
+        <name>Current_Annual_Margin__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Projected CM (0-Year) --></label>
+        <name>Initial_Projected_CM_0_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Projected CM (1-Year) --></label>
+        <name>Initial_Projected_CM_1_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Projected CM (2-Year) --></label>
+        <name>Initial_Projected_CM_2_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Projected CM (3-Year) --></label>
+        <name>Initial_Projected_CM_3_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Projected Volume (0-Year) --></label>
+        <name>Initial_Projected_Volume_0_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Projected Volume (1-Year) --></label>
+        <name>Initial_Projected_Volume_1_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Projected Volume (2-Year) --></label>
+        <name>Initial_Projected_Volume_2_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Projected Volume (3-Year) --></label>
+        <name>Initial_Projected_Volume_3_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy Record ID --></label>
+        <name>LegacyRecordID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Line Item Id --></label>
+        <name>Opportunity_Line_Item_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Family --></label>
+        <name>ProductFamily__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Group --></label>
+        <name>ProductGroup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Line --></label>
+        <name>ProductLine__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product SubGroup --></label>
+        <name>ProductSubGroup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product__c</name>
+        <relationshipLabel><!-- Project Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Project --></label>
+        <name>Project__c</name>
+        <relationshipLabel><!-- Project Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Projected Annual Volume (0-year) --></label>
+        <name>ProjectedAnnualVolume0Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Annual Volume (1-year) --></label>
+        <name>ProjectedAnnualVolume1Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Annual Volume (2-year) --></label>
+        <name>ProjectedAnnualVolume2Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Annual Volume CM (0-year) --></label>
+        <name>ProjectedAnnualVolumeCM0Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Annual Volume CM (1-year) --></label>
+        <name>ProjectedAnnualVolumeCM1Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Annual Volume CM (2-year) --></label>
+        <name>ProjectedAnnualVolumeCM2Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Annual Volume CM (3-year) --></label>
+        <name>ProjectedAnnualVolumeCM3Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume (0-Year) Imperial --></label>
+        <name>ProjectedVolume0YearImperial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume (0-Year) Metric --></label>
+        <name>ProjectedVolume0YearMetric__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume (1-Year) Imperial --></label>
+        <name>ProjectedVolume1YearImperial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume (1-Year) Metric --></label>
+        <name>ProjectedVolume1YearMetric__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume (2-Year) Imperial --></label>
+        <name>ProjectedVolume2YearImperial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume (2-Year) Metric --></label>
+        <name>ProjectedVolume2YearMetric__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume (3-Year) Imperial --></label>
+        <name>ProjectedVolume3YearImperial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume (3-Year) Metric --></label>
+        <name>ProjectedVolume3YearMetric__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Volume CM (0-Year) Imperial --></label>
+        <name>ProjectedVolumeCM0YearImperial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Volume CM (0-Year) Metric --></label>
+        <name>ProjectedVolumeCM0YearMetric__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume CM (1-Year) Imperial --></label>
+        <name>ProjectedVolumeCM1YearImperial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume CM (1-Year) Metric --></label>
+        <name>ProjectedVolumeCM1YearMetric__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume CM (2-Year) Imperial --></label>
+        <name>ProjectedVolumeCM2YearImperial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume CM (2-Year) Metric --></label>
+        <name>ProjectedVolumeCM2YearMetric__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume CM (3-Year) Imperial --></label>
+        <name>ProjectedVolumeCM3YearImperial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume CM (3-Year) Metric --></label>
+        <name>ProjectedVolumeCM3YearMetric__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Annual Volume (3-year) --></label>
+        <name>Projected_Annual_Volume_3year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected CM (0-Year) --></label>
+        <name>Projected_CM_0_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected CM (1-Year) --></label>
+        <name>Projected_CM_1_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected CM (2-Year) --></label>
+        <name>Projected_CM_2_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected CM (3-Year) --></label>
+        <name>Projected_CM_3_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume (0-Year) --></label>
+        <name>Projected_Volume_0_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume (1-Year) --></label>
+        <name>Projected_Volume_1_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume (2-Year) --></label>
+        <name>Projected_Volume_2_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume (3-Year) --></label>
+        <name>Projected_Volume_3_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Volume CM (0-Year) --></label>
+        <name>Projected_Volume_CM_0_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume CM KG (0-Year) --></label>
+        <name>Projected_Volume_CM_KG_0_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume CM KG (1-Year) --></label>
+        <name>Projected_Volume_CM_KG_1_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume CM KG (2-Year) --></label>
+        <name>Projected_Volume_CM_KG_2_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume CM KG (3-Year) --></label>
+        <name>Projected_Volume_CM_KG_3_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume CM LB (0-Year) --></label>
+        <name>Projected_Volume_CM_LB_0_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume CM LB (1-Year) --></label>
+        <name>Projected_Volume_CM_LB_1_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume CM LB (2-Year) --></label>
+        <name>Projected_Volume_CM_LB_2_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume CM LB (3-Year) --></label>
+        <name>Projected_Volume_CM_LB_3_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume KG (0-Year) --></label>
+        <name>Projected_Volume_KG_0_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume KG (1-Year) --></label>
+        <name>Projected_Volume_KG_1_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume KG (2-Year) --></label>
+        <name>Projected_Volume_KG_2_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume KG (3-Year) --></label>
+        <name>Projected_Volume_KG_3_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume LB (0-Year) --></label>
+        <name>Projected_Volume_LB_0_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume LB (1-Year) --></label>
+        <name>Projected_Volume_LB_1_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume LB (2-Year) --></label>
+        <name>Projected_Volume_LB_2_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Volume LB (3-Year) --></label>
+        <name>Projected_Volume_LB_3_Year__c</name>
+    </fields>
+    <fields>
+        <help><!-- Users preferred System of Measure. Values input in Metric will be automatically converted to Imperial.  Values input in Imperial will be automatically converted to Metric. --></help>
+        <label><!-- System of Measure Input --></label>
+        <name>SystemOfMeasureInput__c</name>
+        <picklistValues>
+            <masterLabel>Imperial</masterLabel>
+            <translation><!-- Imperial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Metric</masterLabel>
+            <translation><!-- Metric --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Trigger workflow --></label>
+        <name>Trigger_workflow__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicate the Unit of Measure for a Product Line Item. --></help>
+        <label><!-- Unit of Measure --></label>
+        <name>Unit_of_Measure__c</name>
+    </fields>
+    <fields>
+        <label><!-- Volume Unit of Measure (Imperial) --></label>
+        <name>VolumeUnitOMeasureImperial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Volume Unit of Measure (Metric) --></label>
+        <name>VolumeUnitOfMeasureMetric__c</name>
+    </fields>
+    <layouts>
+        <layout>Project Product Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Volume Projections &amp; Actuals --></label>
+            <section>Volume Projections &amp; Actuals</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Project Product Layout With UoM</layout>
+        <sections>
+            <label><!-- Converted Volume &amp; Margin Projections --></label>
+            <section>Converted Volume &amp; Margin Projections</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Initial Volume &amp; Margin Projections --></label>
+            <section>Initial Volume &amp; Margin Projections</section>
+        </sections>
+        <sections>
+            <label><!-- Product Information --></label>
+            <section>Product Information</section>
+        </sections>
+        <sections>
+            <label><!-- Volume &amp; Margin Projections --></label>
+            <section>Volume &amp; Margin Projections</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please ensure the following fields are provide for Defense type Project:  1) Current Annual Price 2) Current FY Annual Volume 3) Current Annual Margin --></errorMessage>
+        <name>Current_Annual_Price_And_Volume_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If the related Opportunity is in Closed Won stage, then no update is allowed --></errorMessage>
+        <name>Opportunity_Stage_Closed_Won</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Account Team View</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Account Team View</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Access Custom --></label>
+        <name>Account_Access_Custom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Access --></label>
+        <name>Account_Access__c</name>
+        <picklistValues>
+            <masterLabel>Read Only</masterLabel>
+            <translation><!-- Read Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Read/Write</masterLabel>
+            <translation><!-- Read/Write --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Account Team Role --></label>
+        <name>Account_Team_Role__c</name>
+        <picklistValues>
+            <masterLabel>Account Manager</masterLabel>
+            <translation><!-- Account Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Channel Manager</masterLabel>
+            <translation><!-- Channel Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corporate Account Lead</masterLabel>
+            <translation><!-- Corporate Account Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Executive Sponsor</masterLabel>
+            <translation><!-- Executive Sponsor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead Qualifier</masterLabel>
+            <translation><!-- Lead Qualifier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre-Sales Consultant</masterLabel>
+            <translation><!-- Pre-Sales Consultant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project Manager</masterLabel>
+            <translation><!-- Project Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Manager</masterLabel>
+            <translation><!-- Sales Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Rep</masterLabel>
+            <translation><!-- Sales Rep --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technical Service Lead</masterLabel>
+            <translation><!-- Technical Service Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technical Services Engineer</masterLabel>
+            <translation><!-- Technical Services Engineer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Account Team View --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Business Detail --></label>
+        <name>Business_Detail__c</name>
+        <relationshipLabel><!-- Account Team View --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Business Name --></label>
+        <name>Business_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business --></label>
+        <name>Business__c</name>
+        <relationshipLabel><!-- Account Team View --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Case Access Custom --></label>
+        <name>Case_Access_Custom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Access --></label>
+        <name>Case_Access__c</name>
+        <picklistValues>
+            <masterLabel>Read Only</masterLabel>
+            <translation><!-- Read Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Read/Write</masterLabel>
+            <translation><!-- Read/Write --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Legacy Record ID --></label>
+        <name>LegacyRecordID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Access Custom --></label>
+        <name>Opportunity_Access_Custom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Access --></label>
+        <name>Opportunity_Access__c</name>
+        <picklistValues>
+            <masterLabel>Private</masterLabel>
+            <translation><!-- Private --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Read Only</masterLabel>
+            <translation><!-- Read Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Read/Write</masterLabel>
+            <translation><!-- Read/Write --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>User__c</name>
+        <relationshipLabel><!-- Account Team View --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>AccountView Layout</layout>
+        <sections>
+            <label><!-- Access --></label>
+            <section>Access</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

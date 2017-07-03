@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Business Detail</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Business Details</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Group --></label>
+        <name>AccountGroup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Segmentation --></label>
+        <name>AccountSegmentation__c</name>
+        <picklistValues>
+            <masterLabel>Business as usual</masterLabel>
+            <translation><!-- Business as usual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Excellence</masterLabel>
+            <translation><!-- Excellence --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plus</masterLabel>
+            <translation><!-- Plus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Premium</masterLabel>
+            <translation><!-- Premium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Strategic</masterLabel>
+            <translation><!-- Strategic --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Business Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Business Alias --></label>
+        <name>BusinessAlias__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business --></label>
+        <name>BusinessUnit__c</name>
+        <relationshipLabel><!-- Business Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Capacity 2 --></label>
+        <name>Capacity2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Capacity 3 --></label>
+        <name>Capacity3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Capacity --></label>
+        <name>Capacity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Market Strategy --></label>
+        <name>CurrentMarketStrategy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Setup Approval Date --></label>
+        <name>CustomerSetupApprovalDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Future Plan --></label>
+        <name>FuturePlan__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inactive Reasons --></label>
+        <name>InactiveReasons__c</name>
+        <picklistValues>
+            <masterLabel>Backlisted</masterLabel>
+            <translation><!-- Backlisted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit Issues</masterLabel>
+            <translation><!-- Credit Issues --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Using Another Supplier</masterLabel>
+            <translation><!-- Customer Using Another Supplier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Longer In Business</masterLabel>
+            <translation><!-- No Longer In Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Key Strengths --></label>
+        <name>KeyStrengths__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Prospect status change --></label>
+        <name>LastProspectStatusChange__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy Record ID --></label>
+        <name>LegacyRecordID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 2 --></label>
+        <name>Location2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 3 --></label>
+        <name>Location3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+    </fields>
+    <fields>
+        <label><!-- Market share in product group 1, % --></label>
+        <name>MarketShareinProductGroup1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Market share in product group 2, % --></label>
+        <name>Marketshareinproductgroup2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Business Contact --></label>
+        <name>PrimaryBusinessContact__c</name>
+        <relationshipLabel><!-- Business Details (Primary Business Contact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Product Group 1 --></label>
+        <name>ProductGroup1__c</name>
+        <picklistValues>
+            <masterLabel>Bottled Oil</masterLabel>
+            <translation><!-- Bottled Oil --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commodity Tropical Oils</masterLabel>
+            <translation><!-- Commodity Tropical Oils --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corn gluten Meal</masterLabel>
+            <translation><!-- Corn gluten Meal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HORECA oils</masterLabel>
+            <translation><!-- HORECA oils --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hydrocolloids</masterLabel>
+            <translation><!-- Hydrocolloids --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Malt</masterLabel>
+            <translation><!-- Malt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Modified Starch</masterLabel>
+            <translation><!-- Modified Starch --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Native Starch</masterLabel>
+            <translation><!-- Native Starch --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other PFLs</masterLabel>
+            <translation><!-- Other PFLs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sunflower Oil</masterLabel>
+            <translation><!-- Sunflower Oil --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Syrups</masterLabel>
+            <translation><!-- Syrups --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Value-Added Functional Fats</masterLabel>
+            <translation><!-- Value-Added Functional Fats --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vital wheat gluten</masterLabel>
+            <translation><!-- Vital wheat gluten --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>polyols</masterLabel>
+            <translation><!-- polyols --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Group 2 --></label>
+        <name>ProductGroup2__c</name>
+        <picklistValues>
+            <masterLabel>Bottled oil</masterLabel>
+            <translation><!-- Bottled oil --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commodity tropical oils</masterLabel>
+            <translation><!-- Commodity tropical oils --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corn gluten meal</masterLabel>
+            <translation><!-- Corn gluten meal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HORECA oils</masterLabel>
+            <translation><!-- HORECA oils --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hydrocolloids</masterLabel>
+            <translation><!-- Hydrocolloids --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Malt</masterLabel>
+            <translation><!-- Malt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Modified starch</masterLabel>
+            <translation><!-- Modified starch --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Native starch</masterLabel>
+            <translation><!-- Native starch --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other PFLs</masterLabel>
+            <translation><!-- Other PFLs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Polyols</masterLabel>
+            <translation><!-- Polyols --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sunflower oil</masterLabel>
+            <translation><!-- Sunflower oil --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Syrups</masterLabel>
+            <translation><!-- Syrups --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Value-Added Functional fats</masterLabel>
+            <translation><!-- Value-Added Functional fats --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vital wheat gluten</masterLabel>
+            <translation><!-- Vital wheat gluten --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Group --></label>
+        <name>ProductGroup__c</name>
+        <picklistValues>
+            <masterLabel>Cargill Cocoa &amp; Chocolate</masterLabel>
+            <translation><!-- Cargill Cocoa &amp; Chocolate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cargill Industrial Specialties</masterLabel>
+            <translation><!-- Cargill Industrial Specialties --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cargill Texturizing Solutions</masterLabel>
+            <translation><!-- Cargill Texturizing Solutions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cocoa &amp; Chocolate Brazil</masterLabel>
+            <translation><!-- Cocoa &amp; Chocolate Brazil --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cocoa &amp; Chocolate North America</masterLabel>
+            <translation><!-- Cocoa &amp; Chocolate North America --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Foods Brazil</masterLabel>
+            <translation><!-- Foods Brazil --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Foods India</masterLabel>
+            <translation><!-- Foods India --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Foods Middle East, Turkey, and North Africa</masterLabel>
+            <translation><!-- Foods Middle East, Turkey, and North Africa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Global Edible Oil Solutions Asia Pacific</masterLabel>
+            <translation><!-- Global Edible Oil Solutions Asia Pacific --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Global Edible Oil Solutions Europe</masterLabel>
+            <translation><!-- Global Edible Oil Solutions Europe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Global Edible Oil Solutions India</masterLabel>
+            <translation><!-- Global Edible Oil Solutions India --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Global Edible Oil Solutions Mexico</masterLabel>
+            <translation><!-- Global Edible Oil Solutions Mexico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Global Edible Oil Solutions North America</masterLabel>
+            <translation><!-- Global Edible Oil Solutions North America --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Global Edible Oil Solutions South America</masterLabel>
+            <translation><!-- Global Edible Oil Solutions South America --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Global Edible Oil Solutions Venezuela</masterLabel>
+            <translation><!-- Global Edible Oil Solutions Venezuela --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Go To Market Corporate Accounts</masterLabel>
+            <translation><!-- Go To Market Corporate Accounts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Go To Market Shared Sales North America</masterLabel>
+            <translation><!-- Go To Market Shared Sales North America --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Go To Market Shared Shares EMEA</masterLabel>
+            <translation><!-- Go To Market Shared Shares EMEA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Malt</masterLabel>
+            <translation><!-- Malt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Refined Oils Asia Pacific</masterLabel>
+            <translation><!-- Refined Oils Asia Pacific --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Starches &amp; Sweeteners China</masterLabel>
+            <translation><!-- Starches &amp; Sweeteners China --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Starches &amp; Sweeteners Europe</masterLabel>
+            <translation><!-- Starches &amp; Sweeteners Europe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Starches &amp; Sweeteners North America</masterLabel>
+            <translation><!-- Starches &amp; Sweeteners North America --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Starches &amp; Sweeteners South America</masterLabel>
+            <translation><!-- Starches &amp; Sweeteners South America --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Starches &amp; Sweeteners Southeast Asia</masterLabel>
+            <translation><!-- Starches &amp; Sweeteners Southeast Asia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Toshoku</masterLabel>
+            <translation><!-- Toshoku --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Line Interest --></label>
+        <name>ProductLineInterest__c</name>
+        <picklistValues>
+            <masterLabel>Blends</masterLabel>
+            <translation><!-- Blends --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chocolate</masterLabel>
+            <translation><!-- Chocolate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coatings &amp; Fillings</masterLabel>
+            <translation><!-- Coatings &amp; Fillings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cocoa Butter</masterLabel>
+            <translation><!-- Cocoa Butter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cocoa Liquor</masterLabel>
+            <translation><!-- Cocoa Liquor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cocoa Powder</masterLabel>
+            <translation><!-- Cocoa Powder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hosun</masterLabel>
+            <translation><!-- Hosun --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hydro</masterLabel>
+            <translation><!-- Hydro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ines</masterLabel>
+            <translation><!-- Ines --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Laurics</masterLabel>
+            <translation><!-- Laurics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Palm</masterLabel>
+            <translation><!-- Palm --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Palm Fractions</masterLabel>
+            <translation><!-- Palm Fractions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rape</masterLabel>
+            <translation><!-- Rape --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Soy</masterLabel>
+            <translation><!-- Soy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Specialities</masterLabel>
+            <translation><!-- Specialities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sun</masterLabel>
+            <translation><!-- Sun --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>other</masterLabel>
+            <translation><!-- other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Relates to Competitor --></label>
+        <name>RelatesToCompetitor__c</name>
+        <relationshipLabel><!-- Business Details (Relates to Competitor) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sales Support --></label>
+        <name>SalesSupport__c</name>
+        <relationshipLabel><!-- Business Details (Sales Support) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sales Team Region --></label>
+        <name>SalesTeamRegion__c</name>
+        <picklistValues>
+            <masterLabel>BE / FR</masterLabel>
+            <translation><!-- BE / FR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bio-Energy</masterLabel>
+            <translation><!-- Bio-Energy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Danone</masterLabel>
+            <translation><!-- Danone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES Team</masterLabel>
+            <translation><!-- ES Team --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FS France</masterLabel>
+            <translation><!-- FS France --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FS Iberia</masterLabel>
+            <translation><!-- FS Iberia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feed</masterLabel>
+            <translation><!-- Feed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NL Team</masterLabel>
+            <translation><!-- NL Team --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PLM</masterLabel>
+            <translation><!-- PLM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pepsico</masterLabel>
+            <translation><!-- Pepsico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RFS Germany &amp; East EU</masterLabel>
+            <translation><!-- RFS Germany &amp; East EU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RFS Key Account</masterLabel>
+            <translation><!-- RFS Key Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RFs West EU</masterLabel>
+            <translation><!-- RFs West EU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Team 21</masterLabel>
+            <translation><!-- Team 21 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technical Applications</masterLabel>
+            <translation><!-- Technical Applications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Uk / Ireland</masterLabel>
+            <translation><!-- Uk / Ireland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unilever</masterLabel>
+            <translation><!-- Unilever --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>InActive</masterLabel>
+            <translation><!-- InActive --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Targeted Market Categories --></label>
+        <name>TargetedMarketCategories__c</name>
+        <picklistValues>
+            <masterLabel>Baby food</masterLabel>
+            <translation><!-- Baby food --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bakery</masterLabel>
+            <translation><!-- Bakery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Beer, other alcoholic beverages</masterLabel>
+            <translation><!-- Beer, other alcoholic beverages --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bio-chemical industry</masterLabel>
+            <translation><!-- Bio-chemical industry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carbonated soft drinks</masterLabel>
+            <translation><!-- Carbonated soft drinks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chocolate confectionery</masterLabel>
+            <translation><!-- Chocolate confectionery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Construction materials</masterLabel>
+            <translation><!-- Construction materials --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Convenience/Instant Food</masterLabel>
+            <translation><!-- Convenience/Instant Food --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corrugated board</masterLabel>
+            <translation><!-- Corrugated board --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dairy</masterLabel>
+            <translation><!-- Dairy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Distributor / co-packer</masterLabel>
+            <translation><!-- Distributor / co-packer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feed</masterLabel>
+            <translation><!-- Feed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Frozen desserts</masterLabel>
+            <translation><!-- Frozen desserts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HoReCa</masterLabel>
+            <translation><!-- HoReCa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jams, fruit preps</masterLabel>
+            <translation><!-- Jams, fruit preps --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Juice, drinks, nectars</masterLabel>
+            <translation><!-- Juice, drinks, nectars --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Margarine</masterLabel>
+            <translation><!-- Margarine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mayonnaise and sauces</masterLabel>
+            <translation><!-- Mayonnaise and sauces --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other food</masterLabel>
+            <translation><!-- Other food --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other non-food</masterLabel>
+            <translation><!-- Other non-food --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paper</masterLabel>
+            <translation><!-- Paper --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal care and cosmetics</masterLabel>
+            <translation><!-- Personal care and cosmetics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Petfood</masterLabel>
+            <translation><!-- Petfood --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharma</masterLabel>
+            <translation><!-- Pharma --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Processed meat products</masterLabel>
+            <translation><!-- Processed meat products --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Snacks</masterLabel>
+            <translation><!-- Snacks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sugar confectionery</masterLabel>
+            <translation><!-- Sugar confectionery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technical oils and lubricants</masterLabel>
+            <translation><!-- Technical oils and lubricants --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Agent</masterLabel>
+            <translation><!-- Agent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Broker</masterLabel>
+            <translation><!-- Broker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Buyer</masterLabel>
+            <translation><!-- Buyer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Customer</masterLabel>
+            <translation><!-- Direct Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Distributor</masterLabel>
+            <translation><!-- Distributor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gourmet Distributor</masterLabel>
+            <translation><!-- Gourmet Distributor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indirect Customer via Agent</masterLabel>
+            <translation><!-- Indirect Customer via Agent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inside Sales</masterLabel>
+            <translation><!-- Inside Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intercompany</masterLabel>
+            <translation><!-- Intercompany --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Receiver</masterLabel>
+            <translation><!-- Receiver --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Weak Spots --></label>
+        <name>WeakSpots__c</name>
+    </fields>
+    <fields>
+        <help><!-- Account serves as a Distributor for the associated Business. --></help>
+        <label><!-- Distributor --></label>
+        <name>isDistributor__c</name>
+    </fields>
+    <layouts>
+        <layout>Business Detail Layout</layout>
+        <sections>
+            <label><!-- Competitor Detail --></label>
+            <section>Competitor Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Detail --></label>
+            <section>Customer Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Groupings --></label>
+            <section>Customer Groupings</section>
+        </sections>
+        <sections>
+            <label><!-- Market Position --></label>
+            <section>Market Position</section>
+        </sections>
+        <sections>
+            <label><!-- Stategic Profile --></label>
+            <section>Stategic Profile</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

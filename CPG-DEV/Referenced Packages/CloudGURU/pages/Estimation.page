@@ -1,0 +1,110 @@
+<apex:page docType="html-5.0" controller="impframework.EstimationController" sidebar="false" showheader="true" standardStylesheets="false" cache="true" tabStyle="CloudGURU__tab">
+    <apex:stylesheet value="{!URLFOR($Resource.impframework__CloudGURU, 'css/cg_board.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.impframework__CloudGURU, 'css/cg_estimation.css')}"/>
+    <apex:form id="theForm">
+        <apex:actionPoller interval="10" action="{!refreshPage}" reRender="theForm"/>
+        <c:CG_PageTemplate currentTab="estimationPoker" header="false">
+            <c:CG_FirstRow PageTitle="{!$Label.impframework__pagetitle_estimation}"/>
+            <apex:outputPanel rendered="{!authorised}">
+                <div class="row">
+                    <div class="6u">
+                        <section>
+                            <h2 class="sectionHeader">{!$Label.impframework__section_details}</h2>
+                            <ul class="link-list">
+                                <li>
+                                    <apex:outputText value="{!$ObjectType.impframework__Backlog_Item__c.fields.impframework__Reference__c.label}" styleClass="left"/>
+                                    <apex:outputPanel styleClass="right">
+                                        <apex:outputField value="{!backlogItem.impframework__Requirement__c}" rendered="{!NOT(ISNULL(backlogItem.impframework__Requirement__c))}"/>
+                                        <apex:outputField value="{!backlogItem.impframework__Defect__c}" rendered="{!NOT(ISNULL(backlogItem.impframework__Defect__c))}"/>
+                                    </apex:outputPanel>
+                                </li>
+                                <apex:repeat value="{!$ObjectType.impframework__Backlog_Item__c.FieldSets.impframework__EstimationCard}" var="field">
+                                    <li>
+                                        <apex:outputText value="{!field.Label}" styleClass="left"/>
+                                        <apex:outputPanel styleClass="right"><apex:outputField value="{!backlogItem[field]}" /></apex:outputPanel>
+                                    </li>
+                                </apex:repeat>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="1u">
+                        <section>
+                            <div>&nbsp;</div>
+                        </section>
+                    </div>
+                    <div class="3u">
+                        <section>
+                            <h2 class="sectionHeader">{!$Label.Section_Resources}</h2>
+                            <ul class="link-list">
+                                <li>
+                                    <a href="/{!moderator.Id}">{!moderator.Name}</a>
+                                    <apex:outputText value="({!$Label.impframework__section_moderator})" style="padding-left:5px;"/>
+                                </li>
+                                <apex:repeat value="{!lstResources}" var="wrapper">
+                                    <li>
+                                        <!-- 
+                                        <input type="checkbox" id="{!wrapper.resource.User__c}" class="cg-checkbox" value="{!wrapper.selected}"/>
+                                        <label for="{!wrapper.resource.User__c}" class="cg-checkbox-label cg-checkbox-lite-red-check"><a href="/{!wrapper.resource.User__c}">{!wrapper.resource.User__r.Name}</a></label> 
+                                        -->
+                                        <a href="/{!wrapper.resource.User__c}">{!wrapper.resource.User__r.Name}</a>
+                                    </li>
+                                </apex:repeat>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+                <apex:outputPanel rendered="{!showPokerCards}">
+                    <div class="row cardRow">
+                        <div class="rowHeader">{!$Label.Estimation_Select}&nbsp;{!$Label.Estimation_Estimate}</div>
+                        <apex:repeat value="{!cardValues}" var="cardValue">
+                            <div class="pokerCard">
+                                <apex:commandLink styleClass="estimationCard" action="{!recordEstimation}">
+                                    <apex:outputText value="{!cardValue}" styleClass="pokerCardText"/>
+                                    <apex:param name="selectedEstimate" value="{!cardValue}" assignTo="{!selectedEstimate}"/>
+                                </apex:commandLink>
+                            </div>
+                        </apex:repeat>
+                    </div>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!showEstimate}">
+                    <div class="row estimationRow">
+                        <span>{!$Label.impframework__estimation_estimate}: </span>
+                        <apex:inputText maxlength="10" styleClass="estimate" value="{!finalEstimate}"/>
+                        <span>{!$Label.impframework__estimation_rationale}: </span>
+                        <apex:inputText styleClass="rationale" value="{!finalRationale}"/>
+                        <apex:commandButton value="{!$Label.impframework__button_submit}" action="{!submit}"/>
+                        <apex:commandButton value="{!$Label.impframework__button_finishestimation}" action="{!finishEstimation}"/>
+                        <apex:commandButton value="{!$Label.impframework__button_startagain}" action="{!startAgain}"/>
+                    </div>
+                </apex:outputPanel>
+                <apex:repeat value="{!lstEstimates}" var="item">
+                    <div class="row cardRow">
+                        <apex:outputPanel rendered="{!item.estimationInProgress}">
+                            <div class="rowHeader">{!$Label.impframework__estimation_inprogress}</div>
+                        </apex:outputPanel>
+                        <apex:repeat value="{!item.userEstimates}" var="estimate">
+                            <div class="pokerCard">
+                                <apex:outputlink rendered="{!IF(item.itemEstimate.impframework__Show_Cards__c, true, IF(item.allUsersIncluded || (estimate.impframework__User__c == $User.Id), true, false))}">
+                                    <apex:outputText value="{!estimate.impframework__Estimate__c}" styleClass="pokerCardText"/>
+                                </apex:outputlink>
+                                <apex:outputlink styleClass="face" rendered="{!IF(item.itemEstimate.impframework__Show_Cards__c, false, IF(item.allUsersIncluded || (estimate.impframework__User__c == $User.Id), false, true))}">
+                                    <apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/company/logo_icon.png')}" styleClass="pokerCardImage"/>
+                                </apex:outputlink>
+                                <div class="owner">{!estimate.User__r.Name}</div>
+                            </div>
+                        </apex:repeat>
+                    </div>
+                </apex:repeat>
+            </apex:outputPanel>
+            <apex:outputPanel id="unauthorisedPanel" rendered="{!NOT(authorised)}">
+                <div class="row main-row">
+                    <div class="12u">
+                        <section>
+                            <p style="text-align: center;">{!$Label.impframework__estimation_unauthorised}</p>
+                        </section>
+                    </div>
+                </div>
+            </apex:outputPanel>
+        </c:CG_PageTemplate>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Competitor Junction</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Competitor Junctions</value>
+    </caseValues>
+    <fields>
+        <label><!-- Competitor Change in Behavior Detail --></label>
+        <name>Competitor_Change_in_Behavior_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Competitor Change in Behavior --></label>
+        <name>Competitor_Change_in_Behavior__c</name>
+        <picklistValues>
+            <masterLabel>Disciplined</masterLabel>
+            <translation><!-- Disciplined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>More Aggressive</masterLabel>
+            <translation><!-- More Aggressive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Out of Position</masterLabel>
+            <translation><!-- Out of Position --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stepping back</masterLabel>
+            <translation><!-- Stepping back --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Competitor Performance Trend --></label>
+        <name>Competitor_Performance_Trend__c</name>
+        <picklistValues>
+            <masterLabel>Down</masterLabel>
+            <translation><!-- Down --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Flat</masterLabel>
+            <translation><!-- Flat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Up</masterLabel>
+            <translation><!-- Up --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Competitor --></label>
+        <name>Competitor__c</name>
+        <relationshipLabel><!-- Related Customers --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Customer Change in Behavior Detail --></label>
+        <name>Customer_Change_in_Behavior_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Change in Behavior --></label>
+        <name>Customer_Change_in_Behavior__c</name>
+        <picklistValues>
+            <masterLabel>Decrease in Orders/Volume</masterLabel>
+            <translation><!-- Decrease in Orders/Volume --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delayed Shipment</masterLabel>
+            <translation><!-- Delayed Shipment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Extra/added Shipments</masterLabel>
+            <translation><!-- Extra/added Shipments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Increase in Orders/Volume</masterLabel>
+            <translation><!-- Increase in Orders/Volume --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moved to Inviting to Collaborate</masterLabel>
+            <translation><!-- Moved to Inviting to Collaborate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moved to Loyal</masterLabel>
+            <translation><!-- Moved to Loyal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moved to RFP/Bidding</masterLabel>
+            <translation><!-- Moved to RFP/Bidding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moved to Transactional</masterLabel>
+            <translation><!-- Moved to Transactional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other (Reason Required)</masterLabel>
+            <translation><!-- Other (Reason Required) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Speed up Shipments</masterLabel>
+            <translation><!-- Speed up Shipments --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Customer --></label>
+        <name>Customer__c</name>
+        <relationshipLabel><!-- Related Competitors --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Legacy Record ID --></label>
+        <name>LegacyRecordID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reason --></label>
+        <name>Reason_To_Leave_Supplier__c</name>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>Region__c</name>
+        <picklistValues>
+            <masterLabel>E</masterLabel>
+            <translation><!-- E --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NW</masterLabel>
+            <translation><!-- NW --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SW</masterLabel>
+            <translation><!-- SW --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Regional Performance Detail --></label>
+        <name>Regional_Performance_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Regional Performance --></label>
+        <name>Regional_Performance__c</name>
+        <picklistValues>
+            <masterLabel>Down</masterLabel>
+            <translation><!-- Down --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Flat</masterLabel>
+            <translation><!-- Flat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Up</masterLabel>
+            <translation><!-- Up --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Why Did the Customer Leave Supplier? --></label>
+        <name>Why_did_the_customer_leave_supplier__c</name>
+        <picklistValues>
+            <masterLabel>Multi Source Supply</masterLabel>
+            <translation><!-- Multi Source Supply --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other (Reason Required)</masterLabel>
+            <translation><!-- Other (Reason Required) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plant Location/Freight Advantage</masterLabel>
+            <translation><!-- Plant Location/Freight Advantage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Price</masterLabel>
+            <translation><!-- Price --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product, Product Quality</masterLabel>
+            <translation><!-- Product, Product Quality --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Relationship</masterLabel>
+            <translation><!-- Relationship --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reputation/Credibility</masterLabel>
+            <translation><!-- Reputation/Credibility --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service</masterLabel>
+            <translation><!-- Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Supply Performance Problem</masterLabel>
+            <translation><!-- Supply Performance Problem --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Competitor Junction Layout</layout>
+        <sections>
+            <label><!-- Behavior --></label>
+            <section>Behavior</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

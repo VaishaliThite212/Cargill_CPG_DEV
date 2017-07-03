@@ -1,0 +1,40 @@
+<apex:page standardController="impframework__Project__c">
+    <apex:includeScript value="{!URLFOR($Resource.impframework__CloudGURU, '/js/jquery-1.9.1.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.impframework__CloudGURU, '/js/jquery-ui-1.10.1.custom.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.impframework__CloudGURU, '/js/jquery.fn.gantt.js')}"/>    
+    <apex:stylesheet value="{!URLFOR($Resource.impframework__CloudGURU, '/css/cg_gantt.css')}"/>
+    <div class="gantt" id="{!Project__c.Id}"></div>
+    <script>
+        $j = jQuery.noConflict();
+        
+        function getHostName(){
+            var p = $j(location).attr('href');
+            pathArray = p.split( '/' );
+            var protocol = pathArray[0];
+            var host = pathArray[2];
+            return protocol+'//'+host;
+        }
+        var planDataURL = getHostName()+'/apex/ProjectPlanData?core.apexpages.devmode.url=0&id=' + $j(".gantt").attr('id');
+        $j(function() {
+            $j(".gantt").gantt({
+                source: planDataURL,
+                navigate: "scroll",
+                scale: "weeks",
+                maxScale: "months",
+                minScale: "days",
+                itemsPerPage: 10,
+                onItemClick: function(data) {
+                    //alert("Item clicked");
+                },
+                onAddClick: function(dt, rowId) {
+                    //alert("Empty space clicked");
+                },
+                onRender: function() {
+                    if (window.console && typeof console.log === "function") {
+                        console.log("chart rendered");
+                    }
+                }
+            });
+        });
+    </script>
+</apex:page>

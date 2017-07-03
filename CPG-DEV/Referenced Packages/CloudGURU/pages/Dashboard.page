@@ -1,0 +1,197 @@
+<apex:page docType="html-5.0" controller="impframework.DashboardController" sidebar="false" showheader="true" standardStylesheets="false" cache="true" tabStyle="CloudGURU__tab">
+    <script type="text/javascript">
+        window.onload = function(){
+            if('{!dashboardType}' == 'sprintburndown')
+                loadBurndownChart();
+            else if('{!dashboardType}' == 'sprintburnup')
+                loadBurnupChart();
+            else if('{!dashboardType}' == 'sprintsummary')
+                loadSprintSummary();
+        };
+
+        function loadBurndownChart(){
+            <apex:repeat value="{!mapSprints}" var="m">
+                <apex:repeat value="{!mapSprints[m]}" var="sprint">
+                    var chart = new cfx.Chart();
+                    var i = 0;
+                    var items = new Array();
+        
+                    //Data
+                    chart.getDataSourceSettings().getFields().clear();
+                    var ideal = {!sprint.Sprint_Estimate__c};
+                    var divisor = {!sprint.Sprint_Progress__r.size} - 1;
+                    var projectedIdeal = 0;
+                    var conditionPoint = 0;
+                    var newDivisor = 1;
+                    var j = 0;
+                    <apex:repeat value="{!sprint.Sprint_Progress__r}" var="sprintProgress">
+                        var sprintProgressDate = new Date("{!sprintProgress.Date__c}");
+                        sprintProgressDate.setHours(0,0,0,0);
+                        var today = new Date();
+                        today.setHours(0,0,0,0);
+                        var difference = sprintProgressDate - today;
+        
+                        var effortRemaining = {!sprintProgress.Effort_Remaining__c};
+                        if (difference >= 0){
+                            if (projectedIdeal == 0){
+                                 conditionPoint = i + 1;
+                                 projectedIdeal = effortRemaining * 0.99;
+                                 newDivisor = divisor - i;
+                            }
+                            if (newDivisor == 0)
+                                effortRemaining = 0;
+                            else
+                                effortRemaining = projectedIdeal - (j * projectedIdeal/newDivisor);
+                            j++;
+                        }
+                        
+                        items.push(
+                            getBurnDownItem(
+                                "Day " + i,
+                                ideal - (i * ideal/divisor),
+                                effortRemaining,
+                                {!sprintProgress.Stories_Completed__c}
+                            )
+                        );
+                        i++;
+                    </apex:repeat>
+                    loadBurndown(chart, items, conditionPoint, {!sprint.Baseline_Scope__c}, "", 'burndownChart{!sprint.Id}');
+                </apex:repeat>
+            </apex:repeat>
+        };
+
+        function loadBurnupChart(){
+            <apex:repeat value="{!mapSprints}" var="m">
+                <apex:repeat value="{!mapSprints[m]}" var="sprint">
+                    var chart = new cfx.Chart();
+                    var i = 0;
+                    var items = new Array();
+                    //Data
+                    chart.getDataSourceSettings().getFields().clear();
+                    var scope = {!sprint.Baseline_Scope__c};
+                    var storiesCumulative = 0;
+                    <apex:repeat value="{!sprint.Sprint_Progress__r}" var="sprintProgress">
+                        storiesCumulative = storiesCumulative + {!sprintProgress.Stories_Completed__c};
+                        scope = scope + {!sprintProgress.Stories_Added__c} - {!sprintProgress.Stories_Removed__c};
+                        
+                        items.push(
+                            getBurnUpItem(
+                                "Day " + i,
+                                scope,
+                                storiesCumulative
+                            )
+                        );
+                        i++;
+                    </apex:repeat>
+                    loadBurnUp(chart, items, "", 'burnupChart{!sprint.Id}');
+                </apex:repeat>
+            </apex:repeat>
+        }
+
+        function loadSprintSummary(){
+            <apex:repeat value="{!mapSprints}" var="m">
+                <apex:repeat value="{!mapSprints[m]}" var="sprint">
+                    var chart = new cfx.Chart();
+                    var items = new Array();
+                    //Data
+                    chart.getDataSourceSettings().getFields().clear();
+                    <apex:repeat value="{!sprint.Requirements__r}" var="requirement">
+                        var utilised = {!requirement.Effort_Estimate__c} - {!requirement.Effort_Remaining__c};
+                        var negativeRemaining = 0 - {!requirement.Effort_Remaining__c};
+                        var item = new Object();
+                        item["Utilised"] = utilised;
+                        item["Remaining"] = negativeRemaining;
+                        items.push(item);
+                    </apex:repeat>
+
+                    chart.setDataSource(items);
+                    var i=0;
+                    <apex:repeat value="{!sprint.Requirements__r}" var="requirement">
+                        chart.getAxisX().getLabels().setItem(i, "{!requirement.Name}");
+                        i++;
+                    </apex:repeat>
+
+                    chart.getAxisY().getTitle().setText("Effort");
+
+                    //Series Type
+                    chart.setGallery(cfx.Gallery.Gantt);
+                    chart.getAllSeries().setStacked(cfx.Stacked.Normal);
+                    
+                    //Legend Box
+                    chart.getLegendBox().setDock(cfx.DockArea.Bottom);
+                    chart.getLegendBox().setVisible(true);
+                    
+                    //Create Chart
+                    chart.create(document.getElementById('sprintSummary{!sprint.Id}'))
+
+                </apex:repeat>
+            </apex:repeat>
+        }
+    </script>
+    <apex:form id="form">
+        <apex:actionFunction name="loadProject" action="{!loadProjectData}">
+            <apex:param name="firstParam" value="" assignTo="{!projectId}"/>
+        </apex:actionFunction>
+
+        <apex:actionFunction name="loadDashboard" action="{!loadProjectData}">
+            <apex:param name="firstParam" value="" assignTo="{!dashboardType}"/>
+        </apex:actionFunction>
+
+        <c:CG_PageTemplate currentTab="dashboard">
+            <c:CG_FirstRow PageTitle="Cloud View"
+                Title1="Select Project" OptionsList1="{!projects}" SelectedOption1="{!projectId}" onchange1="loadProject(this.value)"
+                Title2="Select View" OptionsList2="{!dashboardTypes}" SelectedOption2="{!dashboardType}" onchange2="loadDashboard(this.value)"
+            />
+            <div class="row">
+                <div class="4u">
+                    <apex:repeat value="{!mapSprints[0]}" var="sprint">
+                        <section>
+                            <h2 class="sectionHeader"><a href="/{!sprint.Id}">{!sprint.Name}</a></h2>
+                            <apex:outputPanel rendered="{!IF(dashboardType == 'sprintburndown', true, false)}">
+                                <div id="burndownChart{!sprint.Id}" class="chart"/>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!IF(dashboardType == 'sprintburnup', true, false)}">
+                                <div id="burnupChart{!sprint.Id}" class="chart"/>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!IF(dashboardType == 'sprintsummary', true, false)}">
+                                <div id="sprintSummary{!sprint.Id}" class="chart"/>
+                            </apex:outputPanel>
+                        </section>
+                    </apex:repeat>
+                </div>
+                <div class="4u">
+                    <apex:repeat value="{!mapSprints[1]}" var="sprint">
+                        <section>
+                            <h2 class="sectionHeader"><a href="/{!sprint.Id}">{!sprint.Name}</a></h2>
+                            <apex:outputPanel rendered="{!IF(dashboardType == 'sprintburndown', true, false)}">
+                                <div id="burndownChart{!sprint.Id}" class="chart"/>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!IF(dashboardType == 'sprintburnup', true, false)}">
+                                <div id="burnupChart{!sprint.Id}" class="chart"/>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!IF(dashboardType == 'sprintsummary', true, false)}">
+                                <div id="sprintSummary{!sprint.Id}" class="chart"/>
+                            </apex:outputPanel>
+                        </section>
+                    </apex:repeat>
+                </div>
+                <div class="4u">
+                    <apex:repeat value="{!mapSprints[2]}" var="sprint">
+                        <section>
+                            <h2 class="sectionHeader"><a href="/{!sprint.Id}">{!sprint.Name}</a></h2>
+                            <apex:outputPanel rendered="{!IF(dashboardType == 'sprintburndown', true, false)}">
+                                <div id="burndownChart{!sprint.Id}" class="chart"/>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!IF(dashboardType == 'sprintburnup', true, false)}">
+                                <div id="burnupChart{!sprint.Id}" class="chart"/>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!IF(dashboardType == 'sprintsummary', true, false)}">
+                                <div id="sprintSummary{!sprint.Id}" class="chart"/>
+                            </apex:outputPanel>
+                        </section>
+                    </apex:repeat>
+                </div>
+            </div>
+        </c:CG_PageTemplate>
+    </apex:form>
+</apex:page>

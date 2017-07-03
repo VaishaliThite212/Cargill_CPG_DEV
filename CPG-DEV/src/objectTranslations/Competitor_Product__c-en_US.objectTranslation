@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Competitor Product</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Competitor Products</value>
+    </caseValues>
+    <fields>
+        <label><!-- Activate Price Capture --></label>
+        <name>Activate_Price_Capture__c</name>
+    </fields>
+    <fields>
+        <label><!-- Competitive Behavior Other Description --></label>
+        <name>Competitive_Behavior_Other_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Competitive Behavior --></label>
+        <name>Competitive_Behavior__c</name>
+        <picklistValues>
+            <masterLabel>Aggressive</masterLabel>
+            <translation><!-- Aggressive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disciplined</masterLabel>
+            <translation><!-- Disciplined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Out of position</masterLabel>
+            <translation><!-- Out of position --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Competitor --></label>
+        <name>Competitor__c</name>
+        <relationshipLabel><!-- Competitor Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Launch Date --></label>
+        <name>Launch_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Positioning --></label>
+        <name>Positioning__c</name>
+        <picklistValues>
+            <masterLabel>GMO-free</masterLabel>
+            <translation><!-- GMO-free --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Healthy</masterLabel>
+            <translation><!-- Healthy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low Calorie</masterLabel>
+            <translation><!-- Low Calorie --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Natural</masterLabel>
+            <translation><!-- Natural --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Organic</masterLabel>
+            <translation><!-- Organic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sustainability</masterLabel>
+            <translation><!-- Sustainability --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Price Point Source --></label>
+        <name>Price_Point_Source__c</name>
+        <picklistValues>
+            <masterLabel>Customer</masterLabel>
+            <translation><!-- Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internal Estimate</masterLabel>
+            <translation><!-- Internal Estimate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail/consumer</masterLabel>
+            <translation><!-- Retail/consumer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vendor</masterLabel>
+            <translation><!-- Vendor --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Price Point --></label>
+        <name>Price_Point__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Line --></label>
+        <name>Product_Line__c</name>
+        <picklistValues>
+            <masterLabel>Product Line A</masterLabel>
+            <translation><!-- Product Line A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Line B</masterLabel>
+            <translation><!-- Product Line B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Line C</masterLabel>
+            <translation><!-- Product Line C --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Line D</masterLabel>
+            <translation><!-- Product Line D --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- What particular sub sector/segment/application are they focusing on? --></help>
+        <label><!-- Sub sector/segment/application --></label>
+        <name>Sub_sector_segment_application__c</name>
+        <picklistValues>
+            <masterLabel>Bakery</masterLabel>
+            <translation><!-- Bakery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Beverages</masterLabel>
+            <translation><!-- Beverages --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Confection</masterLabel>
+            <translation><!-- Confection --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Convenience Foods</masterLabel>
+            <translation><!-- Convenience Foods --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dairy</masterLabel>
+            <translation><!-- Dairy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fruit</masterLabel>
+            <translation><!-- Fruit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Infant and Baby Food</masterLabel>
+            <translation><!-- Infant and Baby Food --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meat</masterLabel>
+            <translation><!-- Meat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal Care</masterLabel>
+            <translation><!-- Personal Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pet Food</masterLabel>
+            <translation><!-- Pet Food --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharma</masterLabel>
+            <translation><!-- Pharma --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Snacks &amp; cereals</masterLabel>
+            <translation><!-- Snacks &amp; cereals --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Total Capacity --></label>
+        <name>Total_Capacity__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

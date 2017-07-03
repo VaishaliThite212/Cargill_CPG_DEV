@@ -1,0 +1,25 @@
+<apex:page docType="html-5.0" sidebar="false" showheader="true" standardStylesheets="false" cache="true" tabStyle="CloudGURU__tab">
+    <c:CG_PageTemplate currentTab="configuration">
+        <div class="row main-row">
+            <div class="9u">
+                <section>
+                    <h2 class="sectionHeader">Configuration</h2>
+                    <ul class="paragraph-list">
+                        <li>
+                            Go to <a href="/0rp?spl1=1&setupid=SecurityRemoteProxy&retURL=%2Fui%2Fsetup%2FSetup%3Fsetupid%3DSecurity" target="_blank">Remote Site Settings</a> page and edit the <strong>CloudGURU</strong> RemoteSite 
+                        </li>
+                        <li>
+                            Change the server (na15) in the URL (https://impframework.<strong>na15</strong>.visual.force.com) to your salesforce server, e.g. na1, cs7, eu1 etc.
+                        </li>
+                        <li class="image">
+                            <apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/configuration/remoteSite.png')}" width="550px"/>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div class="3u">
+                <c:CG_PageLinks />
+            </div>
+        </div>
+    </c:CG_PageTemplate>
+</apex:page>

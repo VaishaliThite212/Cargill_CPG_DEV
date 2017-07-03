@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Is_Cloned</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Is Cloned</shortDescription>
+        <value>IS Cloned</value>
+    </labels>
+    <labels>
+        <fullName>NewOppName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NewOppName</shortDescription>
+        <value>|</value>
+    </labels>
+    <labels>
+        <fullName>OpportunityStage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OpportunityStage</shortDescription>
+        <value>Explore</value>
+    </labels>
+    <labels>
+        <fullName>OpportunityTypeRenewal</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OpportunityTypeRenewal</shortDescription>
+        <value>Renewal</value>
+    </labels>
+    <labels>
+        <fullName>Query</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Query</shortDescription>
+        <value>select id,name,Budget_Confirmed__c,Accountid,Account.name,Amount,External_ID__c,Business__c,BusinessAlias__c,CloseDate,CloseReason__c,CustomerMeetingReport__c, Discovery_Completed__c ,EstimatedCloseDate__c, EstimatedShipDate__c,LeadSource__c,RelatedToRFP__c,RenewalDate__c,SourceOpportunity__c,OriginalName__c,OwnerId,Description,ExpectedRevenue,ForecastCategoryName,LeadSource,NextStep,RecordTypeid,Pricebook2id,Campaignid,IsPrivate,Probability,TotalOpportunityQuantity,StageName,SyncedQuoteid,Type from opportunity where external_id__c !=:isCloned AND RenewalDate__c =today AND StageName= &apos;Closed Won&apos;</value>
+    </labels>
+    <labels>
+        <fullName>SyncProjectMem1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SyncProjectMem1</shortDescription>
+        <value>Edit</value>
+    </labels>
+    <labels>
+        <fullName>SyncProjectMem2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SyncProjectMem2</shortDescription>
+        <value>Project_Team_Member__c</value>
+    </labels>
+    <labels>
+        <fullName>SyncProjectMem3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SyncProjectMem3</shortDescription>
+        <value>Opportunity_Team_Member__c</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Market Intelligence Detail</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Market Intelligence Details</value>
+    </caseValues>
+    <fields>
+        <label><!-- Annual Volume --></label>
+        <name>AnnualVolume__c</name>
+    </fields>
+    <fields>
+        <label><!-- Captive Demand --></label>
+        <name>CaptiveDemand__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Cargill Supplier? --></label>
+        <name>IsCargillSupplier__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy Record ID --></label>
+        <name>LegacyRecordID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Market Intelligence --></label>
+        <name>MarketIntelligence__c</name>
+        <relationshipLabel><!-- Market Intelligence Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Ship To Name --></label>
+        <name>ShipToName__c</name>
+        <relationshipLabel><!-- Market Intelligence Details (Ship To Name) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Ship to Country --></label>
+        <name>ShiptoCountry__c</name>
+    </fields>
+    <fields>
+        <label><!-- SupplierName --></label>
+        <name>SupplierName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Supplier --></label>
+        <name>Supplier__c</name>
+        <relationshipLabel><!-- Market Intelligence Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Unit of Measure --></label>
+        <name>UnitOfMeasure__c</name>
+    </fields>
+    <layouts>
+        <layout>Market Intelligence Detail Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,41 @@
+<apex:page controller="impframework.DeliverableController" action="{!init}" renderAs="pdf" readOnly="true">
+    <!-- ------------------------------------------------------------------------------------------------------- -->
+    <!-- DOCUMENT -->
+    <!-- ------------------------------------------------------------------------------------------------------- -->
+    <apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/watermarks/sample.png')}" style="position: fixed; left: 0; top:0; z-index:-1" width="650px" height="850px" rendered="{!deliverable.impframework__Test_Deliverable__c}"/>
+    <c:CG_DocumentTemplate deliverable="{!deliverable}" toc="{!toc}">
+        <body>
+            <!-- --------------------------------------------------------------------------------------------------------- -->
+            <!-- INTRODUCTION -->
+            <!-- --------------------------------------------------------------------------------------------------------- -->
+            <h1 class="numbered" id="introduction">{!$Label.Introduction}</h1>
+            <!-- PROJECT DESCRIPTION -->
+            <h2 class="numbered" id="projectDescription">{!$Label.Project_Description}</h2>
+            <apex:outputField value="{!deliverable.Project__r.impframework__Description__c}" />
+            <!-- PURPOSE -->
+            <h2 class="numbered" id="documentPurpose">{!$Label.impframework__document_purpose}</h2>
+            <apex:outputField value="{!deliverable.impframework__Purpose__c}"/>
+            
+            <!-- --------------------------------------------------------------------------------------------------------- -->
+            <!-- ADDITIONAL SECTIONS -->
+            <!-- --------------------------------------------------------------------------------------------------------- -->
+            <c:CG_DocumentSections additionalSections="{!mainSections}"/>
+
+            <!-- --------------------------------------------------------------------------------------------------------- -->
+            <!-- REQUIREMENTS -->
+            <!-- --------------------------------------------------------------------------------------------------------- -->
+            <c:CG_Requirements isDesign="false"
+                functionalRequirements="{!backlogItemWrapper.lstFunctionalRequirements}"
+                interfaceRequirements="{!backlogItemWrapper.lstInterfaceRequirements}"
+                reportRequirements="{!backlogItemWrapper.lstReportRequirements}"
+                customScreenLayoutRequirements="{!backlogItemWrapper.lstCustomScreenLayoutRequirements}"
+                processRequirements="{!backlogItemWrapper.lstProcessRequirements}"
+                nonFunctionalRequirements="{!backlogItemWrapper.lstNonFunctionalRequirements}"
+                defects="{!backlogItemWrapper.lstDefects}"
+                incidents="{!backlogItemWrapper.lstIncidents}"
+                changeRequests="{!backlogItemWrapper.lstChangeRequests}"
+            />
+            
+        </body>
+    </c:CG_DocumentTemplate>
+</apex:page>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Market Intelligence</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Market Intelligence</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Market Intelligence --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Application --></label>
+        <name>Application__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Detail --></label>
+        <name>BusinessDetail__c</name>
+        <relationshipLabel><!-- Market Intelligence --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Business --></label>
+        <name>Business__c</name>
+    </fields>
+    <fields>
+        <label><!-- Captive Demand --></label>
+        <name>CaptiveDemand__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cargill Annual Volume --></label>
+        <name>CargillAnnualVolume__c</name>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Competitor Annual Volume --></label>
+        <name>CompetitorAnnualVolume__c</name>
+    </fields>
+    <fields>
+        <label><!-- Competitor Product --></label>
+        <name>CompetitorProduct__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completeness --></label>
+        <name>Completeness__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Profile --></label>
+        <name>CustomerProfile__c</name>
+        <relationshipLabel><!-- Market Intelligence --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Legacy Record ID --></label>
+        <name>LegacyRecordID__c</name>
+    </fields>
+    <fields>
+        <label><!-- % Market Share --></label>
+        <name>PctMarketShare__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product__c</name>
+        <relationshipLabel><!-- Market Intelligence --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Referred to Distributor --></label>
+        <name>ReferredtoDistributor__c</name>
+        <relationshipLabel><!-- Market Intelligence (Referred to Distributor) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Total Annual Volume --></label>
+        <name>TotalAnnualVolumeDisplay__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Annual Volume --></label>
+        <name>TotalAnnualVolume__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit of Measure --></label>
+        <name>UnitofMeasure__c</name>
+    </fields>
+    <layouts>
+        <layout>Market Intelligence Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

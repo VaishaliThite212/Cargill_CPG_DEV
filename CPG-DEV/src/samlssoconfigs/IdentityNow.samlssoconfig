@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SamlSsoConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <identityLocation>SubjectNameId</identityLocation>
+    <identityMapping>FederationId</identityMapping>
+    <issuer>https://cargill-sb.identitynow.com</issuer>
+    <loginUrl>https://stg01-useast1-sso.identitynow.com/sso/SSORedirect/metaAlias/cargill-sb/idp</loginUrl>
+    <logoutUrl>http://cargillconnects.cargill.com/Pages/Default.aspx</logoutUrl>
+    <name>IdentityNow</name>
+    <oauthTokenEndpoint>https://cargillprotein--CPGdev.cs71.my.salesforce.com/services/oauth2/token?so=00D4D000000CnG9</oauthTokenEndpoint>
+    <redirectBinding>false</redirectBinding>
+    <requestSignatureMethod>0</requestSignatureMethod>
+    <salesforceLoginUrl>https://cargillprotein--CPGdev.cs71.my.salesforce.com?so=00D4D000000CnG9</salesforceLoginUrl>
+    <samlEntityId>https://cargillprotein--cpgdev.cs71.my.salesforce.com</samlEntityId>
+    <samlVersion>SAML2_0</samlVersion>
+    <userProvisioning>false</userProvisioning>
+    <validationCert>MIIDRjCCAi6gAwIBAgIEbsTsdzANBgkqhkiG9w0BAQsFADBlMQswCQYDVQQGEwJVUzEOMAwGA1UECBMFVGV4YXMxDzANBgNVBAcTBkF1c3RpbjESMBAGA1UEChMJU2FpbFBvaW50MSEwHwYDVQQDExhzdGcwMS11c2Vhc3QxLWNhcmdpbGwtc2IwHhcNMTYwMzA1MTc0ODAzWhcNMjYwMzAzMTc0ODAzWjBlMQswCQYDVQQGEwJVUzEOMAwGA1UECBMFVGV4YXMxDzANBgNVBAcTBkF1c3RpbjESMBAGA1UEChMJU2FpbFBvaW50MSEwHwYDVQQDExhzdGcwMS11c2Vhc3QxLWNhcmdpbGwtc2IwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCeS0XYYNIe/YL8Psq4LA2QjwAxM4cwTLV/TVhccKC2TSYnZ2gGPTYPucl4GNnZqgpVaGRxItnNuRSFSc4KGDn1EfKa3yPcAli9693gpLXP+cVALFrU5zOJYEso4LqfxjdKghNZml9JrOW9Ax7g7lx4uloxIHC/cBlZq+vT/xCrmmZCF1kW5e9rmAzQMDJSsFPuw+QitUJlGRdPEV6TeDbhSC80wFq0msitGDFjTgJlpiOJyP0m5+QB+Hc16ClKkyxAZ1GqUK7HwGmFqJTQDgQOLLHJulvn6PIZd1Ozc4Zt4AE8sADwyl4X4EuqqTCAZz5R0yaQyLh4xtYl4ghhyl03AgMBAAEwDQYJKoZIhvcNAQELBQADggEBAIIn12slWIuYzhM2W04w4PggE4txQp6sQNocDdgLpUTVcPnIJWQSph4LNQSkkArRQtQpli8VF6yU9qzwI0wBC8ah1x3VrkeWfM/5XXN0tbSd3auvb3YmO56X5QfeCB7bMUfXf31qO0nDontbG0A1zFeXecz/LafYNR/+/S7elC0esiNZyxxjs0vQ9lTdkySpb29gpMX4QupU7Zz8koWxmyEAiAkyAvivlYx9XX0VCorJ1lWYI66Rez18u7J75w1dzaFknUQZy4+N9Xc4TRnSvygs10wmEIAu1ORUswSRb4R7Prdy4aIZVB2ZCxtsjuxTTn95FJDx2sYl7Ee7N48qQ1s=</validationCert>
+</SamlSsoConfig>

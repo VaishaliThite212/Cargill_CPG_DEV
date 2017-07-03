@@ -1,0 +1,1175 @@
+<apex:page controller="impframework.DeliverableController" action="{!init}" renderAs="pdf">
+    <!-- ------------------------------------------------------------------------------------------------------- -->
+    <!-- DOCUMENT -->
+    <!-- ------------------------------------------------------------------------------------------------------- -->
+    <apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/watermarks/sample.png')}" style="position: fixed; left: 0; top:0; z-index:-1" width="650px" height="850px" rendered="{!deliverable.impframework__Test_Deliverable__c}"/>
+    <c:CG_DocumentTemplate deliverable="{!deliverable}" toc="{!toc}">
+        <body>
+            <!-- --------------------------------------------------------------------------------------------------------- -->
+            <!-- INTRODUCTION -->
+            <!-- --------------------------------------------------------------------------------------------------------- -->
+            <h1 class="numbered"  id="introduction">{!$Label.Introduction}</h1>
+            <!-- PROJECT DESCRIPTION -->
+            <h2 class="numbered" id="projectDescription">{!$Label.Project_Description}</h2>
+            <apex:outputField value="{!deliverable.Project__r.impframework__Description__c}" />
+            <!-- PURPOSE -->
+            <h2 class="numbered" id="documentPurpose">{!$Label.impframework__document_purpose}</h2>
+            <apex:outputField value="{!deliverable.impframework__Purpose__c}"/>
+            
+            <!-- --------------------------------------------------------------------------------------------------------- -->
+            <!-- ADDITIONAL SECTIONS -->
+            <!-- --------------------------------------------------------------------------------------------------------- -->
+            <c:CG_DocumentSections additionalSections="{!mainSections}"/>
+
+            <!-- --------------------------------------------------------------------------------------------------------- -->
+            <!-- REQUIREMENTS -->
+            <!-- --------------------------------------------------------------------------------------------------------- -->
+            <c:CG_Requirements isDesign="true"
+                functionalRequirements="{!backlogItemWrapper.lstFunctionalRequirements}"
+                interfaceRequirements="{!backlogItemWrapper.lstInterfaceRequirements}"
+                reportRequirements="{!backlogItemWrapper.lstReportRequirements}"
+                customScreenLayoutRequirements="{!backlogItemWrapper.lstCustomScreenLayoutRequirements}"
+                processRequirements="{!backlogItemWrapper.lstProcessRequirements}"
+                nonFunctionalRequirements="{!backlogItemWrapper.lstNonFunctionalRequirements}"
+                defects="{!backlogItemWrapper.lstDefects}"
+                incidents="{!backlogItemWrapper.lstIncidents}"
+                changeRequests="{!backlogItemWrapper.lstChangeRequests}"
+            />
+            
+            <!-- --------------------------------------------------------------------------------------------------------- -->
+            <!-- SYSTEM ARCHITECTURE -->
+            <!-- --------------------------------------------------------------------------------------------------------- -->
+            <apex:outputPanel id="SystemArchitecturePanel" style="overflow:hidden" rendered="{!showObjects}">
+                <h1 class="numbered" id="systemArchitecture">{!$Label.System_Architecture}</h1>
+                <!-- Application Objects -->
+                <h2 class="numbered" id="applicationObjectDetails">{!$Label.Application_Object_Details}</h2>
+                <apex:variable value="{!1}" var="count"/>
+                <table class="tableStyle">
+                    <thead>
+                        <tr>
+                            <th width="10%" align="center"><div id="inner">#</div></th>
+                            <th width="40%"><div id="inner">Object Name</div></th>
+                            <th width="40%"><div id="inner">Object API Name</div></th>
+                            <th width="10%" align="center"><div id="inner">Custom</div></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <apex:repeat value="{!application.lstCustomObjects}" var="customObject">
+                            <tr>
+                                <td width="10%" align="center" ><div id="inner">{!FLOOR(count)}</div></td> 
+                                <td width="40%"><div id="inner">{!customObject.label}</div></td> 
+                                <td width="40%"><div id="inner">{!customObject.fullName}</div></td> 
+                                <td width="10%" align="center">
+                                    <div id="inner">
+                                        <apex:image value="{!URLFOR($Resource.impframework__CloudGURU, IF(customObject.isCustom, 'images/checkbox/checkbox_checked.gif', 'images/checkbox/checkbox_unchecked.gif'))}"/>
+                                    </div>
+                                </td>
+                                <apex:variable var="count" value="{!count+ 1}"/>
+                            </tr>
+                        </apex:repeat>
+                    </tbody>
+                </table>
+    
+                <!-- Architecture Diagram -->
+                <apex:outputpanel id="ArchitecturePanel" style="overflow:hidden" rendered="{!IF(deliverable.impframework__Architecture_Attachment_Id__c != null, true, false)}">
+                    <h2 class="numbered" id="architectureDiagram" style="page-break-before: always;">{!$Label.impframework__architecture_diagram}</h2>
+                    <apex:image value="{!'/servlet/servlet.FileDownload?file=' + deliverable.impframework__Architecture_Attachment_Id__c}" width="650"/>
+                </apex:outputpanel>
+    
+                <!-- ERD -->
+                <apex:outputpanel id="ERDPanel" style="overflow:hidden" rendered="{!IF(deliverable.impframework__ER_Diagram_Attachment_Id__c != null, true, false)}">
+                    <h2 class="numbered" id="erDiagram" style="page-break-before: always;">{!$Label.impframework__er_diagram}</h2>
+                    <apex:image value="{!'/servlet/servlet.FileDownload?file=' + deliverable.impframework__ER_Diagram_Attachment_Id__c}" width="650" style="max-width:650px;"/>
+                </apex:outputpanel>
+            </apex:outputPanel>
+            
+            <!-- --------------------------------------------------------------------------------------------------------- -->
+            <!-- CUSTOM OBJECTS -->
+            <!-- --------------------------------------------------------------------------------------------------------- -->
+            <apex:outputPanel id="CustomObjectPanel" style="overflow:hidden" rendered="{!showObjects}">
+                <h1 class="numbered" id="customObjects">{!$Label.impframework__custom_objects}</h1>
+                <apex:repeat value="{!application.lstCustomObjects}" var="customObject">
+                    <h2 class="numbered" id="object{!customObject.fullName}" style="page-break-before:{!IF(customObject.fullName == application.lstCustomObjects[0].fullName, 'avoid', 'always')};">{!customObject.label} ({!customObject.fullName})</h2>
+                    <!-- --------------------- -->
+                    <!-- FIELDS -->
+                    <!-- --------------------- -->
+                    <apex:outputPanel id="CustomFieldPanel" rendered="{!IF(customObject.fields.size>0, true, false)}">
+                        <h3 class="numbered" id="object{!customObject.fullName}fields">{!$Label.impframework__fields_description}</h3>
+                        <apex:variable value="{!1}" var="count"/>
+                        <table class="tableStyle" >
+                            <thead>
+                                <tr>
+                                    <th width="5%" align="center"><div id="inner">#</div></th>
+                                    <th width="30%"><div id="inner">Field</div></th>
+                                    <th width="15%"><div id="inner">Type</div></th>
+                                    <th width="30%"><div id="inner">Values</div></th>
+                                    <th width="10%"><div id="inner">Default Value</div></th>
+                                    <th width="10%" align="center"><div id="inner">Track History</div></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <apex:repeat value="{!customObject.fields}" var="field">
+                                    <tr>
+                                        <td width="5%" align="center"><div id="inner">{!FLOOR(count)}</div></td> 
+                                        <td width="30%"><div id="inner">{!field.label} ({!field.fullName}) <apex:outputText value=" ({!field.attributes})" rendered="{!field.attributes!=''}"/></div></td> 
+                                        <td width="15%"><div id="inner">{!field.type}</div></td> 
+                                        <td width="30%">
+                                            <div id="inner">
+                                                <apex:repeat value="{!field.values}" var="value">
+                                                    {!value}<BR/>
+                                                </apex:repeat>
+                                            </div>
+                                        </td>
+                                        <td width="10%"><div id="inner">{!field.defaultValue}</div></td>
+                                        <td width="10%" align="center">
+                                            <div id="inner">
+                                                <apex:image value="{!URLFOR($Resource.impframework__CloudGURU, IF(field.trackHistory, 'images/checkbox/checkbox_checked.gif', 'images/checkbox/checkbox_unchecked.gif'))}" rendered="{!field.isCustom}"/>
+                                            </div>
+                                        </td>
+                                        <apex:variable var="count" value="{!count+ 1}"/>
+                                    </tr>
+                                </apex:repeat>
+                            </tbody>
+                        </table>
+                        <BR/>
+                    </apex:outputPanel>
+        
+                    <!-- --------------------- -->
+                    <!-- FIELDSETS -->
+                    <!-- --------------------- -->
+                    <apex:outputPanel id="FieldSetPanel" rendered="{!IF(customObject.fieldSets.size>0, true, false)}">
+                        <h3 class="numbered" id="object{!customObject.fullName}fieldSets">{!$Label.impframework__fieldsets}</h3>
+                        <apex:variable value="{!1}" var="count"/>
+                        <table class="tableStyle" >
+                            <thead>
+                                <tr>
+                                    <th width="5%" align="center"><div id="inner">#</div></th>
+                                    <th width="25%"><div id="inner">Name</div></th>
+                                    <th width="30%"><div id="inner">Description</div></th>
+                                    <th width="20%"><div id="inner">Available Fields</div></th>
+                                    <th width="20%"><div id="inner">Displayed Fields</div></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <apex:repeat value="{!customObject.fieldSets}" var="fieldSet">
+                                    <tr>
+                                        <td width="5%" align="center"><div id="inner">{!FLOOR(count)}</div></td> 
+                                        <td width="25%"><div id="inner">{!fieldSet.label} ({!fieldSet.fullName})</div></td> 
+                                        <td width="30%"><div id="inner">{!fieldSet.description}</div></td> 
+                                        <td width="20%">
+                                            <div id="inner">
+                                                <apex:repeat value="{!fieldSet.availableFields}" var="availableField">
+                                                    {!availableField}<BR/>
+                                                </apex:repeat>
+                                            </div>
+                                        </td>
+                                        <td width="20%">
+                                            <div id="inner">
+                                                <apex:repeat value="{!fieldSet.displayedFields}" var="displayedField">
+                                                    {!displayedField}<BR/>
+                                                </apex:repeat>
+                                            </div>
+                                        </td>
+                                        <apex:variable var="count" value="{!count+ 1}"/>
+                                    </tr>
+                                </apex:repeat>
+                            </tbody>
+                        </table>
+                        <BR/>
+                    </apex:outputPanel>
+        
+                    <!-- --------------------- -->
+                    <!-- RECORDTYPES -->
+                    <!-- --------------------- -->
+                    <apex:outputPanel id="RecordTypePanel" rendered="{!IF(customObject.recordTypes.size>0, true, false)}">
+                        <h3 class="numbered" id="object{!customObject.fullName}recordTypes">{!$Label.impframework__recordtypes}</h3>
+                        <apex:variable value="{!1}" var="count"/>
+                        <table class="tableStyle" >
+                            <thead>
+                                <tr>
+                                    <th width="5%" align="center"><div id="inner">#</div></th>
+                                    <th width="30%"><div id="inner">Name</div></th>
+                                    <th width="55%"><div id="inner">Description</div></th>
+                                    <th width="10%"><div id="inner">Active</div></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <apex:repeat value="{!customObject.recordTypes}" var="recordType">
+                                    <tr>
+                                        <td width="5%" align="center"><div id="inner">{!FLOOR(count)}</div></td> 
+                                        <td width="30%"><div id="inner">{!recordType.label} ({!recordType.fullName})</div></td> 
+                                        <td width="55%"><div id="inner">{!recordType.description}</div></td> 
+                                        <td width="10%" align="center">
+                                            <div id="inner">
+                                                <apex:image value="{!URLFOR($Resource.impframework__CloudGURU, IF(recordType.isActive, 'images/checkbox/checkbox_checked.gif', 'images/checkbox/checkbox_unchecked.gif'))}"/>
+                                            </div>
+                                        </td>
+                                        <apex:variable var="count" value="{!count+ 1}"/>
+                                    </tr>
+                                </apex:repeat>
+                            </tbody>
+                        </table>
+                        <BR/>
+                    </apex:outputPanel>
+        
+                    <!-- --------------------- -->
+                    <!-- WORKFLOWS -->
+                    <!-- --------------------- -->
+                    <apex:outputPanel id="WorkflowRulesPanel" rendered="{!IF(customObject.lstWorkflowRules.size>0, true, false)}">
+                        <h3 class="numbered" id="object{!customObject.fullName}workflowRules">{!$Label.impframework__workflow_rules}</h3>
+                        <apex:variable value="{!1}" var="ruleCount"/>
+                        <apex:repeat value="{!customObject.lstWorkflowRules}" var="workflowRule">
+                            <table class="tableStyle">
+                                <tr>
+                                    <th width="100%"><div id="inner">Rule {!FLOOR(ruleCount)}: {!workflowRule.fullName}</div></th> 
+                                </tr>
+                            </table>
+                            <table class="tableStyle">
+                                <tbody>
+                                    <tr>
+                                        <td width="20%"><div id="inner">Description</div></td> 
+                                        <td width="80%"><div id="inner">{!workflowRule.description}</div></td> 
+                                    </tr>
+                                    <tr>
+                                        <td width="20%"><div id="inner">Active</div></td> 
+                                        <td width="80%">
+                                            <div id="inner">
+                                                <apex:image value="{!URLFOR($Resource.impframework__CloudGURU, IF(workflowRule.isActive, 'images/checkbox/checkbox_checked.gif', 'images/checkbox/checkbox_unchecked.gif'))}"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%"><div id="inner">Evaluation Criteria</div></td> 
+                                        <td width="80%"><div id="inner">{!workflowRule.criteria}</div></td> 
+                                    </tr>
+                                    <tr>
+                                        <td width="20%"><div id="inner">Rule Criteria</div></td> 
+                                        <td width="80%"><div id="inner">{!workflowRule.triggerType}</div></td> 
+                                    </tr>
+                                    <tr>
+                                        <td width="20%"><div id="inner">Immediate Action(s)</div></td> 
+                                        <td width="80%">
+                                            <div id="inner">
+                                                <apex:outputPanel rendered="{!workflowRule.fieldUpdates.size>0}">
+                                                    <apex:outputText value="Field Updates" style="font-style:italic;"/>
+                                                    <apex:dataTable width="100%" value="{!workflowRule.fieldUpdates}" var="fieldUpdate">
+                                                        <apex:column width="30%" headerValue="Name" value="{!fieldUpdate.fullName}"/>
+                                                        <apex:column width="20%" headerValue="Field" value="{!fieldUpdate.field}"/>
+                                                        <apex:column width="50%" headerValue="Value" value="{!fieldUpdate.value}"/>
+                                                    </apex:dataTable>
+                                                    <BR/>
+                                                </apex:outputPanel>
+                                                <apex:outputPanel rendered="{!workflowRule.tasks.size>0}">
+                                                    <apex:outputText value="Tasks" style="font-style:italic;"/>
+                                                    <apex:dataTable width="100%" value="{!workflowRule.tasks}" var="task">
+                                                        <apex:column width="25%" headerValue="Name" value="{!task.fullName}"/>
+                                                        <apex:column width="25%" headerValue="Subject" value="{!task.subject}"/>
+                                                        <apex:column width="30%" headerValue="Assigned To" value="{!task.assignedTo}"/>
+                                                        <apex:column width="10%" headerValue="Status" value="{!task.status}"/>
+                                                        <apex:column width="10%" headerValue="Priority" value="{!task.priority}"/>
+                                                    </apex:dataTable>
+                                                    <BR/>
+                                                </apex:outputPanel>
+                                                <apex:outputPanel rendered="{!workflowRule.alerts.size>0}">
+                                                    <apex:outputText value="Email Alerts" style="font-style:italic;"/>
+                                                    <apex:dataTable width="100%" value="{!workflowRule.alerts}" var="alert">
+                                                        <apex:column width="30%" headerValue="Name" value="{!alert.fullName}"/>
+                                                        <apex:column width="30%" headerValue="Template" value="{!alert.template}"/>
+                                                        <apex:column width="40%" headerValue="Sender" value="{!alert.sender}"/>
+                                                    </apex:dataTable>
+                                                    <BR/>
+                                                </apex:outputPanel>
+                                            </div>
+                                        </td> 
+                                    </tr>
+                                    <tr>
+                                        <td width="20%"><div id="inner">Time Trigger(s)</div></td> 
+                                        <td width="80%">
+                                            <div id="inner">
+                                                <apex:outputPanel rendered="{!workflowRule.workflowTimeTriggers.size>0}">
+                                                    <apex:variable value="{!1}" var="count"/>
+                                                    <apex:repeat value="{!workflowRule.workflowTimeTriggers}" var="workflowTimeTrigger">
+                                                        <apex:outputText >{!FLOOR(count)}. {!workflowTimeTrigger.timeTrigger}</apex:outputText>
+                                                        <BR/>
+                                                        <apex:outputPanel rendered="{!workflowTimeTrigger.fieldUpdates.size>0}">
+                                                            <apex:outputText value="Field Updates" style="font-style:italic;"/>
+                                                            <apex:dataTable width="100%" value="{!workflowTimeTrigger.fieldUpdates}" var="fieldUpdate">
+                                                                <apex:column width="30%" headerValue="Name" value="{!fieldUpdate.fullName}"/>
+                                                                <apex:column width="20%" headerValue="Field" value="{!fieldUpdate.field}"/>
+                                                                <apex:column width="50%" headerValue="Value" value="{!fieldUpdate.value}"/>
+                                                            </apex:dataTable>
+                                                            <BR/>
+                                                        </apex:outputPanel>
+                                                        <apex:outputPanel rendered="{!workflowTimeTrigger.tasks.size>0}">
+                                                            <apex:outputText value="Tasks" style="font-style:italic;"/>
+                                                            <apex:dataTable width="100%" value="{!workflowTimeTrigger.tasks}" var="task">
+                                                                <apex:column width="25%" headerValue="Name" value="{!task.fullName}"/>
+                                                                <apex:column width="25%" headerValue="Subject" value="{!task.subject}"/>
+                                                                <apex:column width="30%" headerValue="Assigned To" value="{!task.assignedTo}"/>
+                                                                <apex:column width="10%" headerValue="Status" value="{!task.status}"/>
+                                                                <apex:column width="10%" headerValue="Priority" value="{!task.priority}"/>
+                                                            </apex:dataTable>
+                                                            <BR/>
+                                                        </apex:outputPanel>
+                                                        <apex:outputPanel rendered="{!workflowTimeTrigger.alerts.size>0}">
+                                                            <apex:outputText value="Email Alerts" style="font-style:italic;"/>
+                                                            <apex:dataTable width="100%" value="{!workflowTimeTrigger.alerts}" var="alert">
+                                                                <apex:column width="30%" headerValue="Name" value="{!alert.fullName}"/>
+                                                                <apex:column width="30%" headerValue="Template" value="{!alert.template}"/>
+                                                                <apex:column width="40%" headerValue="Sender" value="{!alert.sender}"/>
+                                                            </apex:dataTable>
+                                                            <BR/>
+                                                        </apex:outputPanel>
+                                                        <BR/>
+                                                        <apex:variable var="count" value="{!count+ 1}"/>
+                                                    </apex:repeat>
+                                                </apex:outputPanel>
+                                            </div>
+                                        </td> 
+                                    </tr>
+                                    <BR/>
+                                </tbody>
+                            </table>
+                            <apex:variable var="ruleCount" value="{!ruleCount+ 1}"/>
+                        </apex:repeat>
+                    </apex:outputPanel>
+        
+                    <!-- --------------------- -->
+                    <!-- VALIDATION RULES -->
+                    <!-- --------------------- -->
+                    <apex:outputPanel id="ValidationRulePanel" rendered="{!IF(customObject.validationRules.size>0, true, false)}">
+                        <h3 class="numbered" id="object{!customObject.fullName}validationRules">{!$Label.impframework__validation_rules}</h3>
+                        <apex:variable value="{!1}" var="count"/>
+                        <table class="tableStyle" >
+                            <thead>
+                                <tr>
+                                    <th width="5%" align="center"><div id="inner">#</div></th>
+                                    <th width="30%"><div id="inner">Name</div></th>
+                                    <th width="25%"><div id="inner">Error Condition</div></th>
+                                    <th width="15%"><div id="inner">Error Message</div></th>
+                                    <th width="15%"><div id="inner">Location</div></th>
+                                    <th width="10%"><div id="inner">Active</div></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <apex:repeat value="{!customObject.validationRules}" var="validationRule">
+                                    <tr>
+                                        <td width="5%" align="center"><div id="inner">{!FLOOR(count)}</div></td> 
+                                        <td width="30%"><div id="inner">{!validationRule.fullName}</div></td> 
+                                        <td width="25%"><div id="inner">{!validationRule.errorConditionFormula}</div></td> 
+                                        <td width="15%"><div id="inner">{!validationRule.errorMessage}</div></td> 
+                                        <td width="15%"><div id="inner">{!validationRule.location}</div></td> 
+                                        <td width="10%" align="center">
+                                            <div id="inner">
+                                                <apex:image value="{!URLFOR($Resource.impframework__CloudGURU, IF(validationRule.isActive, 'images/checkbox/checkbox_checked.gif', 'images/checkbox/checkbox_unchecked.gif'))}"/>
+                                            </div>
+                                        </td>
+                                        <apex:variable var="count" value="{!count+ 1}"/>
+                                    </tr>
+                                </apex:repeat>
+                            </tbody>
+                        </table>
+                        <BR/>
+                    </apex:outputPanel>
+        
+                    <!-- --------------------- -->
+                    <!-- BUTTONS & LINKS -->
+                    <!-- --------------------- -->
+                    <apex:outputPanel id="WebLinkPanel" rendered="{!IF(customObject.webLinks.size>0, true, false)}">
+                        <h3 class="numbered" id="object{!customObject.fullName}webLinks">{!$Label.impframework__weblinks}</h3>
+                        <apex:variable value="{!1}" var="count"/>
+                        <table class="tableStyle" >
+                            <thead>
+                                <tr>
+                                    <th width="5%" align="center"><div id="inner">#</div></th>
+                                    <th width="30%"><div id="inner">Name</div></th>
+                                    <th width="25%"><div id="inner">Description</div></th>
+                                    <th width="10%"><div id="inner">Button/ Link</div></th>
+                                    <th width="30%"><div id="inner">Content</div></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <apex:repeat value="{!customObject.webLinks}" var="webLink">
+                                    <tr>
+                                        <td width="5%" align="center"><div id="inner">{!FLOOR(count)}</div></td> 
+                                        <td width="30%"><div id="inner">{!webLink.masterLabel} ({!webLink.fullName})</div></td> 
+                                        <td width="25%"><div id="inner">{!webLink.description}</div></td> 
+                                        <td width="10%"><div id="inner">{!webLink.displayType}</div></td> 
+                                        <td width="30%"><div id="inner">{!webLink.content}</div></td> 
+                                        <apex:variable var="count" value="{!count+ 1}"/>
+                                    </tr>
+                                </apex:repeat>
+                            </tbody>
+                        </table>
+                        <BR/>
+                    </apex:outputPanel>
+        
+                    <!-- --------------------- -->
+                    <!-- LIST VIEWS -->
+                    <!-- --------------------- -->
+                    <apex:outputPanel id="ListViewPanel" rendered="{!IF(customObject.listViews.size>0, true, false)}">
+                        <h3 class="numbered" id="object{!customObject.fullName}listViews">{!$Label.impframework__list_views}</h3>
+                        <apex:variable value="{!1}" var="count"/>
+                        <table class="tableStyle" >
+                            <thead>
+                                <tr>
+                                    <th width="5%" align="center"><div id="inner">#</div></th>
+                                    <th width="30%"><div id="inner">Name</div></th>
+                                    <th width="25%"><div id="inner">Columns</div></th>
+                                    <th width="30%"><div id="inner">Filters</div></th>
+                                    <th width="10%" align="center"><div id="inner">Filter Scope</div></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <apex:repeat value="{!customObject.listViews}" var="listView">
+                                    <tr>
+                                        <td width="5%" align="center"><div id="inner">{!FLOOR(count)}</div></td> 
+                                        <td width="30%"><div id="inner">{!listView.label} ({!listView.fullName})</div></td> 
+                                        <td width="25%">
+                                            <div id="inner">
+                                                <apex:repeat value="{!listView.columns}" var="column">
+                                                    {!column}<BR/>
+                                                </apex:repeat>
+                                            </div>
+                                        </td>
+                                        <td width="30%"><div id="inner">{!listView.filters}</div></td> 
+                                        <td width="10%" align="center"><div id="inner">{!listView.filterScope}</div></td> 
+                                        <apex:variable var="count" value="{!count+ 1}"/>
+                                    </tr>
+                                </apex:repeat>
+                            </tbody>
+                        </table>
+                        <BR/>
+                    </apex:outputPanel>
+        
+                    <!-- --------------------- -->
+                    <!-- APEX TRIGGERS -->
+                    <!-- --------------------- -->
+                    <apex:outputPanel id="ApexTriggerPanel" rendered="{!IF(customObject.lstApexTriggers.size>0, true, false)}">
+                        <h3 class="numbered" id="object{!customObject.fullName}apexTriggers">{!$Label.impframework__apex_triggers}</h3>
+                        <apex:variable value="{!1}" var="count"/>
+                        <table class="tableStyle" >
+                            <thead>
+                                <tr>
+                                    <th width="5%" align="center"><div id="inner">#</div></th>
+                                    <th width="85%"><div id="inner">Name</div></th>
+                                    <th width="10%" align="center"><div id="inner">API Version</div></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <apex:repeat value="{!customObject.lstApexTriggers}" var="apexTrigger">
+                                    <tr>
+                                        <td width="5%" align="center"><div id="inner">{!FLOOR(count)}</div></td> 
+                                        <td width="85%"><div id="inner">{!apexTrigger.fullName}</div></td> 
+                                        <td width="10%" align="center"><div id="inner">{!apexTrigger.apiVersion}</div></td> 
+                                        <apex:variable var="count" value="{!count+ 1}"/>
+                                    </tr>
+                                    <tr style="display:{!IF(deliverable.Include_Code__c,'table-row','none')}">
+                                        <td width="100%" colspan="3" class="code">{!apexTrigger.content}</td> 
+                                    </tr>
+                                </apex:repeat>
+                            </tbody>
+                        </table>
+                        <BR/>
+                    </apex:outputPanel>
+        
+                    <!-- --------------------- -->
+                    <!-- SHARING RULES -->
+                    <!-- --------------------- -->
+                    <apex:outputPanel id="SharingRulePanel" rendered="{!IF(customObject.ownerSharingRules.size>0 || customObject.criteriaSharingRules.size>0, true, false)}">
+                        <h3 class="numbered" id="object{!customObject.fullName}sharingRules">{!$Label.impframework__sharing_rules}</h3>
+                        <!-- OWNER SHARING RULES -->
+                        <apex:outputPanel id="OwnerSharingRulePanel" rendered="{!IF(customObject.ownerSharingRules.size>0, true, false)}">
+                            <h4 class="numbered">{!$Label.impframework__owner_sharing_rules}</h4>
+                            <apex:variable value="{!1}" var="count"/>
+                            <table class="tableStyle" >
+                                <thead>
+                                    <tr>
+                                        <th width="5%" align="center"><div id="inner">#</div></th>
+                                        <th width="30%"><div id="inner">Name</div></th>
+                                        <th width="25%"><div id="inner">Shared By</div></th>
+                                        <th width="25%"><div id="inner">Shared With</div></th>
+                                        <th width="15%"><div id="inner">Access</div></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <apex:repeat value="{!customObject.ownerSharingRules}" var="sharingRule">
+                                        <tr>
+                                            <td width="5%" align="center"><div id="inner">{!FLOOR(count)}</div></td> 
+                                            <td width="30%"><div id="inner">{!sharingRule.fullName}</div></td> 
+                                            <td width="25%"><div id="inner">{!sharingRule.sharedFrom}</div></td> 
+                                            <td width="25%"><div id="inner">{!sharingRule.sharedTo}</div></td> 
+                                            <td width="15%">
+                                                <div id="inner">
+                                                    <apex:repeat value="{!sharingRule.accessLevels}" var="accessLevel">
+                                                        {!accessLevel}<BR/>
+                                                    </apex:repeat>
+                                                </div>
+                                            </td>
+                                            <apex:variable var="count" value="{!count+ 1}"/>
+                                        </tr>
+                                    </apex:repeat>
+                                </tbody>
+                            </table>
+                            <BR/>
+                        </apex:outputPanel>
+                        <!-- CRITERIA BASED SHARING RULES -->
+                        <apex:outputPanel id="CriteriaSharingRulePanel" rendered="{!IF(customObject.criteriaSharingRules.size>0, true, false)}">
+                            <h4 class="numbered">{!$Label.impframework__criteria_sharing_rules}</h4>
+                            <apex:variable value="{!1}" var="count"/>
+                            <table class="tableStyle" >
+                                <thead>
+                                    <tr>
+                                        <th width="5%" align="center"><div id="inner">#</div></th>
+                                        <th width="30%"><div id="inner">Name</div></th>
+                                        <th width="25%"><div id="inner">Criteria</div></th>
+                                        <th width="25%"><div id="inner">Shared With</div></th>
+                                        <th width="15%"><div id="inner">Access</div></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <apex:repeat value="{!customObject.criteriaSharingRules}" var="sharingRule">
+                                        <tr>
+                                            <td width="5%" align="center"><div id="inner">{!FLOOR(count)}</div></td> 
+                                            <td width="30%"><div id="inner">{!sharingRule.fullName}</div></td> 
+                                            <td width="25%"><div id="inner">{!sharingRule.criteria}</div></td> 
+                                            <td width="25%"><div id="inner">{!sharingRule.sharedTo}</div></td> 
+                                            <td width="15%">
+                                                <div id="inner">
+                                                    <apex:repeat value="{!sharingRule.accessLevels}" var="accessLevel">
+                                                        {!accessLevel}<BR/>
+                                                    </apex:repeat>
+                                                </div>
+                                            </td>
+                                            <apex:variable var="count" value="{!count+ 1}"/>
+                                        </tr>
+                                    </apex:repeat>
+                                </tbody>
+                            </table>
+                            <BR/>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                </apex:repeat>
+            </apex:outputPanel>
+    
+            <!-- --------------------------------------------------------------------------------------------------------- -->
+            <!-- CUSTOM DEVELOPMENT DETAILS -->
+            <!-- --------------------------------------------------------------------------------------------------------- -->
+            <apex:outputPanel id="CustomDevelopmentPanel" style="overflow:hidden" rendered="{!showCustomDevelopment}">
+                <h1 class="numbered" id="customDevelopment">{!$Label.impframework__custom_development}</h1>
+                <!-- --------------------- -->
+                <!-- APEX CLASSES -->
+                <!-- --------------------- -->
+                <apex:outputPanel id="ApexClassPanel" rendered="{!IF(application.lstApexClasses.size>0, true, false)}">
+                    <h2 class="numbered" id="apexClasses">{!$Label.impframework__apex_classes}</h2>
+                    <apex:variable value="{!1}" var="count"/>
+                    <table class="tableStyle" >
+                        <thead>
+                            <tr>
+                                <th width="5%" align="center"><div id="inner">#</div></th>
+                                <th width="75%"><div id="inner">Name</div></th>
+                                <th width="10%" align="center"><div id="inner">API Version</div></th>
+                                <th width="10%" align="center"><div id="inner">Status</div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!application.lstApexClasses}" var="apexClass">
+                                <tr>
+                                    <td width="5%" align="center"><div id="inner">{!FLOOR(count)}</div></td> 
+                                    <td width="75%"><div id="inner">{!apexClass.fullName}</div></td> 
+                                    <td width="10%" align="center"><div id="inner">{!apexClass.apiVersion}</div></td> 
+                                    <td width="10%" align="center"><div id="inner">{!apexClass.status}</div></td> 
+                                    <apex:variable var="count" value="{!count+ 1}"/>
+                                </tr>
+                                <tr style="display:{!IF(deliverable.Include_Code__c,'table-row','none')}">
+                                    <td width="100%" colspan="4" class="code">{!apexClass.content}</td> 
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                    <BR/>
+                </apex:outputPanel>
+        
+                <!-- --------------------- -->
+                <!-- VISUALFORCE PAGES -->
+                <!-- --------------------- -->
+                <apex:outputPanel id="ApexPagePanel" rendered="{!IF(application.lstApexPages.size>0, true, false)}">
+                    <h2 class="numbered" id="visualforcePages" style="page-break-before:always;">{!$Label.impframework__visualforce_pages}</h2>
+                    <apex:variable value="{!1}" var="count"/>
+                    <table class="tableStyle" >
+                        <thead>
+                            <tr>
+                                <th width="5%" align="center"><div id="inner">#</div></th>
+                                <th width="85%"><div id="inner">Name</div></th>
+                                <th width="10%" align="center"><div id="inner">API Version</div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!application.lstApexPages}" var="apexPage">
+                                <tr>
+                                    <td width="5%" align="center"><div id="inner">{!FLOOR(count)}</div></td> 
+                                    <td width="85%"><div id="inner">{!apexPage.label} ({!apexPage.fullName})</div></td> 
+                                    <td width="10%" align="center"><div id="inner">{!apexPage.apiVersion}</div></td> 
+                                    <apex:variable var="count" value="{!count+ 1}"/>
+                                </tr>
+                                <tr style="display:{!IF(deliverable.Include_Code__c,'table-row','none')}">
+                                    <td width="100%" colspan="3" class="code">{!apexPage.content}</td> 
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                    <BR/>
+                </apex:outputPanel>
+        
+                <!-- --------------------- -->
+                <!-- VISUALFORCE COMPONENTS -->
+                <!-- --------------------- -->
+                <apex:outputPanel id="ApexComponentPanel" rendered="{!IF(application.lstApexComponents.size>0, true, false)}">
+                    <h2 class="numbered" id="visualforceComponents" style="page-break-before:always;">{!$Label.impframework__visualforce_components}</h2>
+                    <apex:variable value="{!1}" var="count"/>
+                    <table class="tableStyle" >
+                        <thead>
+                            <tr>
+                                <th width="5%" align="center"><div id="inner">#</div></th>
+                                <th width="85%"><div id="inner">Name</div></th>
+                                <th width="10%" align="center"><div id="inner">API Version</div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!application.lstApexComponents}" var="apexComponent">
+                                <tr>
+                                    <td width="5%" align="center"><div id="inner">{!FLOOR(count)}</div></td> 
+                                    <td width="85%"><div id="inner">{!apexComponent.label} ({!apexComponent.fullName})</div></td> 
+                                    <td width="10%" align="center"><div id="inner">{!apexComponent.apiVersion}</div></td> 
+                                    <apex:variable var="count" value="{!count+ 1}"/>
+                                </tr>
+                                <tr style="display:{!IF(deliverable.Include_Code__c,'table-row','none')}">
+                                    <td width="100%" colspan="3" class="code">{!apexComponent.content}</td> 
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                    <BR/>
+                </apex:outputPanel>
+        
+                <!-- --------------------- -->
+                <!-- CUSTOM APPS -->
+                <!-- --------------------- -->
+                <apex:outputPanel id="CustomAppPanel" rendered="{!IF(application.lstCustomApplications.size>0, true, false)}">
+                    <h2 class="numbered" id="customApps" style="page-break-before:always;">{!$Label.impframework__custom_apps}</h2>
+                    <apex:variable value="{!1}" var="count"/>
+                    <table class="tableStyle" >
+                        <thead>
+                            <tr>
+                                <th width="5%" align="center"><div id="inner">#</div></th>
+                                <th width="25%"><div id="inner">Name</div></th>
+                                <th width="40%"><div id="inner">Description</div></th>
+                                <th width="20%"><div id="inner">Tabs</div></th>
+                                <th width="10%" align="center"><div id="inner">Service Cloud</div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!application.lstCustomApplications}" var="customApp">
+                                <tr>
+                                    <td width="5%" align="center"><div id="inner">{!FLOOR(count)}</div></td> 
+                                    <td width="25%"><div id="inner">{!customApp.label} ({!customApp.fullName})</div></td> 
+                                    <td width="40%"><div id="inner">{!customApp.description}</div></td> 
+                                    <td width="20%">
+                                        <div id="inner">
+                                            <apex:repeat value="{!customApp.tabs}" var="tab">
+                                                {!tab}<BR/>
+                                            </apex:repeat>
+                                        </div>
+                                    </td>
+                                    <td width="10%" align="center">
+                                        <div id="inner">
+                                            <apex:image value="{!URLFOR($Resource.impframework__CloudGURU, IF(customApp.isServiceCloudConsole, 'images/checkbox/checkbox_checked.gif', 'images/checkbox/checkbox_unchecked.gif'))}"/>
+                                        </div>
+                                    </td>
+                                    <apex:variable var="count" value="{!count+ 1}"/>
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                    <BR/>
+                </apex:outputPanel>
+        
+                <!-- --------------------- -->
+                <!-- CUSTOM SETTINGS -->
+                <!-- --------------------- -->
+                <apex:outputPanel id="CustomSettingPanel" rendered="{!IF(application.lstCustomSettings.size>0, true, false)}">
+                    <h2 class="numbered" id="customSettings">{!$Label.impframework__custom_settings}</h2>
+                    <apex:variable value="{!1}" var="count"/>
+                    <table class="tableStyle" >
+                        <thead>
+                            <tr>
+                                <th width="5%" align="center"><div id="inner">#</div></th>
+                                <th width="20%"><div id="inner">Name</div></th>
+                                <th width="30%"><div id="inner">Description</div></th>
+                                <th width="15%"><div id="inner">Type</div></th>
+                                <th width="20%"><div id="inner">Fields</div></th>
+                                <th width="10%"><div id="inner">Visibility</div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!application.lstCustomSettings}" var="customSetting">
+                                <tr>
+                                    <td width="5%" align="center"><div id="inner">{!FLOOR(count)}</div></td> 
+                                    <td width="20%"><div id="inner">{!customSetting.label} ({!customSetting.fullName})</div></td> 
+                                    <td width="30%"><div id="inner">{!customSetting.description}</div></td> 
+                                    <td width="15%"><div id="inner">{!customSetting.customSettingsType}</div></td> 
+                                    <td width="20%">
+                                        <div id="inner">
+                                            <apex:repeat value="{!customSetting.fields}" var="field">
+                                                {!field.fullName}<BR/>
+                                            </apex:repeat>
+                                        </div>
+                                    </td>
+                                    <td width="10%"><div id="inner">{!customSetting.customSettingsVisibility}</div></td> 
+                                    <apex:variable var="count" value="{!count+ 1}"/>
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                    <BR/>
+                </apex:outputPanel>
+        
+                <!-- --------------------- -->
+                <!-- STATIC RESOURCES -->
+                <!-- --------------------- -->
+                <apex:outputPanel id="StaticResourcePanel" rendered="{!IF(application.lstStaticResources.size>0, true, false)}">
+                    <h2 class="numbered" id="staticResources">{!$Label.impframework__static_resources}</h2>
+                    <apex:variable value="{!1}" var="count"/>
+                    <table class="tableStyle" >
+                        <thead>
+                            <tr>
+                                <th width="5%" align="center"><div id="inner">#</div></th>
+                                <th width="25%"><div id="inner">Name</div></th>
+                                <th width="30%"><div id="inner">Description</div></th>
+                                <th width="30%"><div id="inner">Content Type</div></th>
+                                <th width="10%"><div id="inner">Cache Control</div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!application.lstStaticResources}" var="staticResource">
+                                <tr>
+                                    <td width="5%" align="center"><div id="inner">{!FLOOR(count)}</div></td> 
+                                    <td width="25%"><div id="inner">{!staticResource.fullName}</div></td> 
+                                    <td width="30%"><div id="inner">{!staticResource.description}</div></td> 
+                                    <td width="30%"><div id="inner">{!staticResource.contentType}</div></td> 
+                                    <td width="10%"><div id="inner">{!staticResource.cacheControl}</div></td> 
+                                    <apex:variable var="count" value="{!count+ 1}"/>
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                    <BR/>
+                </apex:outputPanel>
+        
+                <!-- --------------------- -->
+                <!-- CUSTOM LABELS -->
+                <!-- --------------------- -->
+                <apex:outputPanel id="CustomLabelPanel" rendered="{!IF(application.lstCustomLabels.size>0, true, false)}">
+                    <h2 class="numbered" id="customLabels">{!$Label.impframework__custom_labels}</h2>
+                    <apex:variable value="{!1}" var="count"/>
+                    <table class="tableStyle" >
+                        <thead>
+                            <tr>
+                                <th width="5%" align="center"><div id="inner">#</div></th>
+                                <th width="25%"><div id="inner">Name</div></th>
+                                <th width="30%"><div id="inner">Description</div></th>
+                                <th width="30%"><div id="inner">Value</div></th>
+                                <th width="10%"><div id="inner">Protected</div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!application.lstCustomLabels}" var="customLabel">
+                                <tr>
+                                    <td width="5%" align="center"><div id="inner">{!FLOOR(count)}</div></td> 
+                                    <td width="25%"><div id="inner">{!customLabel.fullName}</div></td> 
+                                    <td width="30%"><div id="inner">{!customLabel.shortDescription}</div></td> 
+                                    <td width="30%"><div id="inner">{!customLabel.value}</div></td> 
+                                    <td width="10%" align="center">
+                                        <div id="inner">
+                                            <apex:image value="{!URLFOR($Resource.impframework__CloudGURU, IF(customLabel.isProtected, 'images/checkbox/checkbox_checked.gif', 'images/checkbox/checkbox_unchecked.gif'))}"/>
+                                        </div>
+                                    </td>
+                                    <apex:variable var="count" value="{!count+ 1}"/>
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                    <BR/>
+                </apex:outputPanel>
+        
+                <!-- --------------------- -->
+                <!-- PORTALS -->
+                <!-- --------------------- -->
+                <apex:outputPanel id="PortalPanel" rendered="{!IF(application.lstPortals.size>0, true, false)}">
+                    <h2 class="numbered" id="portals">{!$Label.impframework__portals}</h2>
+                    <apex:variable value="{!1}" var="count"/>
+                    <table class="tableStyle" >
+                        <thead>
+                            <tr>
+                                <th width="5%" align="center"><div id="inner">#</div></th>
+                                <th width="25%"><div id="inner">Name</div></th>
+                                <th width="40%"><div id="inner">Description</div></th>
+                                <th width="20%"><div id="inner">Type</div></th>
+                                <th width="10%"><div id="inner">Active</div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!application.lstPortals}" var="portal">
+                                <tr>
+                                    <td width="5%" align="center"><div id="inner">{!FLOOR(count)}</div></td> 
+                                    <td width="25%"><div id="inner">{!portal.fullName}</div></td> 
+                                    <td width="40%"><div id="inner">{!portal.description}</div></td> 
+                                    <td width="20%"><div id="inner">{!portal.type}</div></td> 
+                                    <td width="10%" align="center">
+                                        <div id="inner">
+                                            <apex:image value="{!URLFOR($Resource.impframework__CloudGURU, IF(portal.isActive, 'images/checkbox/checkbox_checked.gif', 'images/checkbox/checkbox_unchecked.gif'))}"/>
+                                        </div>
+                                    </td>
+                                    <apex:variable var="count" value="{!count+ 1}"/>
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                    <BR/>
+                </apex:outputPanel>
+        
+                <!-- --------------------- -->
+                <!-- SITES -->
+                <!-- --------------------- -->
+                <apex:outputPanel id="CustomSitePanel" rendered="{!IF(application.lstCustomSites.size>0, true, false)}">
+                    <h2 class="numbered" id="customSites">{!$Label.impframework__custom_sites}</h2>
+                    <apex:variable value="{!1}" var="count"/>
+                    <table class="tableStyle" >
+                        <thead>
+                            <tr>
+                                <th width="5%" align="center"><div id="inner">#</div></th>
+                                <th width="25%"><div id="inner">Name</div></th>
+                                <th width="15%"><div id="inner">Index Page</div></th>
+                                <th width="15%"><div id="inner">Portal</div></th>
+                                <th width="30%"><div id="inner">Site URL</div></th>
+                                <th width="10%"><div id="inner">HTTP Access</div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!application.lstCustomSites}" var="customSite">
+                                <tr>
+                                    <td width="5%" align="center"><div id="inner">{!FLOOR(count)}</div></td> 
+                                    <td width="25%"><div id="inner">{!customSite.masterLabel} ({!customSite.fullName})</div></td> 
+                                    <td width="15%"><div id="inner">{!customSite.indexPage}</div></td>
+                                    <td width="15%"><div id="inner">{!customSite.portal}</div></td> 
+                                    <td width="30%"><div id="inner">{!customSite.siteUrl}</div></td> 
+                                    <td width="10%" align="center">
+                                        <div id="inner">
+                                            <apex:image value="{!URLFOR($Resource.impframework__CloudGURU, IF(customSite.requireInsecurePortalAccess, 'images/checkbox/checkbox_checked.gif', 'images/checkbox/checkbox_unchecked.gif'))}"/>
+                                        </div>
+                                    </td>
+                                    <apex:variable var="count" value="{!count+ 1}"/>
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                    <BR/>
+                </apex:outputPanel>
+        
+                <!-- --------------------- -->
+                <!-- REMOTE SITE SETTINGS -->
+                <!-- --------------------- -->
+                <apex:outputPanel id="RemoteSitePanel" rendered="{!IF(application.lstRemoteSiteSettings.size>0, true, false)}">
+                    <h2 class="numbered" id="remoteSiteSettings">{!$Label.impframework__remote_site_settings}</h2>
+                    <apex:variable value="{!1}" var="count"/>
+                    <table class="tableStyle" >
+                        <thead>
+                            <tr>
+                                <th width="5%" align="center"><div id="inner">#</div></th>
+                                <th width="20%"><div id="inner">Name</div></th>
+                                <th width="20%"><div id="inner">Description</div></th>
+                                <th width="35%"><div id="inner">URL</div></th>
+                                <th width="10%"><div id="inner">Active</div></th>
+                                <th width="10%"><div id="inner">Disable Protocol Security</div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!application.lstRemoteSiteSettings}" var="remoteSiteSetting">
+                                <tr>
+                                    <td width="5%" align="center"><div id="inner">{!FLOOR(count)}</div></td> 
+                                    <td width="20%"><div id="inner">{!remoteSiteSetting.fullName}</div></td> 
+                                    <td width="20%"><div id="inner">{!remoteSiteSetting.description}</div></td>
+                                    <td width="35%"><div id="inner">{!remoteSiteSetting.url}</div></td> 
+                                    <td width="10%" align="center">
+                                        <div id="inner">
+                                            <apex:image value="{!URLFOR($Resource.impframework__CloudGURU, IF(remoteSiteSetting.isActive, 'images/checkbox/checkbox_checked.gif', 'images/checkbox/checkbox_unchecked.gif'))}"/>
+                                        </div>
+                                    </td>
+                                    <td width="10%" align="center">
+                                        <div id="inner">
+                                            <apex:image value="{!URLFOR($Resource.impframework__CloudGURU, IF(remoteSiteSetting.disableProtocolSecurity, 'images/checkbox/checkbox_checked.gif', 'images/checkbox/checkbox_unchecked.gif'))}"/>
+                                        </div>
+                                    </td>
+                                    <apex:variable var="count" value="{!count+ 1}"/>
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                    <BR/>
+                </apex:outputPanel>
+            </apex:outputPanel>
+
+            <!-- --------------------------------------------------------------------------------------------------------- -->
+            <!-- ADMINISTRATION SETTINGS -->
+            <!-- --------------------------------------------------------------------------------------------------------- -->
+            <apex:outputPanel id="AdministrationSettingsPanel" rendered="{!deliverable.impframework__Include_Roles_Profiles__c}">
+                <h1 class="numbered" id="administrationSettings">{!$Label.impframework__administration_settings}</h1>
+                <!-- --------------------- -->
+                <!-- ROLE HIERARCHY -->
+                <!-- --------------------- -->
+                <apex:outputPanel id="RoleHierarchyPanel" rendered="{!IF(application.lstApplicationRoles.size>0, true, false)}">
+                    <h2 class="numbered" id="roleHierarchy">{!$Label.impframework__role_hierarchy}</h2>
+                    <apex:variable value="{!650}" var="maxWidth"/>
+                    <apex:variable value="{!10}" var="maxLevels"/>
+                    <table width="{!maxWidth}px">
+                        <apex:repeat value="{!application.lstApplicationRoles}" var="node">
+                            <apex:outputPanel id="Level0" rendered="{!IF(node.level == 0, true, false)}">
+                                <tr>
+                                    <td width="{!maxWidth - (23 * node.level)}px" height="23px" colspan="{!maxLevels-node.level}">{!node.fullName}</td>
+                                </tr>
+                            </apex:outputPanel>
+                            <apex:outputPanel id="Level1" rendered="{!IF(node.level == 1, true, false)}">
+                                <tr>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_junction.png')}"/></td>
+                                    <td width="{!maxWidth - (23 * node.level)}px" colspan="{!maxLevels-node.level}">{!node.fullName}</td>
+                                </tr>
+                            </apex:outputPanel>
+                            <apex:outputPanel id="Level2" rendered="{!IF(node.level == 2, true, false)}">
+                                <tr>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_junction.png')}"/></td>
+                                    <td width="{!maxWidth - (23 * node.level)}px" colspan="{!maxLevels-node.level}">{!node.fullName}</td>
+                                </tr>
+                            </apex:outputPanel>
+                            <apex:outputPanel id="Level3" rendered="{!IF(node.level == 3, true, false)}">
+                                <tr>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_junction.png')}"/></td>
+                                    <td width="{!maxWidth - (23 * node.level)}px" colspan="{!maxLevels-node.level}">{!node.fullName}</td>
+                                </tr>
+                            </apex:outputPanel>
+                            <apex:outputPanel id="Level4" rendered="{!IF(node.level == 4, true, false)}">
+                                <tr>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_junction.png')}"/></td>
+                                    <td width="{!maxWidth - (23 * node.level)}px" colspan="{!maxLevels-node.level}">{!node.fullName}</td>
+                                </tr>
+                            </apex:outputPanel>
+                            <apex:outputPanel id="Level5" rendered="{!IF(node.level == 5, true, false)}">
+                                <tr>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_junction.png')}"/></td>
+                                    <td width="{!maxWidth - (23 * node.level)}px" colspan="{!maxLevels-node.level}">{!node.fullName}</td>
+                                </tr>
+                            </apex:outputPanel>
+                            <apex:outputPanel id="Level6" rendered="{!IF(node.level == 6, true, false)}">
+                                <tr>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_junction.png')}"/></td>
+                                    <td width="{!maxWidth - (23 * node.level)}px" colspan="{!maxLevels-node.level}">{!node.fullName}</td>
+                                </tr>
+                            </apex:outputPanel>
+                            <apex:outputPanel id="Level7" rendered="{!IF(node.level == 7, true, false)}">
+                                <tr>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_junction.png')}"/></td>
+                                    <td width="{!maxWidth - (23 * node.level)}px" colspan="{!maxLevels-node.level}">{!node.fullName}</td>
+                                </tr>
+                            </apex:outputPanel>
+                            <apex:outputPanel id="Level8" rendered="{!IF(node.level == 8, true, false)}">
+                                <tr>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_junction.png')}"/></td>
+                                    <td width="{!maxWidth - (23 * node.level)}px" colspan="{!maxLevels-node.level}">{!node.fullName}</td>
+                                </tr>
+                            </apex:outputPanel>
+                            <apex:outputPanel id="Level9" rendered="{!IF(node.level == 9, true, false)}">
+                                <tr>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_junction.png')}"/></td>
+                                    <td width="{!maxWidth - (23 * node.level)}px" colspan="{!maxLevels-node.level}">{!node.fullName}</td>
+                                </tr>
+                            </apex:outputPanel>
+                        </apex:repeat>
+                    </table>
+                    <BR/>
+                </apex:outputPanel>
+        
+                <!-- --------------------- -->
+                <!-- TERRITORY HIERARCHY -->
+                <!-- --------------------- -->
+                <apex:outputPanel id="TerritoryHierarchyPanel" rendered="{!IF(application.lstApplicationTerritories.size>0, true, false)}">
+                    <h2 class="numbered" id="territoryHierarchy" style="page-break-before:always;">{!$Label.impframework__territory_hierarchy}</h2>
+                    <apex:variable value="{!650}" var="maxWidth"/>
+                    <apex:variable value="{!10}" var="maxLevels"/>
+                    <table width="{!maxWidth}px">
+                        <apex:repeat value="{!application.lstApplicationTerritories}" var="node">
+                            <apex:outputPanel id="Level0" rendered="{!IF(node.level == 0, true, false)}">
+                                <tr>
+                                    <td width="{!maxWidth - (23 * node.level)}px" height="23px" colspan="{!maxLevels-node.level}">{!node.fullName}</td>
+                                </tr>
+                            </apex:outputPanel>
+                            <apex:outputPanel id="Level1" rendered="{!IF(node.level == 1, true, false)}">
+                                <tr>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_junction.png')}"/></td>
+                                    <td width="{!maxWidth - (23 * node.level)}px" colspan="{!maxLevels-node.level}">{!node.fullName}</td>
+                                </tr>
+                            </apex:outputPanel>
+                            <apex:outputPanel id="Level2" rendered="{!IF(node.level == 2, true, false)}">
+                                <tr>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_junction.png')}"/></td>
+                                    <td width="{!maxWidth - (23 * node.level)}px" colspan="{!maxLevels-node.level}">{!node.fullName}</td>
+                                </tr>
+                            </apex:outputPanel>
+                            <apex:outputPanel id="Level3" rendered="{!IF(node.level == 3, true, false)}">
+                                <tr>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_junction.png')}"/></td>
+                                    <td width="{!maxWidth - (23 * node.level)}px" colspan="{!maxLevels-node.level}">{!node.fullName}</td>
+                                </tr>
+                            </apex:outputPanel>
+                            <apex:outputPanel id="Level4" rendered="{!IF(node.level == 4, true, false)}">
+                                <tr>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_junction.png')}"/></td>
+                                    <td width="{!maxWidth - (23 * node.level)}px" colspan="{!maxLevels-node.level}">{!node.fullName}</td>
+                                </tr>
+                            </apex:outputPanel>
+                            <apex:outputPanel id="Level5" rendered="{!IF(node.level == 5, true, false)}">
+                                <tr>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_junction.png')}"/></td>
+                                    <td width="{!maxWidth - (23 * node.level)}px" colspan="{!maxLevels-node.level}">{!node.fullName}</td>
+                                </tr>
+                            </apex:outputPanel>
+                            <apex:outputPanel id="Level6" rendered="{!IF(node.level == 6, true, false)}">
+                                <tr>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_junction.png')}"/></td>
+                                    <td width="{!maxWidth - (23 * node.level)}px" colspan="{!maxLevels-node.level}">{!node.fullName}</td>
+                                </tr>
+                            </apex:outputPanel>
+                            <apex:outputPanel id="Level7" rendered="{!IF(node.level == 7, true, false)}">
+                                <tr>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_junction.png')}"/></td>
+                                    <td width="{!maxWidth - (23 * node.level)}px" colspan="{!maxLevels-node.level}">{!node.fullName}</td>
+                                </tr>
+                            </apex:outputPanel>
+                            <apex:outputPanel id="Level8" rendered="{!IF(node.level == 8, true, false)}">
+                                <tr>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_junction.png')}"/></td>
+                                    <td width="{!maxWidth - (23 * node.level)}px" colspan="{!maxLevels-node.level}">{!node.fullName}</td>
+                                </tr>
+                            </apex:outputPanel>
+                            <apex:outputPanel id="Level9" rendered="{!IF(node.level == 9, true, false)}">
+                                <tr>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_extension.png')}"/></td>
+                                    <td width="23px"><apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/nodes/node_junction.png')}"/></td>
+                                    <td width="{!maxWidth - (23 * node.level)}px" colspan="{!maxLevels-node.level}">{!node.fullName}</td>
+                                </tr>
+                            </apex:outputPanel>
+                        </apex:repeat>
+                    </table>
+                    <BR/>
+                </apex:outputPanel>
+        
+                <!-- --------------------- -->
+                <!-- PROFILES -->
+                <!-- --------------------- -->
+                <apex:outputPanel id="ProfilePanel" rendered="{!IF(application.lstProfileWrappers.size>0, true, false)}">
+                    <h2 class="numbered" id="profiles" style="page-break-before:always;">{!$Label.impframework__profiles}</h2>
+                    <apex:variable value="{!1}" var="count"/>
+                    <table class="tableStyle" >
+                        <thead>
+                            <tr>
+                                <th width="5%" align="center"><div id="inner">#</div></th>
+                                <th width="60%"><div id="inner">Name</div></th>
+                                <th width="35%"><div id="inner">Type</div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!application.lstProfileWrappers}" var="profile">
+                                <tr>
+                                    <td width="5%" align="center"><div id="inner">{!FLOOR(count)}</div></td> 
+                                    <td width="60%"><div id="inner">{!profile.fullName}</div></td> 
+                                    <td width="35%"><div id="inner">{!profile.type}</div></td> 
+                                    <apex:variable var="count" value="{!count+ 1}"/>
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                    <BR/>
+                </apex:outputPanel>
+            </apex:outputPanel>
+        </body>
+    </c:CG_DocumentTemplate>
+</apex:page>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>26.0</apiVersion>
+    <description>A component that controls the header and footer for the PDF Document</description>
+    <label>CG_DocumentHeaderFooter</label>
+</ApexComponent>

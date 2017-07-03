@@ -1,0 +1,78 @@
+<apex:page standardController="impframework__Deliverable__c" extensions="impframework.SelectComponentController" action="{!init}" wizard="true">
+    <style>
+        .whiteLink {
+            color:#FFFFFF;
+        }
+    </style>
+    <apex:form id="theForm">
+        <apex:sectionHeader title="Select Components" subtitle="{!displayComponentTitle}"/>
+        <apex:outputPanel id="FirstRowSelectionPanel" rendered="{!IF(lstFirstRowSelectionWrappers.size > 0, true, false)}">
+            <table width="100%">
+                <tr>
+                    <td width="100%" style="text-align:center;">
+                        <apex:variable value="{!1}" var="count"/>
+                        <apex:repeat value="{!lstFirstRowSelectionWrappers}" var="wrapper">
+                            <apex:commandLink value="{!wrapper.displayTitle}" action="{!refresh}" reRender="theForm" styleClass="whiteLink">
+                                <apex:param name="displayComponentTitle" value="{!wrapper.displayTitle}" assignTo="{!displayComponentTitle}"/>
+                                <apex:param name="displayComponentType" value="{!wrapper.displayType}" assignTo="{!displayComponentType}"/>
+                                <apex:param name="isCustomSetting" value="{!wrapper.isCustomSetting}" assignTo="{!isCustomSetting}"/>
+                            </apex:commandLink>
+                            <apex:outputText rendered="{!IF(count <= (lstFirstRowSelectionWrappers.size - 1), true, false)}">  |  </apex:outputText>
+                            <apex:variable var="count" value="{!count+ 1}"/>
+                        </apex:repeat>
+                    </td>
+                </tr>
+            </table>
+        </apex:outputPanel>
+        <apex:outputPanel id="SecondRowSelectionPanel" rendered="{!IF(lstSecondRowSelectionWrappers.size > 0, true, false)}">
+            <table width="100%">
+                <tr>
+                    <td width="100%" style="text-align:center;">
+                        <apex:variable value="{!1}" var="count"/>
+                        <apex:repeat value="{!lstSecondRowSelectionWrappers}" var="wrapper">
+                            <apex:commandLink value="{!wrapper.displayTitle}" action="{!refresh}" reRender="theForm" styleClass="whiteLink">
+                                <apex:param name="displayComponentTitle" value="{!wrapper.displayTitle}" assignTo="{!displayComponentTitle}"/>
+                                <apex:param name="displayComponentType" value="{!wrapper.displayType}" assignTo="{!displayComponentType}"/>
+                                <apex:param name="isCustomSetting" value="{!wrapper.isCustomSetting}" assignTo="{!isCustomSetting}"/>
+                            </apex:commandLink>
+                            <apex:outputText rendered="{!IF(count <= 7, true, false)}">  |  </apex:outputText>
+                            <apex:variable var="count" value="{!count+ 1}"/>
+                        </apex:repeat>
+                    </td>
+                </tr>
+            </table>
+        </apex:outputPanel>
+            <BR/>
+        <apex:outputPanel id="componentPanel">
+            <!-- DISPLAY ALL OTHER COMPONENTS -->
+            <table width="100%">
+                <tr>
+                    <td width="100%" align="right">
+                        <apex:commandLink value="Select All" action="{!selectAll}" reRender="theForm" styleClass="whiteLink"/>
+                        <apex:outputtext > | </apex:outputtext>
+                        <apex:commandLink value="Deselect All" action="{!deselectAll}" reRender="theForm" styleClass="whiteLink"/>
+                    </td>
+                </tr>
+            </table>
+            <apex:pageBlock >
+                <apex:pagemessages />
+                <!-- DISPLAY CUSTOM SETTINGS -->
+                <apex:pageBlockSection columns="2" collapsible="false">
+                    <apex:repeat value="{!lstSubComponents}" var="wrapper">
+                        <apex:inputCheckbox label="{!wrapper.componentName}" selected="{!wrapper.isSelected}"/>
+                    </apex:repeat>
+                </apex:pageBlockSection>
+                <!-- ACTION BUTTONS -->
+                <table width="100%">
+                    <tr>
+                        <td width="100%" style="text-align:right;">
+                            <apex:commandButton value="Submit" action="{!submit}"/>
+                            <apex:outputText > </apex:outputText>
+                            <apex:commandButton value="Cancel" action="{!cancel}"/>
+                        </td>
+                    </tr>
+                </table>
+            </apex:pageBlock>
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

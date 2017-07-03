@@ -1,0 +1,47 @@
+<apex:page standardController="impframework__Deliverable__c" extensions="impframework.GenerateDocumentController" action="{!init}" showHeader="false" sidebar="false" cache="true">
+    <apex:form id="form">
+        <apex:pageMessages />
+        <apex:actionPoller action="{!checkAsyncResult}" interval="5" rerender="form" rendered="{!NOT(ISNULL(AsyncResult))}"/>
+        <apex:actionPoller action="{!checkStaticResourceAsyncResult}" interval="5" rerender="form" rendered="{!NOT(ISNULL(staticResourceAsyncResult))}"/>
+        <apex:actionPoller action="{!checkParsingCompleted}" interval="5" rerender="form" rendered="{!NOT(ISNULL(processAsyncResult))}"/>
+        <apex:outputPanel id="loading" rendered="{!isProcessing}">
+            <BR/>
+            <table width="100%">
+                <tr>
+                    <td width="100%" align="center">
+                        <apex:image value="{!URLFOR($Resource.impframework__CloudGURU, '/images/loading/grey.gif')}"/>
+                        <br/>
+                        <apex:outputText >{!$Label.impframework__deliverable_waitmessage}</apex:outputText>
+                    </td>
+                </tr>
+            </table>
+        </apex:outputPanel>
+        <apex:outputpanel rendered="{!IF((isProcessing == false), true, false)}">
+            <BR/>
+            <apex:pageBlock title="Change Control">
+                <apex:pageBlockSection columns="1">
+                    <apex:pageBlockSectionItem rendered="{!lstChangeControls.size>0}">
+                        <apex:outputLabel value="Change Type"/>
+                        <apex:selectRadio value="{!changeControlType}">
+                            <apex:selectOptions value="{!ChangeTypes}"/>
+                        </apex:selectRadio>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Author"/>
+                        <apex:outputText >{!$User.FirstName} {!$User.LastName}</apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem rendered="{!lstChangeControls.size>0}">
+                        <apex:outputLabel value="Description"/>
+                        <apex:outputPanel styleClass="requiredInput" layout="block" id="description">
+                            <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                            <apex:inputTextArea value="{!changeControlDescription}" rows="10" cols="80" required="true" id="descriptionField"/>
+                        </apex:outputPanel>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+                <apex:pageblockButtons >
+                    <apex:commandButton value="Generate PDF" action="{!generatePdf}" reRender="nothing"/>
+                </apex:pageblockButtons>
+            </apex:pageBlock>
+        </apex:outputpanel>
+    </apex:form>
+</apex:page>

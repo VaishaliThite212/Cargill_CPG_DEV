@@ -1,0 +1,11 @@
+Team,
+
+The following Defect has been Opened/ReOpened. Please follow the link to look at the details. 
+
+Defect No: {!Defect__c.Name} 
+Summary: {!Defect__c.Summary__c} 
+Raised By: {!Defect__c.Raised_By__r.Name} 
+Link: {!Defect__c.Link} 
+
+Regards 
+System Administrator

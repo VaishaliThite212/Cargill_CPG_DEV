@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Product Plant Association</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Product Plant Associations</value>
+    </caseValues>
+    <fields>
+        <label><!-- Cargill Product --></label>
+        <name>CargillProduct__c</name>
+        <relationshipLabel><!-- Product Plant Associations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Legacy Record ID --></label>
+        <name>LegacyRecord_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plant Alias --></label>
+        <name>PlantAlias__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plant --></label>
+        <name>Plant__c</name>
+        <relationshipLabel><!-- Product Plant Associations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Product Code --></label>
+        <name>ProductCode__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

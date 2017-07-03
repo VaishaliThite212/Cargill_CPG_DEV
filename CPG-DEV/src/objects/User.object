@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CallHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditUserAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EmailHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>FreezeUserAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>LinkToSetupUserDetailAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ManagePermSetsAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>PasswordUnlockAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ResetPasswordAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>UserActivationAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>User_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>User_Layout</fullName>
+        <fields>Name</fields>
+        <fields>Title</fields>
+        <label>User Layout</label>
+    </compactLayouts>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Business_Unit_Detail__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Detail</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CargillBusiness_Text__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Cargill_Business_Unit__c )</formula>
+        <label>Cargill Business (Text)</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CargillEnterprise__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Cargill_Enterprise</globalPicklist>
+        <label>Cargill Enterprise</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CargillGroup__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Cargill_Group</globalPicklist>
+        <label>Cargill Group</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CargillRegion__c</fullName>
+        <externalId>false</externalId>
+        <label>Cargill Region</label>
+        <picklist>
+            <picklistValues>
+                <fullName>North America (NA)</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Central America Caribbean (CAC)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>South America (SA)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Europe Middle East Africa (EMEA)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Asia Pacific (AP)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Cargill_Business_Alias__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( Cargill_Business_Unit__c ,
+&quot;Go To Market Corporate Accounts&quot;,&quot;GTM Corp Accts&quot;,
+&quot;Go To Market Shared Sales North America&quot;,&quot;GTM SS NA&quot;,
+&quot;Go To Market Shared Sales EMEA&quot;,&quot;GTM SS EMEA&quot;,
+&quot;Global Edible Oil Solutions North America&quot;,&quot;GEOS NA&quot;,
+&quot;Global Edible Oil Solutions Europe&quot;,&quot;GEOS Europe&quot;,
+&quot;Cargill Industrial Specialties&quot;,&quot;CIS&quot;,
+&quot;Global Edible Oil Solutions Mexico&quot;,&quot;GEOS Mexico&quot;,
+&quot;Global Edible Oil Solutions South America&quot;,&quot;GEOS SA&quot;,
+&quot;Global Edible Oil Solutions Venezuela&quot;,&quot;GEOS Venezuela&quot;,
+&quot;Global Edible Oil Solutions India&quot;,&quot;GEOS India&quot;,
+&quot;Global Edible Oil Solutions Asia Pacific&quot;,&quot;GEOS AP&quot;,
+&quot;Foods Brazil&quot;,&quot;Foods Brazil&quot;,
+&quot;Starches &amp; Sweeteners North America&quot;,&quot;SSNA&quot;,
+&quot;Starches &amp; Sweeteners Europe&quot;,&quot;SSE&quot;,
+&quot;Cargill Texturizing Solutions&quot;,&quot;CTS&quot;,
+&quot;Starches &amp; Sweeteners South America&quot;,&quot;SSSA&quot;,
+&quot;Foods Middle East, Turkey, and North Africa&quot;,&quot;CF METNA&quot;,
+&quot;Cargill Cocoa &amp; Chocolate&quot;,&quot;CCC&quot;,
+&quot;Cocoa &amp; Chocolate North America&quot;,&quot;CCCNA&quot;,
+&quot;Cocoa &amp; Chocolate Brazil&quot;,&quot;CCC Brazil&quot;,
+&quot;Refined Oils Asia Pacific&quot;,&quot;ROAP&quot;,
+&quot;Starches &amp; Sweeteners China&quot;,&quot;S&amp;S China&quot;,
+&quot;Starches &amp; Sweeteners Southeast Asia&quot;,&quot;S&amp;S SE Asia&quot;,
+&quot;Toshoku&quot;,&quot;Toshoku&quot;,
+&quot;Foods India&quot;,&quot;Foods India&quot;,
+&quot;Malt&quot;,&quot;Malt&quot;,
+&quot;Salt&quot;,&quot;Salt&quot;,
+&quot;Cargill Deicing Technology&quot;,&quot;CDT&quot;,
+&quot;Food Argentina&quot;,&quot;Foods Argentina&quot;,
+&quot;&quot;
+)</formula>
+        <label>Cargill Business Alias</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cargill_Business_Unit__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>CargillBusiness</globalPicklist>
+        <label>Cargill Business</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Cluster__c</fullName>
+        <description>Created by EB on 4/10/2017 for CCC Sprint1</description>
+        <externalId>false</externalId>
+        <label>Cluster</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ASIA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DACHS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EXPORT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>G&amp;D</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GLOBAL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>INS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>METNA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PLM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WEST</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ManagerId</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <type>Hierarchy</type>
+    </fields>
+    <listViews>
+        <fullName>ActiveUsers</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USERS.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Active Users</label>
+    </listViews>
+    <listViews>
+        <fullName>AdminUsers</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.PROFILE.NAME</field>
+            <operation>equals</operation>
+            <value>System Administrator</value>
+        </filters>
+        <label>Admin Users</label>
+    </listViews>
+    <listViews>
+        <fullName>AllUsers</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Users</label>
+    </listViews>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>FULL_NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CORE.USER_ROLE.NAME</lookupDialogsAdditionalFields>
+        <lookupFilterFields>FULL_NAME</lookupFilterFields>
+        <lookupFilterFields>CORE.USER_ROLE.NAME</lookupFilterFields>
+        <lookupPhoneDialogsAdditionalFields>FULL_NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.USER_ROLE.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.USERS.PHONE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.USERS.EXTENSION</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.USERS.CELL</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>FULL_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.TITLE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.PHONE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.EMAIL</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+</CustomObject>

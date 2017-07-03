@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CloudGURU</letterhead>
+    <name>Notify User</name>
+    <style>freeForm</style>
+    <subject>A request has been made for your comment against {!Item_Comment__c.Type__c} {!Item_Comment__c.Item_Reference__c}</subject>
+    <textOnly>Dear
+
+A comment has been added for XXXX which requires your attention
+
+Please visit XXXX
+
+Regards</textOnly>
+    <type>html</type>
+</EmailTemplate>

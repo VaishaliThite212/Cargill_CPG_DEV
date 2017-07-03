@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Customer Profile</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Customer Profile</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Global Description --></label>
+        <name>AccountGlobalDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Customer Profiles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Applications --></label>
+        <name>Applications__c</name>
+        <picklistValues>
+            <masterLabel>Value1</masterLabel>
+            <translation><!-- Value1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Value2</masterLabel>
+            <translation><!-- Value2 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Brands --></label>
+        <name>Brands__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business --></label>
+        <name>Business__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cargill Ingredients in Top Brands --></label>
+        <name>Cargill_Ingredients_in_Top_Brands__c</name>
+    </fields>
+    <fields>
+        <label><!-- Convenience Opportunities --></label>
+        <name>ConvenienceOpportunities__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Overview --></label>
+        <name>CustomerDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- Development Focus --></label>
+        <name>DevelopmentFocus__c</name>
+        <picklistValues>
+            <masterLabel>Value1</masterLabel>
+            <translation><!-- Value1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Value2</masterLabel>
+            <translation><!-- Value2 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Drivers --></label>
+        <name>Drivers__c</name>
+        <picklistValues>
+            <masterLabel>Better With</masterLabel>
+            <translation><!-- Better With --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Better Without</masterLabel>
+            <translation><!-- Better Without --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cleaner Label</masterLabel>
+            <translation><!-- Cleaner Label --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Differentiated Performance</masterLabel>
+            <translation><!-- Differentiated Performance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lean &amp; Green</masterLabel>
+            <translation><!-- Lean &amp; Green --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Supplier/Service Performance</masterLabel>
+            <translation><!-- Supplier/Service Performance --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Health &amp; Wellness Opportunities --></label>
+        <name>HealthWellnessOpportunities__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy Record ID --></label>
+        <name>LegacyRecordID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Market Share --></label>
+        <name>MarketShare__c</name>
+    </fields>
+    <fields>
+        <label><!-- Market Channel --></label>
+        <name>Market_Channel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Space --></label>
+        <name>Opportunity_Space__c</name>
+        <picklistValues>
+            <masterLabel>Antibiotic Free</masterLabel>
+            <translation><!-- Antibiotic Free --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food with a Story</masterLabel>
+            <translation><!-- Food with a Story --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sustainability</masterLabel>
+            <translation><!-- Sustainability --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Value Added</masterLabel>
+            <translation><!-- Value Added --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Owner --></label>
+        <name>Owner__c</name>
+        <relationshipLabel><!-- Customer Profile --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Potential Tools --></label>
+        <name>PotentialTools__c</name>
+        <picklistValues>
+            <masterLabel>Cargill Optimizing Services</masterLabel>
+            <translation><!-- Cargill Optimizing Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Risk Managment</masterLabel>
+            <translation><!-- Customer Risk Managment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade &amp; Structured Finance</masterLabel>
+            <translation><!-- Trade &amp; Structured Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waste Management</masterLabel>
+            <translation><!-- Waste Management --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- PreventMoreThanOneRecord --></label>
+        <name>PreventMoreThanOneRecord__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Application --></label>
+        <name>PrimaryApplication__c</name>
+        <picklistValues>
+            <masterLabel>Bath and Body Care </masterLabel>
+            <translation><!-- Bath and Body Care  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Beer </masterLabel>
+            <translation><!-- Beer  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bread/ bread products </masterLabel>
+            <translation><!-- Bread/ bread products  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Breakfast/Cereal </masterLabel>
+            <translation><!-- Breakfast/Cereal  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carbonated Soft Drinks </masterLabel>
+            <translation><!-- Carbonated Soft Drinks  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cheese </masterLabel>
+            <translation><!-- Cheese  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chewing Gums </masterLabel>
+            <translation><!-- Chewing Gums  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chips/Crisps </masterLabel>
+            <translation><!-- Chips/Crisps  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chocolate </masterLabel>
+            <translation><!-- Chocolate  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Color cosmetics </masterLabel>
+            <translation><!-- Color cosmetics  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cooked meats </masterLabel>
+            <translation><!-- Cooked meats  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Creams </masterLabel>
+            <translation><!-- Creams  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dairy Desserts </masterLabel>
+            <translation><!-- Dairy Desserts  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dairy Drinks </masterLabel>
+            <translation><!-- Dairy Drinks  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dry Mixes </masterLabel>
+            <translation><!-- Dry Mixes  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dry meats </masterLabel>
+            <translation><!-- Dry meats  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dry pet food </masterLabel>
+            <translation><!-- Dry pet food  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dry </masterLabel>
+            <translation><!-- Dry  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Egg Products </masterLabel>
+            <translation><!-- Egg Products  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Energy snacks </masterLabel>
+            <translation><!-- Energy snacks  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Extruded Snacks </masterLabel>
+            <translation><!-- Extruded Snacks  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feed </masterLabel>
+            <translation><!-- Feed  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fillings &amp; Toppings </masterLabel>
+            <translation><!-- Fillings &amp; Toppings  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fillings, Coatings, Toppings </masterLabel>
+            <translation><!-- Fillings, Coatings, Toppings  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fish </masterLabel>
+            <translation><!-- Fish  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food ingredients</masterLabel>
+            <translation><!-- Food ingredients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fresh-frozen meats </masterLabel>
+            <translation><!-- Fresh-frozen meats  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Frozen Desserts </masterLabel>
+            <translation><!-- Frozen Desserts  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fruit Desserts </masterLabel>
+            <translation><!-- Fruit Desserts  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fruit Preparations </masterLabel>
+            <translation><!-- Fruit Preparations  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fruit Sauces </masterLabel>
+            <translation><!-- Fruit Sauces  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Functional &amp; Flavored Water </masterLabel>
+            <translation><!-- Functional &amp; Flavored Water  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Glazings, Icings &amp; Pipings </masterLabel>
+            <translation><!-- Glazings, Icings &amp; Pipings  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Granola/Museli </masterLabel>
+            <translation><!-- Granola/Museli  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hair Care </masterLabel>
+            <translation><!-- Hair Care  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industrial </masterLabel>
+            <translation><!-- Industrial  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jams &amp; Jellies </masterLabel>
+            <translation><!-- Jams &amp; Jellies  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Juice, Juice Drinks, Nectars </masterLabel>
+            <translation><!-- Juice, Juice Drinks, Nectars  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liquid Concentrates </masterLabel>
+            <translation><!-- Liquid Concentrates  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liquid Creamers </masterLabel>
+            <translation><!-- Liquid Creamers  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liquid Dosage Forms </masterLabel>
+            <translation><!-- Liquid Dosage Forms  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liquid </masterLabel>
+            <translation><!-- Liquid  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medicated confectionery </masterLabel>
+            <translation><!-- Medicated confectionery  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mixes &amp; Doughs </masterLabel>
+            <translation><!-- Mixes &amp; Doughs  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nutritional Supplements </masterLabel>
+            <translation><!-- Nutritional Supplements  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oils, Fats and Spreads </masterLabel>
+            <translation><!-- Oils, Fats and Spreads  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oral Care </masterLabel>
+            <translation><!-- Oral Care  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parenteral applications </masterLabel>
+            <translation><!-- Parenteral applications  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pasta </masterLabel>
+            <translation><!-- Pasta  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pastries/Sweet Goods </masterLabel>
+            <translation><!-- Pastries/Sweet Goods  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Powdered /Dry Mixes </masterLabel>
+            <translation><!-- Powdered /Dry Mixes  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RTD Tea/Coffee </masterLabel>
+            <translation><!-- RTD Tea/Coffee  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RTE/Breakfast Cereals </masterLabel>
+            <translation><!-- RTE/Breakfast Cereals  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready Meals/Kits </masterLabel>
+            <translation><!-- Ready Meals/Kits  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reformed Fruit &amp; Vegetables </masterLabel>
+            <translation><!-- Reformed Fruit &amp; Vegetables  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sauces, Dressings &amp; Condiments </masterLabel>
+            <translation><!-- Sauces, Dressings &amp; Condiments  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Savory Biscuits/Crackers </masterLabel>
+            <translation><!-- Savory Biscuits/Crackers  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Skin and Sun Care </masterLabel>
+            <translation><!-- Skin and Sun Care  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Snack Bars </masterLabel>
+            <translation><!-- Snack Bars  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Snack pet food </masterLabel>
+            <translation><!-- Snack pet food  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solid Dosage Forms </masterLabel>
+            <translation><!-- Solid Dosage Forms  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solid </masterLabel>
+            <translation><!-- Solid  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Soups </masterLabel>
+            <translation><!-- Soups  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Specialty &amp; meat Analogs </masterLabel>
+            <translation><!-- Specialty &amp; meat Analogs  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Specialty Dairy &amp; Non-Dairy </masterLabel>
+            <translation><!-- Specialty Dairy &amp; Non-Dairy  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Specialty </masterLabel>
+            <translation><!-- Specialty  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sports/Energy </masterLabel>
+            <translation><!-- Sports/Energy  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sugar Confectionery </masterLabel>
+            <translation><!-- Sugar Confectionery  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sweet Biscuits/Cookies </masterLabel>
+            <translation><!-- Sweet Biscuits/Cookies  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Syrups &amp; Ripples </masterLabel>
+            <translation><!-- Syrups &amp; Ripples  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tortilla / Corn Chips </masterLabel>
+            <translation><!-- Tortilla / Corn Chips  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Water Jellies </masterLabel>
+            <translation><!-- Water Jellies  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wet pet food </masterLabel>
+            <translation><!-- Wet pet food  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wine, spirits and alc flavored drinks </masterLabel>
+            <translation><!-- Wine, spirits and alc flavored drinks  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yogurt &amp; Quark </masterLabel>
+            <translation><!-- Yogurt &amp; Quark  --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Primary Category --></label>
+        <name>PrimaryCategory__c</name>
+        <picklistValues>
+            <masterLabel>F1 Product Experience &amp; Value Differentiation/B2C – Scratch</masterLabel>
+            <translation><!-- F1 Product Experience &amp; Value Differentiation/B2C – Scratch --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F2 Product Experience /B2C – Assembly &amp; B2C – Heat and Serve</masterLabel>
+            <translation><!-- F2 Product Experience /B2C – Assembly &amp; B2C – Heat and Serve --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F3 Value Differentiation/ B2C – Assembly &amp; B2C – Heat and Serve</masterLabel>
+            <translation><!-- F3 Value Differentiation/ B2C – Assembly &amp; B2C – Heat and Serve --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F4 Product Experience/B2B – Move Product</masterLabel>
+            <translation><!-- F4 Product Experience/B2B – Move Product --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F5 Value Differentiation/ B2B – Move Product</masterLabel>
+            <translation><!-- F5 Value Differentiation/ B2B – Move Product --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F6 Product Experience &amp; Value Differentiation/B2B – Manage Product</masterLabel>
+            <translation><!-- F6 Product Experience &amp; Value Differentiation/B2B – Manage Product --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F7 Product Experience &amp; Value Differentiation/Institution</masterLabel>
+            <translation><!-- F7 Product Experience &amp; Value Differentiation/Institution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M1 Product experience/High Vertical Integration</masterLabel>
+            <translation><!-- M1 Product experience/High Vertical Integration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M2 Value – Product Innovation &amp; Supply Chain/ High Vertical Integration</masterLabel>
+            <translation><!-- M2 Value – Product Innovation &amp; Supply Chain/ High Vertical Integration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M3 Low vertical B2C</masterLabel>
+            <translation><!-- M3 Low vertical B2C --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M4 Low Vertical integration B2B</masterLabel>
+            <translation><!-- M4 Low Vertical integration B2B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R1  Product experience/High &amp; Medium In-house</masterLabel>
+            <translation><!-- R1  Product experience/High &amp; Medium In-house --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R2 Value – Product Innovation/High In-House</masterLabel>
+            <translation><!-- R2 Value – Product Innovation/High In-House --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R3 Value – Product Innovation/Medium In-House</masterLabel>
+            <translation><!-- R3 Value – Product Innovation/Medium In-House --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R4 Product experience &amp; Value – Product Innovation/Low In-House</masterLabel>
+            <translation><!-- R4 Product experience &amp; Value – Product Innovation/Low In-House --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R5 Value – Supply Chain Innovation</masterLabel>
+            <translation><!-- R5 Value – Supply Chain Innovation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>T Trade</masterLabel>
+            <translation><!-- T Trade --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Primary Channel --></label>
+        <name>PrimaryChannel__c</name>
+        <picklistValues>
+            <masterLabel>Value1</masterLabel>
+            <translation><!-- Value1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Value2</masterLabel>
+            <translation><!-- Value2 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ProductLines --></label>
+        <name>ProductLines__c</name>
+    </fields>
+    <fields>
+        <label><!-- R&amp;D Capabilities --></label>
+        <name>RDCapabilities__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Record Number --></label>
+        <name>RecordNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sensory Opportunities --></label>
+        <name>SensoryOpportunities__c</name>
+    </fields>
+    <fields>
+        <label><!-- Special Services --></label>
+        <name>SpecialServices__c</name>
+        <picklistValues>
+            <masterLabel>Value1</masterLabel>
+            <translation><!-- Value1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Value2</masterLabel>
+            <translation><!-- Value2 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sustainability Opportunities --></label>
+        <name>SustainabilityOpportunities__c</name>
+    </fields>
+    <fields>
+        <label><!-- Value &amp; Service Opportunities --></label>
+        <name>ValueServiceOpportunities__c</name>
+    </fields>
+    <fields>
+        <label><!-- Way Customer Is Organized --></label>
+        <name>Way_Customer_Is_Organized__c</name>
+    </fields>
+    <layouts>
+        <layout>Customer Profile Layout</layout>
+        <sections>
+            <label><!-- Cargill Business Summary Information --></label>
+            <section>Cargill Business Summary Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Administration_Settings</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Administration Settings</shortDescription>
+        <value>Administration Settings</value>
+    </labels>
+    <labels>
+        <fullName>Apex_Classes</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Apex Classes</shortDescription>
+        <value>Apex Classes</value>
+    </labels>
+    <labels>
+        <fullName>Apex_Triggers</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Apex Triggers</shortDescription>
+        <value>Apex Triggers</value>
+    </labels>
+    <labels>
+        <fullName>Appendix</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Appendix</shortDescription>
+        <value>Appendix</value>
+    </labels>
+    <labels>
+        <fullName>Application_Object_Details</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Application Object Details</shortDescription>
+        <value>Application Object Details</value>
+    </labels>
+    <labels>
+        <fullName>Architecture_Diagram</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Architecture Diagram</shortDescription>
+        <value>Architecture Diagram</value>
+    </labels>
+    <labels>
+        <fullName>Button_FinishEstimation</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Button_FinishEstimation</shortDescription>
+        <value>Finish Estimation</value>
+    </labels>
+    <labels>
+        <fullName>Button_StartAgain</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Button_StartAgain</shortDescription>
+        <value>Start Again</value>
+    </labels>
+    <labels>
+        <fullName>Button_Submit</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Button_Submit</shortDescription>
+        <value>Submit</value>
+    </labels>
+    <labels>
+        <fullName>Change_Requests</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Change Requests</shortDescription>
+        <value>Change Requests</value>
+    </labels>
+    <labels>
+        <fullName>Criteria_Sharing_Rules</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Criteria Sharing Rules</shortDescription>
+        <value>Criteria Based Sharing Rules</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Apps</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom Apps</shortDescription>
+        <value>Custom Apps</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Development</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom Development</shortDescription>
+        <value>Custom Development</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Labels</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom Labels</shortDescription>
+        <value>Custom Labels</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Objects</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom Objects</shortDescription>
+        <value>Object Details</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Screen_Layout_Requirements</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom Screen Layout Requirements</shortDescription>
+        <value>Custom Screen Layout Requirements</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Settings</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom Settings</shortDescription>
+        <value>Custom Settings</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Sites</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom Sites</shortDescription>
+        <value>Custom Sites</value>
+    </labels>
+    <labels>
+        <fullName>Defects</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Defects</shortDescription>
+        <value>Defects</value>
+    </labels>
+    <labels>
+        <fullName>Deliverable_WaitMessage</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Deliverable_WaitMessage</shortDescription>
+        <value>Retrieving Files... (This may take up to 2 minutes)</value>
+    </labels>
+    <labels>
+        <fullName>Document_Control</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Document Control</shortDescription>
+        <value>Document Control</value>
+    </labels>
+    <labels>
+        <fullName>Document_Purpose</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Document Purpose</shortDescription>
+        <value>Purpose of this Document</value>
+    </labels>
+    <labels>
+        <fullName>ER_Diagram</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ER Diagram</shortDescription>
+        <value>ER Diagram</value>
+    </labels>
+    <labels>
+        <fullName>Estimation_Estimate</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Estimation_Estimate</shortDescription>
+        <value>estimate</value>
+    </labels>
+    <labels>
+        <fullName>Estimation_InProgress</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Estimation_InProgress</shortDescription>
+        <value>estimation in progress</value>
+    </labels>
+    <labels>
+        <fullName>Estimation_Rationale</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Estimation_Rationale</shortDescription>
+        <value>rationale</value>
+    </labels>
+    <labels>
+        <fullName>Estimation_Select</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Estimation_Select</shortDescription>
+        <value>select your</value>
+    </labels>
+    <labels>
+        <fullName>Estimation_Unauthorised</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Estimation_Unauthorised</shortDescription>
+        <value>You are not authorized. Please ask your moderator for permission</value>
+    </labels>
+    <labels>
+        <fullName>FieldSets</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FieldSets</shortDescription>
+        <value>FieldSets</value>
+    </labels>
+    <labels>
+        <fullName>Fields_Description</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fields Description</shortDescription>
+        <value>Fields Description</value>
+    </labels>
+    <labels>
+        <fullName>Functional_Requirements</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Functional Requirements</shortDescription>
+        <value>Functional Requirements</value>
+    </labels>
+    <labels>
+        <fullName>Incidents</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Incidents</shortDescription>
+        <value>Incidents</value>
+    </labels>
+    <labels>
+        <fullName>Interface_Requirements</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Interface Requirements</shortDescription>
+        <value>Interface Requirements</value>
+    </labels>
+    <labels>
+        <fullName>Introduction</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Introduction</shortDescription>
+        <value>Introduction</value>
+    </labels>
+    <labels>
+        <fullName>List_Views</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>List Views</shortDescription>
+        <value>List Views</value>
+    </labels>
+    <labels>
+        <fullName>Non_Functional_Requirements</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Non Functional Requirements</shortDescription>
+        <value>Non Functional Requirements</value>
+    </labels>
+    <labels>
+        <fullName>Owner_Sharing_Rules</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Owner Sharing Rules</shortDescription>
+        <value>Owner Sharing Rules</value>
+    </labels>
+    <labels>
+        <fullName>PageTitle_Estimation</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PageTitle_Estimation</shortDescription>
+        <value>Poker Estimation</value>
+    </labels>
+    <labels>
+        <fullName>Portals</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Portals</shortDescription>
+        <value>Portals</value>
+    </labels>
+    <labels>
+        <fullName>Process_Requirements</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Process Requirements</shortDescription>
+        <value>Process Requirements</value>
+    </labels>
+    <labels>
+        <fullName>Profiles</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Profiles</shortDescription>
+        <value>Profiles</value>
+    </labels>
+    <labels>
+        <fullName>Project_Description</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Project Description</shortDescription>
+        <value>Project Description</value>
+    </labels>
+    <labels>
+        <fullName>RecordTypes</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RecordTypes</shortDescription>
+        <value>RecordTypes</value>
+    </labels>
+    <labels>
+        <fullName>Remote_Site_Settings</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Remote Site Settings</shortDescription>
+        <value>Remote Site Settings</value>
+    </labels>
+    <labels>
+        <fullName>Report_Requirements</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Report Requirements</shortDescription>
+        <value>Report Requirements</value>
+    </labels>
+    <labels>
+        <fullName>Requirements</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Requirements</shortDescription>
+        <value>Requirements</value>
+    </labels>
+    <labels>
+        <fullName>Role_Hierarchy</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Role Hierarchy</shortDescription>
+        <value>Role Hierarchy</value>
+    </labels>
+    <labels>
+        <fullName>Section_Details</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Section_Details</shortDescription>
+        <value>details</value>
+    </labels>
+    <labels>
+        <fullName>Section_Moderator</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Section_Moderator</shortDescription>
+        <value>moderator</value>
+    </labels>
+    <labels>
+        <fullName>Section_Resources</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Section_Resources</shortDescription>
+        <value>resources</value>
+    </labels>
+    <labels>
+        <fullName>Select_Component_Page_Size</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select Component Page Size</shortDescription>
+        <value>20</value>
+    </labels>
+    <labels>
+        <fullName>Sharing_Rules</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sharing Rules</shortDescription>
+        <value>Sharing Rules</value>
+    </labels>
+    <labels>
+        <fullName>Static_Resources</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Static Resources</shortDescription>
+        <value>Static Resources</value>
+    </labels>
+    <labels>
+        <fullName>System_Architecture</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>System Architecture</shortDescription>
+        <value>System Architecture</value>
+    </labels>
+    <labels>
+        <fullName>Table_of_Contents</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Table of Contents</shortDescription>
+        <value>Table of Contents</value>
+    </labels>
+    <labels>
+        <fullName>Territory_Hierarchy</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Territory Hierarchy</shortDescription>
+        <value>Territory Hierarchy</value>
+    </labels>
+    <labels>
+        <fullName>Validation_Rules</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Validation Rules</shortDescription>
+        <value>Validation Rules</value>
+    </labels>
+    <labels>
+        <fullName>Visualforce_Components</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Visualforce Components</shortDescription>
+        <value>Visualforce Components</value>
+    </labels>
+    <labels>
+        <fullName>Visualforce_Pages</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Visualforce Pages</shortDescription>
+        <value>Visualforce Pages</value>
+    </labels>
+    <labels>
+        <fullName>WebLinks</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WebLinks</shortDescription>
+        <value>Buttons &amp; Links</value>
+    </labels>
+    <labels>
+        <fullName>Workflow_Rules</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Workflow Rules</shortDescription>
+        <value>Workflow Rules</value>
+    </labels>
+</CustomLabels>

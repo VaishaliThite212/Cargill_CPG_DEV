@@ -1,0 +1,2166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AddToCampaign</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CallHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChangeStatus</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Convert</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EmailHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>FindDup</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ListClean</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Lead_Record_Page</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <businessProcesses>
+        <fullName>Cargill Lead Process</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Converted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Nurturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unqualified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Working</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <compactLayoutAssignment>Leads_Custom_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Leads_Custom_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>Company</fields>
+        <fields>Title</fields>
+        <fields>Phone</fields>
+        <fields>MobilePhone</fields>
+        <fields>Email</fields>
+        <label>Leads Custom Compact Layout</label>
+    </compactLayouts>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <fields>
+        <fullName>Address</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>AnnualRevenue</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Business__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>CargillBusiness</globalPicklist>
+        <label>Business</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CampaignId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Company</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Consent_Expiration_Date__c</fullName>
+        <defaultValue>TODAY()+180</defaultValue>
+        <externalId>false</externalId>
+        <label>Consent Expiration Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Distributor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Lead Account is serviced by a Cargill Distributor Account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lead Account is serviced by a Cargill Distributor Account.</inlineHelpText>
+        <label>Distributor</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.isDistributor__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Leads (Account)</relationshipLabel>
+        <relationshipName>Leads1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>DoNotCall</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Email</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Email_Opt_In__c</fullName>
+        <externalId>false</externalId>
+        <label>Email Opt-In</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Opt-Out</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Expressed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Implied</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>None</fullName>
+                <default>true</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Enterprise__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Cargill_Enterprise</globalPicklist>
+        <label>Enterprise</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Fax</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Group__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Cargill_Group</globalPicklist>
+        <label>Group</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>HasOptedOutOfEmail</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>HasOptedOutOfFax</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Industry</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Apparel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Banking</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Biotechnology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chemicals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Communications</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Consulting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Electronics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Energy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Entertainment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Environmental</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Finance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Food &amp; Beverage</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Government</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Healthcare</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hospitality</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Machinery</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Manufacturing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Media</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not For Profit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Recreation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Shipping</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Telecommunications</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transportation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilities</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Jigsaw</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>LanguagePreference__c</fullName>
+        <description>Language Preference for marketing campaigns or product information requests.</description>
+        <externalId>false</externalId>
+        <globalPicklist>Language</globalPicklist>
+        <inlineHelpText>Language Preference for marketing campaigns or product information requests.</inlineHelpText>
+        <label>Language Preference</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>LastTransferDate</fullName>
+    </fields>
+    <fields>
+        <fullName>LeadConversionFlag__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Checkbox will default &quot;TRUE&quot;. This will be mapped to Opportunity checkbox and Opportunity creation will be restricted during lead conversion.</description>
+        <externalId>false</externalId>
+        <label>Lead Conversion Flag</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LeadDisqualificationReason__c</fullName>
+        <externalId>false</externalId>
+        <label>Lead Disqualification Reason</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Minimum Order Quality Not Met</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Ideation Stage</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Forwarded to Other Cargill Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cargill Does Not Supply Ingredient</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Forwarded to Distributor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inquiry Only</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>LeadSource</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer Event</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Google AdWords</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>LeadSource__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Lead_Source</globalPicklist>
+        <label>Lead Source</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LegacyRecordID__c</fullName>
+        <externalId>false</externalId>
+        <label>Legacy Record ID</label>
+        <length>30</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Market_Channel__c</fullName>
+        <externalId>false</externalId>
+        <label>Market Channel</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Retail Channel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Food Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Protein Ingredients</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Growth Ventures</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>International</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Internal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>MobilePhone</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>NumberOfEmployees</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PartnerAccount__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Partner Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Leads</relationshipLabel>
+        <relationshipName>Leads</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>ProductInterest__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Interest</label>
+        <picklist>
+            <picklistValues>
+                <fullName>BULK GRINDS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BY PRODUCTS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CASE READY GRINDS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CASE READY MUSCLE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>COOKED (CONTINUOUS)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HIDES</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MUSCLE MEAT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RENDERED</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRIM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VALUE ADD GRINDS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VARIETY MEAT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ACIDULANTS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BUTTER</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CHOCOLATE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>COMPOUND</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CORE SYSTEMS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CORN SYRUP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EMULSIFIER</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HFCS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HIGH INTENSITY SWEETENER</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HYDROCOLLOIDS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LIQUOR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MAIZE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MALT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MASA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NUTRITIONALS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>POLYOLS &amp; DEXTROSE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>POWDER</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PROTEIN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SPECIAL PRODS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>STARCH</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SUGAR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SUNFLOWER OIL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRADITIONAL MILLING</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Rating</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Hot</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Warm</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Ready_to_Contact__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(AND(Country =&apos;Canada&apos;, Consent_Expiration_Date__c&gt;=TODAY(),OR(  ISPICKVAL(Email_Opt_In__c,&apos;Expressed&apos;), ISPICKVAL( Email_Opt_In__c ,&apos;Implied&apos;))),TRUE,FALSE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Ready to Contact</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Unqualified</fullName>
+                <default>false</default>
+                <converted>false</converted>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>true</default>
+                <converted>false</converted>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Working</fullName>
+                <default>false</default>
+                <converted>false</converted>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nurturing</fullName>
+                <default>false</default>
+                <converted>false</converted>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Qualified</fullName>
+                <default>false</default>
+                <converted>false</converted>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Converted</fullName>
+                <default>false</default>
+                <converted>true</converted>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Title</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Website</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <listViews>
+        <fullName>AllOpenLeads</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>LEAD.COMPANY</columns>
+        <columns>LEAD.TITLE</columns>
+        <columns>LEAD.STATE</columns>
+        <columns>LEAD.PHONE</columns>
+        <columns>LEAD.EMAIL</columns>
+        <columns>LEAD.STATUS</columns>
+        <columns>CORE.USERS.FIRST_NAME</columns>
+        <columns>CORE.USERS.LAST_NAME</columns>
+        <columns>LEAD.CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LEAD.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Qualified</value>
+        </filters>
+        <label>All Open Leads</label>
+    </listViews>
+    <listViews>
+        <fullName>MyUnreadLeads</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>LEAD.COMPANY</columns>
+        <columns>LEAD.STATE</columns>
+        <columns>LEAD.PHONE</columns>
+        <columns>LEAD.EMAIL</columns>
+        <columns>LEAD.RATING</columns>
+        <columns>LEAD.UNREAD</columns>
+        <columns>LEAD.STATUS</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>LEAD.UNREAD</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>My Unread Leads</label>
+    </listViews>
+    <listViews>
+        <fullName>TodaysLeads</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>LEAD.COMPANY</columns>
+        <columns>LEAD.STATE</columns>
+        <columns>LEAD.EMAIL</columns>
+        <columns>LEAD.STATUS</columns>
+        <columns>LEAD.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>LEAD.UNREAD</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LEAD.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Today&apos;s Leads</label>
+    </listViews>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypes>
+        <fullName>Cargill_Lead</fullName>
+        <active>true</active>
+        <businessProcess>Cargill Lead Process</businessProcess>
+        <label>Cargill Lead</label>
+        <picklistValues>
+            <picklist>CargillBusiness</picklist>
+            <values>
+                <fullName>Cargill Cocoa %26 Chocolate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cargill Industrial Specialties</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cargill Texturizing Solutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cocoa %26 Chocolate Brazil</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cocoa %26 Chocolate North America</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Excellence - Inside Sales</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Excellence NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commerical Excellence NA - Shared Sales</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foods Brazil</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foods India</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foods Middle East%2C Turkey%2C and North Africa</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Edible Oil Solutions Asia Pacific</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Edible Oil Solutions Europe</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Edible Oil Solutions India</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Edible Oil Solutions Mexico</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Edible Oil Solutions North America</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Edible Oil Solutions South America</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Edible Oil Solutions Venezuela</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Go To Market Shared Shares EMEA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Malt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New - Commercial Excellence EMEA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refined Oils Asia Pacific</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starches %26 Sweeteners China</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starches %26 Sweeteners Europe</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starches %26 Sweeteners North America</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starches %26 Sweeteners South America</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starches %26 Sweeteners Southeast Asia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Toshoku</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Cargill_Enterprise</picklist>
+            <values>
+                <fullName>Food Ingredients %26 Bio Industrial %28FIBI%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Cargill_Group</picklist>
+            <values>
+                <fullName>Asia Pacific %26 Malt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cocoa %26 Chocolate %28CC%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Edible Oil Solutions %28GEOS%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GoToMarket %28GTM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starches %26 Sweeteners %28SS%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Email_Opt_In__c</picklist>
+            <values>
+                <fullName>Expressed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Opt-Out</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Industry</picklist>
+            <values>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Biotechnology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chemicals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Electronics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Environmental</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Food %26 Beverage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Government</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Healthcare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hospitality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manufacturing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not For Profit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shipping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Utilities</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Language</picklist>
+            <values>
+                <fullName>Chinese %28Simplified%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chinese %28Traditional%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Danish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dutch</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>English</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Finnish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>French</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>German</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Italian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Japanese</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Korean</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Norwegian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Portuguese %28Brazilian%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Russian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spanish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spanish %28Mexican%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Swedish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Thai</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadDisqualificationReason__c</picklist>
+            <values>
+                <fullName>Cargill Does Not Supply Ingredient</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Forwarded to Distributor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Forwarded to Other Cargill Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Ideation Stage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inquiry Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Minimum Order Quality Not Met</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Google AdWords</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Source</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Google AdWords</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Market_Channel__c</picklist>
+            <values>
+                <fullName>Food Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Growth Ventures</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Protein Ingredients</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Channel</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Name</picklist>
+            <values>
+                <fullName>Dr%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mr%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mrs%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ms%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prof%2E</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ProductInterest__c</picklist>
+            <values>
+                <fullName>BULK GRINDS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BY PRODUCTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CASE READY GRINDS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CASE READY MUSCLE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>COOKED %28CONTINUOUS%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HIDES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MUSCLE MEAT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RENDERED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TRIM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VALUE ADD GRINDS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VARIETY MEAT</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Rating</picklist>
+            <values>
+                <fullName>Cold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Warm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Qualified_Lead</fullName>
+        <active>true</active>
+        <businessProcess>Cargill Lead Process</businessProcess>
+        <label>Qualified Lead</label>
+        <picklistValues>
+            <picklist>CargillBusiness</picklist>
+            <values>
+                <fullName>Cargill Cocoa %26 Chocolate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cargill Industrial Specialties</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cargill Texturizing Solutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cocoa %26 Chocolate Brazil</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cocoa %26 Chocolate North America</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Excellence - Inside Sales</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Excellence NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commerical Excellence NA - Shared Sales</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foods Brazil</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foods India</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foods Middle East%2C Turkey%2C and North Africa</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Edible Oil Solutions Asia Pacific</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Edible Oil Solutions Europe</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Edible Oil Solutions India</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Edible Oil Solutions Mexico</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Edible Oil Solutions North America</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Edible Oil Solutions South America</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Edible Oil Solutions Venezuela</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Go To Market Shared Shares EMEA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Malt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New - Commercial Excellence EMEA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refined Oils Asia Pacific</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starches %26 Sweeteners China</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starches %26 Sweeteners Europe</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starches %26 Sweeteners North America</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starches %26 Sweeteners South America</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starches %26 Sweeteners Southeast Asia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Toshoku</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Cargill_Enterprise</picklist>
+            <values>
+                <fullName>Food Ingredients %26 Bio Industrial %28FIBI%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Cargill_Group</picklist>
+            <values>
+                <fullName>Asia Pacific %26 Malt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cocoa %26 Chocolate %28CC%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Edible Oil Solutions %28GEOS%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GoToMarket %28GTM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starches %26 Sweeteners %28SS%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Email_Opt_In__c</picklist>
+            <values>
+                <fullName>Expressed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Opt-Out</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Industry</picklist>
+            <values>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Biotechnology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chemicals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Electronics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Environmental</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Food %26 Beverage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Government</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Healthcare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hospitality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manufacturing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not For Profit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shipping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Utilities</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Language</picklist>
+            <values>
+                <fullName>Chinese %28Simplified%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chinese %28Traditional%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Danish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dutch</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>English</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Finnish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>French</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>German</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Italian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Japanese</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Korean</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Norwegian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Portuguese %28Brazilian%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Russian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spanish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spanish %28Mexican%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Swedish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Thai</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadDisqualificationReason__c</picklist>
+            <values>
+                <fullName>Cargill Does Not Supply Ingredient</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Forwarded to Distributor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Forwarded to Other Cargill Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Ideation Stage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inquiry Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Minimum Order Quality Not Met</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Google AdWords</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Source</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Google AdWords</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Market_Channel__c</picklist>
+            <values>
+                <fullName>Food Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Growth Ventures</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Protein Ingredients</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Channel</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Name</picklist>
+            <values>
+                <fullName>Dr%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mr%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mrs%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ms%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prof%2E</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ProductInterest__c</picklist>
+            <values>
+                <fullName>BULK GRINDS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BY PRODUCTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CASE READY GRINDS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CASE READY MUSCLE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>COOKED %28CONTINUOUS%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HIDES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MUSCLE MEAT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RENDERED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TRIM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VALUE ADD GRINDS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VARIETY MEAT</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Rating</picklist>
+            <values>
+                <fullName>Cold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Warm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>FULL_NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LEAD.COMPANY</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LEAD.PHONE</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>FULL_NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LEAD.COMPANY</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>FULL_NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LEAD.COMPANY</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LEAD.PHONE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LEAD.MOBILE_PHONE</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>FULL_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LEAD.TITLE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LEAD.COMPANY</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LEAD.PHONE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LEAD.MOBILE_PHONE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LEAD.EMAIL</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LEAD.STATUS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWriteTransfer</sharingModel>
+    <validationRules>
+        <fullName>Identify_Distributor</fullName>
+        <active>true</active>
+        <description>If the Lead Disqualification Reason = &apos;Forwarded to Distibutor&quot;, require the Distributor Lookup field to be populated.</description>
+        <errorConditionFormula>AND(
+   ISPICKVAL( LeadDisqualificationReason__c , &quot;Forwarded to Distributor&quot;),
+   ISBLANK(  Distributor__c )
+   )</errorConditionFormula>
+        <errorDisplayField>Distributor__c</errorDisplayField>
+        <errorMessage>Lead Validation Error: Distributor REQUIRED when Lead Disqualification Status = &apos;Forwarded to Distributor&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Lead_Conversion_Required_Field_Business</fullName>
+        <active>false</active>
+        <description>Require the following fields to qualify for Lead Conversion</description>
+        <errorConditionFormula>AND(
+    ISBLANK( Business__c ),
+    ISPICKVAL(Status, &quot;Qualified&quot;)
+   )</errorConditionFormula>
+        <errorDisplayField>Business__c</errorDisplayField>
+        <errorMessage>Lead Conversion Validation Error: BUSINESS is required to be able to Qualify a Lead for CONVERT.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Lead_Conversion_Required_Field_Country</fullName>
+        <active>true</active>
+        <description>Require the following fields to qualify for Lead Conversion</description>
+        <errorConditionFormula>AND(
+    ISBLANK(  Country  ),
+    ISPICKVAL(Status, &quot;Qualified&quot;)
+    )</errorConditionFormula>
+        <errorDisplayField>Country</errorDisplayField>
+        <errorMessage>Lead Conversion Validation Error: COUNTRY is required to be able to Qualify a Lead to CONVERT.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Lead_Conversion_Required_Field_Email</fullName>
+        <active>true</active>
+        <description>Require the following fields to qualify for Lead Conversion</description>
+        <errorConditionFormula>AND( 
+    ISBLANK( Email ),
+    OR(ISPICKVAL(Status, &quot;Qualified&quot;),ISPICKVAL(Status, &quot;New&quot;))
+
+    )</errorConditionFormula>
+        <errorDisplayField>Email</errorDisplayField>
+        <errorMessage>Lead Conversion Validation Error: EMAIL is required to be able to Qualify a LEAD to CONVERT.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Lead_Conversion_Required_Field_FirstName</fullName>
+        <active>true</active>
+        <description>Require the following fields to qualify for Lead Conversion</description>
+        <errorConditionFormula>AND(
+    ISBLANK( FirstName ),
+    ISPICKVAL(Status, &quot;Qualified&quot;)
+    )</errorConditionFormula>
+        <errorDisplayField>FirstName</errorDisplayField>
+        <errorMessage>Lead Conversion Validation Error: FIRST NAME required to be able to Qualify a Lead to CONVERT.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Lead_Conversion_Required_Field_LeadSourc</fullName>
+        <active>false</active>
+        <description>Require the following fields to qualify for Lead Conversion</description>
+        <errorConditionFormula>AND( 
+    ISPICKVAL(  LeadSource,&apos;&apos;  ),
+    ISPICKVAL(Status, &quot;Qualified&quot;)
+    )</errorConditionFormula>
+        <errorMessage>Lead Conversion Validation Error: LEAD SOURCE is required to be able to Qualify a Lead to CONVERT.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Lead_Conversion_Required_Field_MktChannl</fullName>
+        <active>true</active>
+        <description>Require the following fields to qualify for Lead Conversion</description>
+        <errorConditionFormula>AND( 
+    ISPICKVAL(  Market_Channel__c,&apos;&apos; ),
+    ISPICKVAL(Status, &quot;Qualified&quot;)
+    )</errorConditionFormula>
+        <errorMessage>Lead Conversion Validation Error: MARKET CHANNEL is required to be able to Qualify a Lead to CONVERT.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Lead_Conversion_Required_Field_Phone</fullName>
+        <active>true</active>
+        <description>Require the following fields to qualify for Lead Conversion</description>
+        <errorConditionFormula>AND(
+   ISBLANK( Phone ),
+   ISPICKVAL(Status, &quot;Qualified&quot;)
+   )</errorConditionFormula>
+        <errorDisplayField>Phone</errorDisplayField>
+        <errorMessage>Lead Conversion Validation Error: PHONE required to be able to Qualify a Lead to CONVERT.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Lead_Disqualification_Reason_Required</fullName>
+        <active>true</active>
+        <description>Lead Disqualification Reason required when Lead Status = &quot;Unqualified&quot;.</description>
+        <errorConditionFormula>OR(
+AND(
+   ISPICKVAL(Status, &quot;Unqualified&quot;),
+   ISBLANK(TEXT(LeadDisqualificationReason__c))
+   ),
+AND(
+    NOT(ISBLANK(TEXT(LeadDisqualificationReason__c))),
+  NOT(ISPICKVAL(Status, &quot;Unqualified&quot;))
+)
+)</errorConditionFormula>
+        <errorDisplayField>LeadDisqualificationReason__c</errorDisplayField>
+        <errorMessage>Lead Validation Error: Lead Disqualification Reason required when Lead Status = &quot;Unqualified&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Lead_Unqualified_Status_for_Distributor</fullName>
+        <active>true</active>
+        <description>Require that Lead Status = Unqualified to be able to populate the Distributor__c field to assign Lead to Distributor Account.</description>
+        <errorConditionFormula>OR(AND(ISPICKVAL(LeadDisqualificationReason__c ,&quot;Forwarded to Distributor&quot;),ISBLANK( Distributor__c)),
+AND(NOT(ISBLANK(Distributor__c)),NOT(ISPICKVAL(LeadDisqualificationReason__c ,&quot;Forwarded to Distributor&quot;))))</errorConditionFormula>
+        <errorMessage>Lead Validation Error:  Lead can only be assigned to Distributor Account if Lead Disqualification Reason = &quot;Forwarded to Distributor&quot;.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>GoogleMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://maps.google.com/maps?f=q&amp;hl=en&amp;q={!Lead_Street}+{!Lead_City}+{!Lead_State}&amp;om=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleNews</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google News</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/news?&amp;q={!Lead_Company}&amp;btnG=Search+News</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleSearch</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Search</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/search?q={!Lead_Company}</url>
+    </webLinks>
+</CustomObject>

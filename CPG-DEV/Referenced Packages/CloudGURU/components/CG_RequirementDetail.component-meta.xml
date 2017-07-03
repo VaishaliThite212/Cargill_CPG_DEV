@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>27.0</apiVersion>
+    <description>A custom Component to display the individual requirement detail depending on the type of Requirement</description>
+    <label>CG_RequirementDetail</label>
+</ApexComponent>

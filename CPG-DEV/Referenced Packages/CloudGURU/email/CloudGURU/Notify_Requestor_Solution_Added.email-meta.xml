@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CloudGURU</letterhead>
+    <name>Notify Requestor Solution Added</name>
+    <style>freeForm</style>
+    <subject>Design Statement Added  - {!Requirement__c.Name}</subject>
+    <textOnly>Dear {!Requirement__c.Requested_By__c}
+
+A Design Solution statement has been added to requirement {!Requirement__c.Name}.
+
+
+Please review the statement, correct as necessary and provide your approval.
+
+
+Follow the link below to start work
+
+
+
+{!Requirement__c.Link}
+}</textOnly>
+    <type>html</type>
+</EmailTemplate>

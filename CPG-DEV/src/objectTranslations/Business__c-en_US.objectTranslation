@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Business</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Business</value>
+    </caseValues>
+    <fields>
+        <label><!-- Business ID --></label>
+        <name>BusinessID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Alias --></label>
+        <name>BusinessUnitAlias__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cargill Enterprise --></label>
+        <name>CargillEnterprise__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cargill Group --></label>
+        <name>CargillGroup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy Record ID --></label>
+        <name>LegacyRecordID__c</name>
+    </fields>
+    <layouts>
+        <layout>Business Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

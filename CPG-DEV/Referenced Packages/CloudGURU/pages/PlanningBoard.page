@@ -1,0 +1,122 @@
+<apex:page docType="html-5.0" controller="impframework.PlanningBoardController" sidebar="false" showheader="true" standardStylesheets="false" cache="true" tabStyle="CloudGURU__tab">
+    <apex:stylesheet value="{!URLFOR($Resource.impframework__CloudGURU, 'css/start/jquery-ui-1.10.3.custom.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.impframework__CloudGURU, 'css/cg_board.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.impframework__CloudGURU, 'css/cg_planning_board.css')}"/>
+    <apex:form id="theForm">
+        <script>
+            $j = jQuery.noConflict();
+            $j(function(){
+                $j( "#unassigned" ).sortable({
+                    connectWith: "ul",
+                    items: 'li',
+                    dropOnEmpty: true,
+                    handle: ".widget-head",
+                    receive: function(event, ui) {
+                        var objectId = ui.item.attr('id');
+                        impframework.PlanningBoardController.unassignBacklogItem(objectId, function(result,event){
+                            if (result != ''){
+                                alert(result);
+                            }
+                        });
+                    }
+                }).disableSelection();
+                
+                $j( ".assigned" ).sortable({
+                    connectWith: "ul",
+                    items: 'li',
+                    dropOnEmpty: true,
+                    handle: ".widget-head",
+                    receive: function(event, ui) {
+                        var objectId = ui.item.attr('id');
+                        var sprintId = ui.item.parents('.assigned').attr('id');
+                        impframework.PlanningBoardController.assignBacklogItem(objectId, sprintId, function(result,event){
+                            if (result != ''){
+                                alert(result);
+                            }
+                        });
+                    }
+                }).disableSelection();
+            
+                $j('.collapse').mousedown(function (e) {
+                    e.stopPropagation();
+                    if ($j(this).parent().attr('class') == 'widget-head'){
+                        $j(this).toggleClass('expand')
+                                .parents('.widget')
+                                    .find('.widget-content').slideToggle(100);
+                    } else if ($j(this).parent().attr('class') == 'sprint'){
+                        $j(this).toggleClass('expand')
+                                .parent()
+                                    .find('.assigned').toggle();
+                    }
+                    return false;
+                });
+                $j('.progress-bar-text').each( function() {
+                    var completed = $j(this).html().replace(" hrs","") / $j(this).parents('.sprint').find('.progress-text').html().replace(" hrs","");
+                    var barclass = 'progress-green';
+                    if (completed == 1){
+                        barclass = 'under';
+                    } else if (completed > 1) {
+                        completed = 1;
+                        barclass = 'progress-red';
+                    }
+                    var containerWidth = $j(this).parents('.progress').css("width").replace("px","");
+                    var barWidth = Math.round(completed * containerWidth);
+                    $j(this).css('width', containerWidth);
+                    $j(this).parents('.progress-bar').addClass(barclass).css('width', barWidth);
+                });
+            });
+        </script>
+        <apex:actionFunction name="loadProject" action="{!loadData}">
+            <apex:param name="firstParam" value="" assignTo="{!projectId}"/>
+        </apex:actionFunction>
+        <c:CG_PageTemplate currentTab="planningboard">
+            <c:CG_FirstRow PageTitle="Planning Board"
+                Title1="Select Project" OptionsList1="{!projects}" SelectedOption1="{!projectId}" onchange1="loadProject(this.value)"
+                Title2="Select Using" OptionsList2="{!cardOptions}" SelectedOption2="{!cardOption}" 
+            />
+            <div class="row">
+                <div class="6u">
+                    <section>
+                        <div class="column-header">
+                            <h2>BACKLOG</h2>
+                        </div>
+                        <ul class="column" id="unassigned">
+                            <apex:repeat value="{!mapBacklogItems['unassigned']}" var="backlogItem">
+                                <c:CG_StoryCard backlogItem="{!backlogItem}" dataWidth="70" type="planningboard"/>
+                            </apex:repeat>
+                        </ul>
+                    </section>
+                </div>
+                <div class="6u">
+                    <section>
+                        <div class="column-header">
+                            <h2>SPRINTS</h2>
+                            <div class="buttonWrapper">
+                                <apex:commandLink id="newSprint" value="+" styleClass="boardbutton" action="{!newSprint}"/>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <apex:repeat value="{!lstSprints}" var="sprint">
+                                <div class="sprint"> 
+                                    <a href="#" class="collapse"></a>
+                                    <h2><a href="/{!sprint.Id}">{!sprint.Name}</a></h2>
+                                    <div class="progress-text">{!sprint.Sprint_Estimate__c} hrs</div>
+                                    <div class="progress">
+                                        <div class="progress-bar">
+                                            <div class="progress-bar-text">{!sprint.Effort_Estimate__c} hrs</div>
+                                        </div>
+                                    </div>
+                                    <ul class="assigned" id="{!sprint.Id}">
+                                        <apex:repeat value="{!mapBacklogItems[sprint.Id]}" var="backlogItem">
+                                            <c:CG_StoryCard backlogItem="{!backlogItem}" dataWidth="70" type="planningboard"/>
+                                        </apex:repeat>
+                                    </ul>
+                                </div>
+                            </apex:repeat>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </c:CG_PageTemplate>
+    </apex:form>
+</apex:page>

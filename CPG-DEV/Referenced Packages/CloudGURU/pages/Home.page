@@ -1,0 +1,67 @@
+<apex:page controller="impframework.CloudViewController" docType="html-5.0" sidebar="true" showheader="true" standardStylesheets="false" cache="true" tabStyle="CloudGURU__tab">
+    <apex:includeScript value="{!URLFOR($Resource.impframework__CloudGURU, '/js/jquery-1.9.1.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.impframework__CloudGURU, '/js/jquery-ui-1.10.1.custom.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.impframework__CloudGURU, '/js/jquery.fn.gantt.js')}"/>    
+    <apex:stylesheet value="{!URLFOR($Resource.impframework__CloudGURU, '/css/cg_gantt.css')}"/>
+    <apex:form >
+        <c:CG_PageTemplate currentTab="home">
+            <c:CG_FirstRow PageTitle="Cloud View"
+                Title1="Select Project" OptionsList1="{!projects}" SelectedOption1="{!projectId}" onchange1="loadProject(this.value)"
+            />
+            <div class="row">
+                <div class="2u">
+                    <section>
+                        <h2 class="sectionHeader">internal links</h2>
+                        <ul class="link-list">
+                            <li><a href="/apex/planningboard">Planning Board</a></li>
+                            <li><a href="/apex/scrumboard">Scrum Board</a></li>
+                            <li><a href="/apex/dashboard">Dashboard</a></li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="8u">
+                    <section>
+                        <h2 class="sectionHeader"><a href="/{!projectId}">{!projectName}</a></h2>
+                        <div class="gantt" id="{!projectId}"></div>
+                        <script>
+                            $j = jQuery.noConflict();
+                            
+                            function getHostName(){
+                                var p = $j(location).attr('href');
+                                pathArray = p.split( '/' );
+                                var protocol = pathArray[0];
+                                var host = pathArray[2];
+                                return protocol+'//'+host;
+                            }
+                            var planDataURL = getHostName()+'/apex/ProjectPlanData?core.apexpages.devmode.url=0&id=' + $j(".gantt").attr('id');
+                            $j(function() {
+                                $j(".gantt").gantt({
+                                    source: planDataURL,
+                                    navigate: "scroll",
+                                    scale: "weeks",
+                                    maxScale: "months",
+                                    minScale: "days",
+                                    itemsPerPage: 10,
+                                    onItemClick: function(data) {
+                                        //alert("Item clicked");
+                                    },
+                                    onAddClick: function(dt, rowId) {
+                                        //alert("Empty space clicked");
+                                    },
+                                    onRender: function() {
+                                        if (window.console && typeof console.log === "function") {
+                                            console.log("chart rendered");
+                                        }
+                                    }
+                                });
+                            });
+                        </script>
+                    </section>
+                </div>
+                <div class="2u">
+                    <c:CG_PageLinks ideasButton="false" />
+                </div>
+            </div>
+        </c:CG_PageTemplate>
+    </apex:form>
+</apex:page>

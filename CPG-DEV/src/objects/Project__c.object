@@ -1,0 +1,1290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>AccountPlan__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account Plan</label>
+        <referenceTo>AccountPlan__c</referenceTo>
+        <relationshipLabel>Projects</relationshipLabel>
+        <relationshipName>Projects</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Field is created as a part of Cargill Leap Project-IDCTask-0000000162</description>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Projects</relationshipLabel>
+        <relationshipName>Projects</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ActivityDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Activity Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ActualMargins__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Margins</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ActualResourceCost__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Resource Cost</label>
+        <summarizedField>ResourceTeam__c.ActualCost__c</summarizedField>
+        <summaryForeignKey>ResourceTeam__c.Project__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>ActualVolume__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Volume</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AnnualMarginActual__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Annual Margin - Actual</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AnnualMarginEstimated__c</fullName>
+        <externalId>false</externalId>
+        <label>Annual Margin - Estimated</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AnnualVolumeActual__c</fullName>
+        <externalId>false</externalId>
+        <label>Annual Volume - Actual</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AnnualVolumeEstimated__c</fullName>
+        <externalId>false</externalId>
+        <label>Annual Volume - Estimated</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AnnualVolumeProductRollup0Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Annual Volume - Product Rollup (0-Year)</label>
+        <summarizedField>ProjectProduct__c.ProjectedVolume0YearImperial__c</summarizedField>
+        <summaryForeignKey>ProjectProduct__c.Project__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>AnnualVolumeProductRollup1Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Annual Volume - Product Rollup (1-Year)</label>
+        <summarizedField>ProjectProduct__c.ProjectedVolume1YearImperial__c</summarizedField>
+        <summaryForeignKey>ProjectProduct__c.Project__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Annual_Volume_Product_Rollup_2_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Annual Volume - Product Rollup (2-Year)</label>
+        <summarizedField>ProjectProduct__c.ProjectedVolume2YearImperial__c</summarizedField>
+        <summaryForeignKey>ProjectProduct__c.Project__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Annual_Volume_Product_Rollup_3_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Annual Volume - Product Rollup (3-Year)</label>
+        <summarizedField>ProjectProduct__c.ProjectedVolume3YearImperial__c</summarizedField>
+        <summaryForeignKey>ProjectProduct__c.Project__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Anticipated_Commercialization_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Date anticipated to move to Measure and have a contract</inlineHelpText>
+        <label>Anticipated Commercialization Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Business__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Business</label>
+        <referenceTo>Business__c</referenceTo>
+        <relationshipLabel>Projects</relationshipLabel>
+        <relationshipName>Projects</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Campaign__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Campaign</label>
+        <referenceTo>Campaign</referenceTo>
+        <relationshipLabel>Projects</relationshipLabel>
+        <relationshipName>Projects</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Cancelled_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Cancelled Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Clarizen_Project_Id__c</fullName>
+        <externalId>true</externalId>
+        <label>Clarizen Project Id</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Commercialization_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.CloseDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Commercialization Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Commercialization_Date_at_Closed_Won__c</fullName>
+        <externalId>false</externalId>
+        <label>Commercialization Date at Closed Won</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Commercialization_Date_at_Implement__c</fullName>
+        <externalId>false</externalId>
+        <label>Commercialization Date at Implement</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Commercialization_Date_at_Measure__c</fullName>
+        <externalId>false</externalId>
+        <label>Commercialization Date at Measure</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CurrentUser__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( CreatedById = $User.Id, &quot;True&quot;
+,&quot;False&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CurrentUser</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_Until_Commercialization__c</fullName>
+        <externalId>false</externalId>
+        <formula>ABS(TODAY() -   Commercialization_Date__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days Until Commercialization</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DevelopDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Develop Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>EstimatedMargins__c</fullName>
+        <externalId>false</externalId>
+        <label>Estimated Margins</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EstimatedResourceCost__c</fullName>
+        <externalId>false</externalId>
+        <label>Estimated Resource Cost</label>
+        <summarizedField>ResourceTeam__c.EstimatedCost__c</summarizedField>
+        <summaryForeignKey>ResourceTeam__c.Project__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>EstimatedVolume__c</fullName>
+        <externalId>false</externalId>
+        <label>Estimated Volume</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ImplementDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Implement Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LegacyRecordID__c</fullName>
+        <externalId>false</externalId>
+        <label>Legacy Record ID</label>
+        <length>30</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MeasureDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Measure Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Next_Steps__c</fullName>
+        <externalId>false</externalId>
+        <label>Next Steps</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Objective__c</fullName>
+        <externalId>false</externalId>
+        <label>Objective</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>On_Hold_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>On Hold Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>OpportunityCloseDate__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.CloseDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Close Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>OpportunityRecordType__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.RecordType.Name</formula>
+        <label>Opportunity Record Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OpportunitySpace__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Opportunity__r.OpportunitySpace__c )</formula>
+        <label>Opportunity Space</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Stage__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Opportunity__r.StageName)</formula>
+        <label>Opportunity Stage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Projects</relationshipLabel>
+        <relationshipName>Projects</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phase__c</fullName>
+        <externalId>false</externalId>
+        <label>Phase</label>
+        <picklist>
+            <controllingField>Stage__c</controllingField>
+            <picklistValues>
+                <fullName>Ideation</fullName>
+                <default>false</default>
+                <controllingFieldValues>Cancelled</controllingFieldValues>
+                <controllingFieldValues>Draft</controllingFieldValues>
+                <controllingFieldValues>Go</controllingFieldValues>
+                <controllingFieldValues>On Hold</controllingFieldValues>
+                <controllingFieldValues>Rejected</controllingFieldValues>
+                <controllingFieldValues>Submitted for Approval</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Explore</fullName>
+                <default>false</default>
+                <controllingFieldValues>Cancelled</controllingFieldValues>
+                <controllingFieldValues>Draft</controllingFieldValues>
+                <controllingFieldValues>Go</controllingFieldValues>
+                <controllingFieldValues>On Hold</controllingFieldValues>
+                <controllingFieldValues>Rejected</controllingFieldValues>
+                <controllingFieldValues>Submitted for Approval</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Feasibility</fullName>
+                <default>false</default>
+                <controllingFieldValues>Cancelled</controllingFieldValues>
+                <controllingFieldValues>Go</controllingFieldValues>
+                <controllingFieldValues>On Hold</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Develop</fullName>
+                <default>false</default>
+                <controllingFieldValues>Cancelled</controllingFieldValues>
+                <controllingFieldValues>Go</controllingFieldValues>
+                <controllingFieldValues>On Hold</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Planning</fullName>
+                <default>false</default>
+                <controllingFieldValues>Cancelled</controllingFieldValues>
+                <controllingFieldValues>Go</controllingFieldValues>
+                <controllingFieldValues>On Hold</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Implement</fullName>
+                <default>false</default>
+                <controllingFieldValues>Cancelled</controllingFieldValues>
+                <controllingFieldValues>Go</controllingFieldValues>
+                <controllingFieldValues>On Hold</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Measure</fullName>
+                <default>false</default>
+                <controllingFieldValues>Go</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <controllingFieldValues>Complete</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ProjectedAnnualVolume__c</fullName>
+        <externalId>false</externalId>
+        <label>Projected Annual Volume</label>
+        <summaryForeignKey>ProjectOpportunity__c.Project__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Opportunity__r.Owner.CargillRegion__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Region</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Stage</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Go</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Complete</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Submitted for Approval</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Total_Project_Volume_CM__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_Projected_CM_0_Year__c + Total_Projected_CM_1_Year__c + Total_Projected_CM_2_Year__c + Total_Projected_CM_3_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Project Volume CM</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Project_Volume__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_Projected_Volume_LB_0_Year__c + Total_Projected_Volume_LB_1_Year__c + Total_Projected_Volume_LB_2_Year__c + Total_Projected_Volume_LB_3_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Project Volume</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Projected_CM_0_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Projected CM (0-Year)</label>
+        <summarizedField>ProjectProduct__c.Projected_CM_0_Year__c</summarizedField>
+        <summaryForeignKey>ProjectProduct__c.Project__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Projected_CM_1_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Projected CM (1-Year)</label>
+        <summarizedField>ProjectProduct__c.Projected_CM_1_Year__c</summarizedField>
+        <summaryForeignKey>ProjectProduct__c.Project__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Projected_CM_2_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Projected CM (2-Year)</label>
+        <summarizedField>ProjectProduct__c.Projected_CM_2_Year__c</summarizedField>
+        <summaryForeignKey>ProjectProduct__c.Project__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Projected_CM_3_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Projected CM (3-Year)</label>
+        <summarizedField>ProjectProduct__c.Projected_CM_3_Year__c</summarizedField>
+        <summaryForeignKey>ProjectProduct__c.Project__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Projected_Volume_LB_0_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Projected Volume LB (0-Year)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Projected_Volume_LB_1_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Projected Volume LB (1-Year)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Projected_Volume_LB_2_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Projected Volume LB (2-Year)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Projected_Volume_LB_3_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Projected Volume LB (3-Year)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>NPSS New</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NPSS Matching</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NBD CTS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NBD Matching</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IO PPD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IO Ingredient</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IO Out of Spec</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IO Shelf Life</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IO Knowledge</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IO Competitor Analysis</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IO Capacity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>D Support</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>D Problem</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>D Proactive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>D Complaint/IMPASS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>isApproved__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Approval Process Results</description>
+        <externalId>false</externalId>
+        <label>isApproved</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>opportunity_Stage1__c</fullName>
+        <description>Created to update through workflow</description>
+        <externalId>false</externalId>
+        <label>opportunity Stage</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Project</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Stage__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Projects</fullName>
+        <columns>NAME</columns>
+        <columns>Opportunity__c</columns>
+        <columns>Account__c</columns>
+        <columns>Stage__c</columns>
+        <columns>Phase__c</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>Projects_in_Measure_phase</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Opportunity__c</columns>
+        <columns>Stage__c</columns>
+        <columns>Phase__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Phase__c</field>
+            <operation>equals</operation>
+            <value>Measure</value>
+        </filters>
+        <label>Projects in &quot;Measure&quot; phase</label>
+    </listViews>
+    <nameField>
+        <label>Project Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Projects</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Project_Approved</fullName>
+        <active>true</active>
+        <description>Record Type after a Project is approved</description>
+        <label>Project (Approved)</label>
+        <picklistValues>
+            <picklist>Phase__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Develop</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Explore</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feasibility</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ideation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Measure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Planning</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Stage__c</picklist>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Go</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>D Complaint%2FIMPASS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D Proactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D Problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IO Capacity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IO Competitor Analysis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IO Ingredient</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IO Knowledge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IO Out of Spec</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IO PPD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IO Shelf Life</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NBD CTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NBD Matching</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NPSS Matching</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NPSS New</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Project_Draft</fullName>
+        <active>true</active>
+        <description>Initial Record Type when creating a Project</description>
+        <label>Project (Draft)</label>
+        <picklistValues>
+            <picklist>Phase__c</picklist>
+            <values>
+                <fullName>Explore</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ideation</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Stage__c</picklist>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>D Complaint%2FIMPASS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D Proactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D Problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IO Capacity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IO Competitor Analysis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IO Ingredient</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IO Knowledge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IO Out of Spec</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IO PPD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IO Shelf Life</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NBD CTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NBD Matching</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NPSS Matching</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NPSS New</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Project_Submitted</fullName>
+        <active>true</active>
+        <description>Record Type when a Project is submitted waiting for Approval</description>
+        <label>Project (Submitted)</label>
+        <picklistValues>
+            <picklist>Phase__c</picklist>
+            <values>
+                <fullName>Explore</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ideation</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Stage__c</picklist>
+            <values>
+                <fullName>Submitted for Approval</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>D Complaint%2FIMPASS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D Proactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D Problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IO Capacity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IO Competitor Analysis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IO Ingredient</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IO Knowledge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IO Out of Spec</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IO PPD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IO Shelf Life</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NBD CTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NBD Matching</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NPSS Matching</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NPSS New</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <excludedStandardButtons>New</excludedStandardButtons>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <sharingReasons>
+        <fullName>Opportunity_Team_Member__c</fullName>
+        <label>Opportunity Team Member</label>
+    </sharingReasons>
+    <sharingReasons>
+        <fullName>Project_Team_Member__c</fullName>
+        <label>Project Team Member</label>
+    </sharingReasons>
+    <validationRules>
+        <fullName>ProjectWithOpportunityStageClosedWon</fullName>
+        <active>false</active>
+        <description>If the related Opportunity is in Closed Won stage, then no update is allowed</description>
+        <errorConditionFormula>ISPICKVAL(Opportunity__r.StageName , &apos;Closed Won&apos;)</errorConditionFormula>
+        <errorMessage>If the related Opportunity is in Closed Won stage, then no update is allowed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Project_with_Opportunit_with_no_Products</fullName>
+        <active>true</active>
+        <description>Throw an error on Project if the related Opportunity does not have any Products associated</description>
+        <errorConditionFormula>Opportunity__r.NumberOfProducts__c = 0</errorConditionFormula>
+        <errorDisplayField>Opportunity__c</errorDisplayField>
+        <errorMessage>Please select the opportunity which has products associated with it.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Require_Approval_to_Advance_Stage</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(
+    isApproved__c = FALSE,
+    NOT(ISPICKVAL(Stage__c, &quot;Draft&quot;))
+   )</errorConditionFormula>
+        <errorDisplayField>Stage__c</errorDisplayField>
+        <errorMessage>Project Validation Error: Project Approval is required to advance Stage.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RestrictProjectCreationOnOppAccRecType</fullName>
+        <active>true</active>
+        <description>Project can only be created when related opportunity&apos;s account record type is &quot;Prospect or Global Account or Regional Account Group&quot;.</description>
+        <errorConditionFormula>AND(Opportunity__r.Account.RecordType.Name  &lt;&gt; &apos;Global Account&apos;,
+Opportunity__r.Account.RecordType.Name  &lt;&gt; &apos;Prospect&apos;,
+Opportunity__r.Account.RecordType.Name  &lt;&gt; &apos;Country Account Group&apos;)</errorConditionFormula>
+        <errorDisplayField>Opportunity__c</errorDisplayField>
+        <errorMessage>Projects can only be created if the Opportunity ACCOUNT is a Prospect or Global Account or Regional Account Group Account Record Type.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Create_New_Project</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Create New Project</masterLabel>
+        <openType>sidebar</openType>
+        <page>CreateNewcustomProjectPage</page>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+    </webLinks>
+</CustomObject>

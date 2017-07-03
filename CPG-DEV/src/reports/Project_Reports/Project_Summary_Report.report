@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Project__c$Name</field>
+    </columns>
+    <columns>
+        <field>Project__c$Stage__c</field>
+    </columns>
+    <columns>
+        <field>Project__c$Phase__c</field>
+    </columns>
+    <columns>
+        <field>Project__c$Clarizen_Project_Id__c</field>
+    </columns>
+    <columns>
+        <field>Project__c$Campaign__c</field>
+    </columns>
+    <columns>
+        <field>Project__c$CreatedDate</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Project__c$RecordType</column>
+            <operator>equals</operator>
+            <value>Project__c.Project_Approved,Project__c.Project_Draft</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <name>Project Summary Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Project__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Project__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

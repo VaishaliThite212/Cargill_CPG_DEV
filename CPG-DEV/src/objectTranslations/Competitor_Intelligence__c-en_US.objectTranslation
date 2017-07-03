@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Competitor Intelligence</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Competitor Intelligence</value>
+    </caseValues>
+    <fields>
+        <label><!-- Competitor --></label>
+        <name>Competitor__c</name>
+        <relationshipLabel><!-- Competitor Intelligence --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Detail --></label>
+        <name>Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy Record ID --></label>
+        <name>LegacyRecordID__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field should only be filled out when Org Resource Change is selected as the competitive intelligence &quot;type&quot; --></help>
+        <label><!-- Role Change Detail --></label>
+        <name>Role__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rumor Source --></label>
+        <name>Rumor_Source__c</name>
+        <picklistValues>
+            <masterLabel>Competitor</masterLabel>
+            <translation><!-- Competitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer</masterLabel>
+            <translation><!-- Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry source</masterLabel>
+            <translation><!-- Industry source --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Acquisitions / Joint Ventures</masterLabel>
+            <translation><!-- Acquisitions / Joint Ventures --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hot Topic</masterLabel>
+            <translation><!-- Hot Topic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intelligence</masterLabel>
+            <translation><!-- Intelligence --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Org Resources Change</masterLabel>
+            <translation><!-- Org Resources Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rumor</masterLabel>
+            <translation><!-- Rumor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technoology Trend / Capability</masterLabel>
+            <translation><!-- Technoology Trend / Capability --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Validation on Rumor or Hot Topic --></label>
+        <name>Validated__c</name>
+        <picklistValues>
+            <masterLabel>In Print</masterLabel>
+            <translation><!-- In Print --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multiple Sources</masterLabel>
+            <translation><!-- Multiple Sources --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>One Source</masterLabel>
+            <translation><!-- One Source --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

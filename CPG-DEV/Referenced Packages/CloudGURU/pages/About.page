@@ -1,0 +1,63 @@
+<apex:page docType="html-5.0" sidebar="false" showheader="true" standardStylesheets="false" cache="true" tabStyle="CloudGURU__tab">
+    <c:CG_PageTemplate banner="true" currentTab="about">
+        <div class="row main-row">
+            <div class="3u">
+                <c:CG_PageLinks />
+            </div>
+            <div class="6u">
+                <section>
+                    <h2 class="sectionHeader">what is cloudguru</h2>
+                    <p>
+                    <strong>CloudGURU</strong> is a collaborative delivery framework developed to bring rigor and automation to ease the burden of some of the more challenging tasks found in all Salesforce implementations. 
+                    CloudGURU&#39;s mission statement is to
+                    </p>
+                    <ul class="paragraph-list">
+                        <li>enable better collaboration between delivery team and client</li>
+                        <li>act as the basis of change control and clients approvals</li>
+                        <li>be a repository for project artefacts and deliverables</li>
+                        <li>automate the production of key project deliverables* reducing efforts</li>
+                        <li>assuring quality through automation and control</li>
+                        <li>manage project reporting</li>
+                    </ul>
+                    <p><strong>CloudGURU</strong> is part of Cognizant&#39;s wider <strong>DeploySuccess</strong> initiative and is aimed at managing any Force.com engagement</p>
+                </section>
+            </div>
+            <div class="3u">
+                <section>
+                    <h2 class="sectionHeader">meet the team</h2>
+                    <ul class="small-image-list">
+                        <li>
+                            <apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/team/srinivas.jpg')}" styleClass="left" />
+                            <p></p>
+                            <h4><a href="mailto:srinivas.rudrabhatla@cognizant.com?cc=vipul.pahwa@cognizant.com&Subject=Query%20regarding%20CloudGURU">Srinivas Rudrabhatla</a></h4>
+                            <p>Sponsor</p>
+                        </li>
+                        <li>
+                            <apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/team/vipul.jpg')}" styleClass="left" />
+                            <p></p>
+                            <h4><a href="mailto:vipul.pahwa@cognizant.com?Subject=Query%20regarding%20CloudGURU">Vipul Pahwa</a></h4>
+                            <p>Concept &amp; Design</p>
+                        </li>
+                        <li>
+                            <apex:image value="{!URLFOR($Resource.impframework__CloudGURU, 'images/team/michael.png')}" styleClass="left" />
+                            <p></p>
+                            <h4><a href="mailto:michael.cunningham@cognizant.com?cc=vipul.pahwa@cognizant.com&Subject=Query%20regarding%20CloudGURU">Michael Cunningham</a></h4>
+                            <p>Product Owner</p>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <div class="3u">
+                        <div/>
+                    </div>
+                    <div class="6u">
+                        <a href="mailto:cloudguru@cognizant.com&Subject=Query%20regarding%20CloudGURU" class="button">Contact Us</a>
+                    </div>
+                    <div class="3u">
+                        <div/>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </c:CG_PageTemplate>
+</apex:page>

@@ -1,0 +1,66 @@
+<apex:page docType="html-5.0" controller="impframework.ScrumBoardController" sidebar="false" showheader="true" standardStylesheets="false" cache="true" tabStyle="CloudGURU__tab">
+    <apex:stylesheet value="{!URLFOR($Resource.impframework__CloudGURU, 'css/cg_board.css')}"/>
+    <apex:form >
+        <apex:outputPanel id="scriptPanel">
+            <script>
+                $j = jQuery.noConflict();
+                $j(function() {
+                    $j( ".column" ).sortable({
+                        connectWith: '.column',
+                        items: 'li',
+                        handle: ".widget-head",
+                        receive: function(event, ui) {
+                            var objectId = ui.item.attr('id');
+                            var status = ui.item.parents('.column').attr('id');
+                            impframework.ScrumBoardController.changeStatus(objectId, status, function(result,event){
+                                if (result != ''){
+                                    alert(result);
+                                }
+                            });
+                        }
+                    }).disableSelection();
+                    
+                    $j('.collapse').mousedown(function (e) {
+                        e.stopPropagation();
+                        $j(this).toggleClass('expand')
+                                .parents('.widget')
+                                    .find('.widget-content').slideToggle(100);
+                    });
+                });
+            </script>
+        </apex:outputPanel>
+        <apex:actionFunction name="loadProject" action="{!loadData}">
+            <apex:param name="firstParam" value="" assignTo="{!projectId}"/>
+        </apex:actionFunction>
+        <apex:actionFunction name="loadSprint" action="{!loadData}">
+            <apex:param name="firstParam" value="" assignTo="{!sprintId}"/>
+        </apex:actionFunction>
+        <apex:actionFunction name="loadView" action="{!loadData}">
+            <apex:param name="firstParam" value="" assignTo="{!view}"/>
+        </apex:actionFunction>
+
+        <c:CG_PageTemplate currentTab="scrumboard">
+            <c:CG_FirstRow PageTitle="Scrum Board"
+                Title1="Select Project" OptionsList1="{!projects}" SelectedOption1="{!projectId}" onchange1="loadProject(this.value)"
+                Title2="Select Sprint" OptionsList2="{!sprints}" SelectedOption2="{!sprintId}" onchange2="loadSprint(this.value)"
+                Title3="Select View" OptionsList3="{!views}" SelectedOption3="{!view}" onchange3="loadView(this.value)"
+            />
+            <div id="columns">
+                <apex:outputPanel id="scrumBoardPanel">
+                    <apex:repeat value="{!mapBacklogItems}" var="rank">
+                        <div class="column-wrapper">
+                            <div class="column-header">
+                                <h2>{!mapDevelopmentStatus[rank]}</h2>
+                            </div>
+                            <ul class="column" id="{!rank}">
+                                <apex:repeat value="{!mapBacklogItems[rank]}" var="backlogItem">
+                                    <c:CG_StoryCard backlogItem="{!backlogItem}" defaultCollapse="false"/>
+                                </apex:repeat>
+                            </ul>
+                        </div>
+                    </apex:repeat>
+                </apex:outputPanel>
+            </div>
+        </c:CG_PageTemplate>
+    </apex:form>
+</apex:page>

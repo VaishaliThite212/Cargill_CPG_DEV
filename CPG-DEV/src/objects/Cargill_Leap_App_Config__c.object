@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>AccountActivityDefaultDisplayNummber__c</fullName>
+        <externalId>false</externalId>
+        <label>AccountActivityDefaultDisplayNummber</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AccountActivityObjectList__c</fullName>
+        <externalId>false</externalId>
+        <label>AccountActivityObjectList</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>AccountHierarchyLimit__c</fullName>
+        <description>This field is created to determine the number of levels the accounts should be queried in the hierarchy  during the account plan creation process</description>
+        <externalId>false</externalId>
+        <label>AccountHierarchyLimit</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ListViewRecordLimit__c</fullName>
+        <description>This field is created for setting the Limit for the pagination of list views for account plan creation process</description>
+        <externalId>false</externalId>
+        <label>ListViewRecordLimit</label>
+        <length>3</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status_Filter_List__c</fullName>
+        <externalId>false</externalId>
+        <label>Status Filter List</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <label>Cargill Leap App Config</label>
+    <visibility>Public</visibility>
+</CustomObject>

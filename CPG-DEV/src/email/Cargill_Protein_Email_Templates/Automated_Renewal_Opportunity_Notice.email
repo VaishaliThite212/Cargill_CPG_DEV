@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<font color="#CC0000">Automated Renewal Opportunity Notice</font><br><br>Opportunity:&nbsp;&nbsp;&nbsp;&nbsp; <a href="{!Opportunity.Link}">{!Opportunity.Name}</a><br>Account:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {!Opportunity.Account}<br>Created Date:&nbsp; {!Opportunity.CreatedDate}<br>Owner:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#FF6600">{!Opportunity.OwnerFullName}</font><br><br>]]></td>
+</tr>
+</table>

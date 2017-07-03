@@ -1,0 +1,3 @@
+<apex:page tabStyle="impframework__Project__c">
+    <c:UploadSnapshot objId="{!$CurrentPage.Parameters.id}"/>
+</apex:page>

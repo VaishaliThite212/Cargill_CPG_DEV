@@ -1,0 +1,2884 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>AddInfluence</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <businessProcesses>
+        <fullName>Opportunity Sales Process</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Closed Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed Won</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Create</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Explore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Present</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <compactLayoutAssignment>New_Awesome_Companct_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>New_Awesome_Companct_Layout</fullName>
+        <fields>Name</fields>
+        <fields>AccountId</fields>
+        <fields>Business__c</fields>
+        <fields>CloseDate</fields>
+        <fields>Amount</fields>
+        <label>New Awesome Compact Layout</label>
+    </compactLayouts>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <fields>
+        <fullName>AccountId</fullName>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <filterItems>
+                <field>Account.RecordType.Name</field>
+                <operation>equals</operation>
+                <value>Sold To</value>
+            </filterItems>
+            <filterItems>
+                <field>Account.Is_Universal__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <infoMessage>Associated to Universal Bill To level Account only</infoMessage>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Amount</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>AnnualMarginActual__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Project Field</description>
+        <externalId>false</externalId>
+        <label>Annual Margin - Actual</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AnnualMarginEstimated__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Project Field</description>
+        <externalId>false</externalId>
+        <label>Annual Margin - Estimated</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AnnualVolumeActual__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Project Field</description>
+        <externalId>false</externalId>
+        <label>Annual Volume - Actual</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AnnualVolumeEstimated__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Project Field</description>
+        <externalId>false</externalId>
+        <label>Annual Volume - Estimated</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Application__c</fullName>
+        <externalId>false</externalId>
+        <label>Application</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Application 1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Application 2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>AveragePriceSpread__c</fullName>
+        <externalId>false</externalId>
+        <formula>Sum_of_Opp_Comp_Prod_Price_Spread__c  / No_of_Competitor_Products__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Average Price Spread</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bill_To__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>Parent Bill To related to parent customer</description>
+        <externalId>false</externalId>
+        <label>Bill To</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>$Source.AccountId</field>
+                <operation>equals</operation>
+                <valueField>Bill_To_Ship_To__c.Universal_Customer__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Bill_To_Ship_To__c</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Budget_Confirmed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Budget Confirmed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>BusinessAlias__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(  Business__r.Name  ,
+&quot;Go To Market Corporate Accounts&quot;,&quot;GTM Corp Accts&quot;, 
+&quot;Go To Market Shared Sales North America&quot;,&quot;GTM SS NA&quot;, 
+&quot;Go To Market Shared Sales EMEA&quot;,&quot;GTM SS EMEA&quot;, 
+&quot;Global Edible Oil Solutions North America&quot;,&quot;GEOS NA&quot;, 
+&quot;Global Edible Oil Solutions Europe&quot;,&quot;GEOS Europe&quot;, 
+&quot;Cargill Industrial Specialties&quot;,&quot;CIS&quot;, 
+&quot;Global Edible Oil Solutions Mexico&quot;,&quot;GEOS Mexico&quot;, 
+&quot;Global Edible Oil Solutions South America&quot;,&quot;GEOS SA&quot;, 
+&quot;Global Edible Oil Solutions Venezuela&quot;,&quot;GEOS Venezuela&quot;, 
+&quot;Global Edible Oil Solutions India&quot;,&quot;GEOS India&quot;, 
+&quot;Global Edible Oil Solutions Asia Pacific&quot;,&quot;GEOS AP&quot;, 
+&quot;Foods Brazil&quot;,&quot;Foods Brazil&quot;, 
+&quot;Starches &amp; Sweeteners North America&quot;,&quot;SSNA&quot;, 
+&quot;Starches &amp; Sweeteners Europe&quot;,&quot;SSE&quot;, 
+&quot;Texturizing Solutions&quot;,&quot;CTS&quot;, 
+&quot;Starches &amp; Sweeteners South America&quot;,&quot;SSSA&quot;, 
+&quot;Foods Middle East, Turkey, and North Africa&quot;,&quot;CF METNA&quot;, 
+&quot;Cargill Cocoa &amp; Chocolate&quot;,&quot;CCC&quot;, 
+&quot;Cocoa &amp; Chocolate North America&quot;,&quot;CCCNA&quot;, 
+&quot;Cocoa &amp; Chocolate Brazil&quot;,&quot;CCC Brazil&quot;, 
+&quot;Refined Oils Asia Pacific&quot;,&quot;ROAP&quot;, 
+&quot;Starches &amp; Sweeteners China&quot;,&quot;S&amp;S China&quot;, 
+&quot;Starches &amp; Sweeteners Southeast Asia&quot;,&quot;S&amp;S SE Asia&quot;, 
+&quot;Toshoku&quot;,&quot;Toshoku&quot;, 
+&quot;Foods India&quot;,&quot;Foods India&quot;, 
+&quot;Malt&quot;,&quot;Malt&quot;, 
+&quot;Salt&quot;,&quot;Salt&quot;, 
+&quot;Cargill Deicing Technology&quot;,&quot;CDT&quot;, 
+&quot;Food Argentina&quot;,&quot;Foods Argentina&quot;, 
+&quot;&quot;
+)</formula>
+        <label>Business</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BusinessUnit__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(CreatedBy.Cargill_Business_Unit__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Business Unit</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Business Name</label>
+        <referenceTo>Business__c</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BuyerType__c</fullName>
+        <externalId>false</externalId>
+        <label>Buyer Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Relationship Buyer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Price Buyer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Value Buyer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Poker Player</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CampaignId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CancellationDate__c</fullName>
+        <description>Project Field</description>
+        <externalId>false</externalId>
+        <label>Cancellation Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CloseDate</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>CloseDateTEXT__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(CloseDate)</formula>
+        <label>Close Date (TEXT)</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CloseDateVariance__c</fullName>
+        <description>Variance between Estimated Close Data and Actual Close Date</description>
+        <externalId>false</externalId>
+        <formula>EstimatedCloseDate__c - CloseDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Variance between Estimated Close Data and Actual Close Date</inlineHelpText>
+        <label>Close Date Variance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CloseReason__c</fullName>
+        <externalId>false</externalId>
+        <label>Close Reason</label>
+        <picklist>
+            <controllingField>StageName</controllingField>
+            <picklistValues>
+                <fullName>Business declined to pursue the project</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed Lost</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Currency Rate</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed Lost</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer declined to pursue the project</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed Lost</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Freight Rate</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed Lost</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Match not approved</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed Lost</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No capacity to sell</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed Lost</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Price not competitive</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed Lost</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Referred to Distributor</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed Lost</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sample Failed</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed Lost</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Strong relationship with competition</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed Lost</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not actively pursuing - documentation only</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed Lost</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed Lost</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed Won</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Functionality</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed Won</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Relationship</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed Won</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Proprietary Product</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed Won</controllingFieldValues>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CommercializationDate1__c</fullName>
+        <description>Project Field</description>
+        <externalId>false</externalId>
+        <label>Commercialization Date 1</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CommercializationDate2__c</fullName>
+        <description>Project Field</description>
+        <externalId>false</externalId>
+        <label>Commercialization Date 2</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CommericalizationDate3__c</fullName>
+        <description>Project Field</description>
+        <externalId>false</externalId>
+        <label>Commericalization Date 3</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ContractId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CustomerMeetingReport__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Customer Meeting Report</label>
+        <referenceTo>CustomerMeetingReport__c</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>DetailLink__c</fullName>
+        <externalId>false</externalId>
+        <formula>LEFT($Api.Partner_Server_URL_260, FIND( &apos;/services&apos;, $Api.Partner_Server_URL_260))+ Id</formula>
+        <label>Detail Link</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DevelopmentDate__c</fullName>
+        <description>Project Field</description>
+        <externalId>false</externalId>
+        <label>Development Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Discovery_Completed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Discovery Completed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EstimatedCloseDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Estimated Close Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>EstimatedShipDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Estimated Ship Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ExpectedRevenue</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>External_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>External ID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Has_Competitor__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( No_of_Competitor_Products__c &gt; 0 , TRUE, FALSE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Has Competitor</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IfLostCompetitorLostTo__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>If Lost, Competitor Lost To</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Opportunities Lost to Competitor</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>IfWonCompetitorWonAgainst__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>If Won, Competitor Won Against</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Competitor</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Opportunities (If Won, Competitor Won Against)</relationshipLabel>
+        <relationshipName>Opportunities1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ImplementationDate__c</fullName>
+        <description>Project Field</description>
+        <externalId>false</externalId>
+        <label>Implementation Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>InactiveProducts2__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Inactive Products</label>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.ActiveProduct2__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </summaryFilterItems>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>InactiveProducts__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Inactive Products</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsApexCloned__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>IsApexCloned</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsCreatedFromLead__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>IsCreatedFromLead</description>
+        <externalId>false</externalId>
+        <label>IsCreatedFromLead</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsPrivate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>IsSourceLeadConversion__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Will be TRUE if opportunity is being created from Lead Conversion Process.</description>
+        <externalId>false</externalId>
+        <label>Is Source Lead Conversion?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LeadSource</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer Event</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Google AdWords</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>LeadSource__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Lead_Source</globalPicklist>
+        <label>Lead Source</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LegacyRecordID__c</fullName>
+        <externalId>false</externalId>
+        <label>Legacy Record ID</label>
+        <length>30</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LossReason__c</fullName>
+        <externalId>false</externalId>
+        <label>Loss Reason</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Lost to Competitor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No Budget / Lost Funding</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No Decision / Non-Responsive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Loss_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Loss Reason</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Lost to Competitor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No Budget / Lost Funding</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No Decision / Non-Responsive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>MeasureDate__c</fullName>
+        <description>Project Field</description>
+        <externalId>false</externalId>
+        <label>Measure Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>NextStep</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>No_of_Competitor_Products__c</fullName>
+        <description>US70: Count number of competitor products</description>
+        <externalId>false</externalId>
+        <label>No. of Competitor Products</label>
+        <summaryForeignKey>Opportunity_Competitor_Product__c.Opportunity__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>NumberOfProducts__c</fullName>
+        <description>This is created for validation rule that restricts creation of products on closed own opportunity</description>
+        <externalId>false</externalId>
+        <label>Number of Products</label>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_Competitive_Bids__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Competitive Bids</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Renewal Source Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Automated Renewal Source Opportunity</relationshipLabel>
+        <relationshipName>Opportunities1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OnHoldDate__c</fullName>
+        <description>Project Date</description>
+        <externalId>false</externalId>
+        <label>On Hold Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>OpportunitySpace__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Space</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Space1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Space2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>OpportunityType__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Defense</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_End_Date__c</fullName>
+        <description>This is to place under close date on opportunity</description>
+        <externalId>false</externalId>
+        <label>Opportunity End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>OriginalName__c</fullName>
+        <description>Holding field for the original User input Opportunity Name used in the Opportunity Naming Convention.</description>
+        <externalId>false</externalId>
+        <label>Original Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ParentOpportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Parent Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Projects*</relationshipLabel>
+        <relationshipName>Opportunities2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PartiallyWon__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Partially Won</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Payment_Term__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Payment_Terms</globalPicklist>
+        <label>Payment Term</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Phase__c</fullName>
+        <externalId>false</externalId>
+        <label>Phase</label>
+        <picklist>
+            <controllingField>StageName</controllingField>
+            <picklistValues>
+                <fullName>Measure</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Implement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>PotentialStage__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   Budget_Confirmed__c = TRUE,
+   &quot;Discover&quot;,
+
+/* Add additional fields required to advance to each Opportunity Stage */
+
+
+   &quot;Explore&quot;
+   )</formula>
+        <label>Potential Stage</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PricePointSource__c</fullName>
+        <externalId>false</externalId>
+        <label>Price Point Source</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Customer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Internal Estimate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vendor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Retail/consumer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>PricePoint__c</fullName>
+        <description>US#44</description>
+        <externalId>false</externalId>
+        <label>Price Point</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Pricebook2Id</fullName>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PrimaryCategory__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Category1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Category2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Probability</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ROIAnalysisCompleted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>ROI Analysis Completed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ROI_Analysis_Completed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>ROI Analysis Completed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ReasonDetail__c</fullName>
+        <externalId>false</externalId>
+        <label>Reason Detail</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ReasonLost__c</fullName>
+        <description>US74</description>
+        <externalId>false</externalId>
+        <label>Reason Lost</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Due to Price (gross)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No Capacity to Sell (volume)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not interested in the Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Stronger relationship with the competitor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Due to Product Quality</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cannot meet distributor minimums</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Service Execution Challenges</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lack of Distribution (area)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer wants to expand number of suppliers</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>We were not price competitive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Product not a match</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Due to Price (net)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Relationship</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Abandoned</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ReasonWon__c</fullName>
+        <description>US70: Required if Opp won and competitor in deal</description>
+        <externalId>false</externalId>
+        <label>Reason Won</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Due to Price (gross)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No Capacity to Sell (volume)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not interested in the Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Stronger relationship with the competitor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Due to Product Quality</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cannot meet distributor minimums</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Service Execution Challenges</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lack of Distribution (area)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer wants to expand number of suppliers</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>We were not price competitive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Product not a match</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Due to Price (net)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Relationship</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>RelatedtoRFP__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Related to RFP</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RenewalDate__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Date the Opportunity will be cloned automatically</inlineHelpText>
+        <label>Renewal Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ShipDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Ship Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Ship_To__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Ship To</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Bill_To_Ship_To__c.Bill_To__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.Bill_To__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Bill_To_Ship_To__c</referenceTo>
+        <relationshipLabel>Opportunities (Ship To)</relationshipLabel>
+        <relationshipName>Opportunities1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ShippingDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Shipping Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SourceOpportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Source Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Source Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>StageName</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Explore</fullName>
+                <default>false</default>
+                <closed>false</closed>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>10</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Discover</fullName>
+                <default>false</default>
+                <closed>false</closed>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>25</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Create</fullName>
+                <default>false</default>
+                <closed>false</closed>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>50</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Present</fullName>
+                <default>false</default>
+                <closed>false</closed>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>75</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Qualification</fullName>
+                <default>false</default>
+                <description>You&apos;ve contacted the prospect and they&apos;re interested.</description>
+                <closed>false</closed>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>10</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Needs Analysis</fullName>
+                <default>false</default>
+                <description>You&apos;re defining the prospect&apos;s needs.</description>
+                <closed>false</closed>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>35</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Proposal</fullName>
+                <default>false</default>
+                <description>You&apos;re developing a sales proposal for the prospect.</description>
+                <closed>false</closed>
+                <forecastCategory>BestCase</forecastCategory>
+                <probability>75</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Negotiation</fullName>
+                <default>false</default>
+                <description>You&apos;re working with the prospect on the proposal you delivered.</description>
+                <closed>false</closed>
+                <forecastCategory>Forecast</forecastCategory>
+                <probability>90</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed Won</fullName>
+                <default>false</default>
+                <description>Sold!</description>
+                <closed>true</closed>
+                <forecastCategory>Closed</forecastCategory>
+                <probability>100</probability>
+                <won>true</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed Lost</fullName>
+                <default>false</default>
+                <description>No sale.</description>
+                <closed>true</closed>
+                <forecastCategory>Omitted</forecastCategory>
+                <probability>0</probability>
+                <won>false</won>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Sum_of_Opp_Comp_Prod_Price_Spread__c</fullName>
+        <externalId>false</externalId>
+        <label>Sum of Opp Comp Prod Price Spread</label>
+        <summarizedField>Opportunity_Competitor_Product__c.Price_Spread__c</summarizedField>
+        <summaryForeignKey>Opportunity_Competitor_Product__c.Opportunity__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>SyncedQuoteId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Tools__c</fullName>
+        <externalId>false</externalId>
+        <label>Tools</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Tool A</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tool B</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tool C</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>TotalOpportunityQuantity</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Existing Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Unit_of_Measure__c</fullName>
+        <description>Unit of Measure</description>
+        <externalId>false</externalId>
+        <globalPicklist>UnitOfMeasure</globalPicklist>
+        <label>Unit of Measure</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Volume__c</fullName>
+        <externalId>false</externalId>
+        <label>Volume</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WorkFlowOrder__c</fullName>
+        <externalId>false</externalId>
+        <label>WorkFlowOrder</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <listViews>
+        <fullName>AllOpportunities</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OPPORTUNITY.AMOUNT</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>OPPORTUNITY.PROBABILITY</columns>
+        <columns>OPPORTUNITY.TYPE</columns>
+        <columns>OPPORTUNITY.LEAD_SOURCE</columns>
+        <columns>CORE.USERS.FULL_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Opportunities</label>
+    </listViews>
+    <listViews>
+        <fullName>ClosingNextMonth</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <operation>equals</operation>
+            <value>NEXT_MONTH</value>
+        </filters>
+        <label>Closing Next Month</label>
+    </listViews>
+    <listViews>
+        <fullName>ClosingThisMonth</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_MONTH</value>
+        </filters>
+        <label>Closing This Month</label>
+    </listViews>
+    <listViews>
+        <fullName>Default_Opportunity_Pipeline</fullName>
+        <booleanFilter>(1 OR 2)</booleanFilter>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <operation>greaterOrEqual</operation>
+            <value>LAST_N_DAYS:30</value>
+        </filters>
+        <label>Opportunity Pipeline</label>
+    </listViews>
+    <listViews>
+        <fullName>MyOpportunities</fullName>
+        <filterScope>Mine</filterScope>
+        <label>My Opportunities</label>
+    </listViews>
+    <listViews>
+        <fullName>NewThisWeek</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <label>New This Week</label>
+    </listViews>
+    <listViews>
+        <fullName>Won</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.WON</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.CLOSED</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Won</label>
+    </listViews>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypes>
+        <fullName>Closed_Opportunity</fullName>
+        <active>true</active>
+        <businessProcess>Opportunity Sales Process</businessProcess>
+        <label>Closed Opportunity</label>
+        <picklistValues>
+            <picklist>Application__c</picklist>
+            <values>
+                <fullName>Application 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application 2</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>BuyerType__c</picklist>
+            <values>
+                <fullName>Poker Player</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price Buyer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relationship Buyer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Value Buyer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CloseReason__c</picklist>
+            <values>
+                <fullName>Business declined to pursue the project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Currency Rate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer declined to pursue the project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Freight Rate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Match not approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No capacity to sell</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not actively pursuing - documentation only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price not competitive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proprietary Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referred to Distributor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relationship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sample Failed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Strong relationship with competition</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Google AdWords</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Source</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Google AdWords</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LossReason__c</picklist>
+            <values>
+                <fullName>Lost to Competitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Budget %2F Lost Funding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Decision %2F Non-Responsive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loss_Reason__c</picklist>
+            <values>
+                <fullName>Lost to Competitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Budget %2F Lost Funding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Decision %2F Non-Responsive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>OpportunitySpace__c</picklist>
+            <values>
+                <fullName>Space1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Space2</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>OpportunityType__c</picklist>
+            <values>
+                <fullName>Defense</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment_Terms</picklist>
+            <values>
+                <fullName>1%25 DISCOUNT IN 10 DAYS NET 30 DAYS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%25 DISCOUNT IN 10 DAYS NET 30 DAYS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CASH AGAINST DOCUMENTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DUE 30TH OF MONTH FOLLOWING DATE OF INVOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DUE 5TH OF MONTH FOLLOWING DATE OF INVOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DUE 60TH DAY AFTER END OF INVOICE MONTH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LETTER OF CREDIT SIGHT CONFIRMED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NET 10 DAYS FROM DATE OF INVOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NET 14 DAYS FROM DATE OF INVOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NET 15 DAYS FROM DATE OF INVOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NET 21 DAYS FROM DATE OF INVOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NET 30 DAYS FROM DATE OF INVOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NET 40 DAYS FROM DATE OF INVOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NET 45 DAYS FROM DATE OF INVOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NET 60 DAYS FROM DATE OF INVOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NET 7 DAYS FROM DATE OF INVOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NET 8 DAYS FROM DATE OF INVOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAY IMMEDIATELY WITHOUT DEDUCTION</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PREPAYMENT</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Phase__c</picklist>
+            <values>
+                <fullName>Implement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Measure</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PricePointSource__c</picklist>
+            <values>
+                <fullName>Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internal Estimate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail%2Fconsumer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vendor</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PrimaryCategory__c</picklist>
+            <values>
+                <fullName>Category1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Category2</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ReasonLost__c</picklist>
+            <values>
+                <fullName>Cannot meet distributor minimums</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer wants to expand number of suppliers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Due to Price %28gross%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Due to Price %28net%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Due to Product Quality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Distribution %28area%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Capacity to Sell %28volume%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not interested in the Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product not a match</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relationship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Execution Challenges</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stronger relationship with the competitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>We were not price competitive</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ReasonWon__c</picklist>
+            <values>
+                <fullName>Cannot meet distributor minimums</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer wants to expand number of suppliers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Due to Price %28gross%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Due to Price %28net%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Due to Product Quality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Distribution %28area%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Capacity to Sell %28volume%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not interested in the Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product not a match</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relationship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Execution Challenges</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stronger relationship with the competitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>We were not price competitive</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Tools__c</picklist>
+            <values>
+                <fullName>Tool A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tool B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tool C</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Existing Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Business</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>UnitOfMeasure</picklist>
+            <values>
+                <fullName>Kilogram %28kg%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Metric Ton %28mt%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ounce %28oz%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pound %28lb%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ton %28t%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>New_Opportunity</fullName>
+        <active>true</active>
+        <businessProcess>Opportunity Sales Process</businessProcess>
+        <label>New Opportunity</label>
+        <picklistValues>
+            <picklist>Application__c</picklist>
+            <values>
+                <fullName>Application 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application 2</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>BuyerType__c</picklist>
+            <values>
+                <fullName>Poker Player</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price Buyer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relationship Buyer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Value Buyer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CloseReason__c</picklist>
+            <values>
+                <fullName>Business declined to pursue the project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Currency Rate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer declined to pursue the project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Freight Rate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Match not approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No capacity to sell</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not actively pursuing - documentation only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price not competitive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proprietary Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referred to Distributor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relationship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sample Failed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Strong relationship with competition</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Google AdWords</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Source</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Google AdWords</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LossReason__c</picklist>
+            <values>
+                <fullName>Lost to Competitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Budget %2F Lost Funding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Decision %2F Non-Responsive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loss_Reason__c</picklist>
+            <values>
+                <fullName>Lost to Competitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Budget %2F Lost Funding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Decision %2F Non-Responsive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>OpportunitySpace__c</picklist>
+            <values>
+                <fullName>Space1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Space2</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>OpportunityType__c</picklist>
+            <values>
+                <fullName>Defense</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment_Terms</picklist>
+            <values>
+                <fullName>1%25 DISCOUNT IN 10 DAYS NET 30 DAYS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%25 DISCOUNT IN 10 DAYS NET 30 DAYS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CASH AGAINST DOCUMENTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DUE 30TH OF MONTH FOLLOWING DATE OF INVOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DUE 5TH OF MONTH FOLLOWING DATE OF INVOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DUE 60TH DAY AFTER END OF INVOICE MONTH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LETTER OF CREDIT SIGHT CONFIRMED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NET 10 DAYS FROM DATE OF INVOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NET 14 DAYS FROM DATE OF INVOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NET 15 DAYS FROM DATE OF INVOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NET 21 DAYS FROM DATE OF INVOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NET 30 DAYS FROM DATE OF INVOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NET 40 DAYS FROM DATE OF INVOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NET 45 DAYS FROM DATE OF INVOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NET 60 DAYS FROM DATE OF INVOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NET 7 DAYS FROM DATE OF INVOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NET 8 DAYS FROM DATE OF INVOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAY IMMEDIATELY WITHOUT DEDUCTION</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PREPAYMENT</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Phase__c</picklist>
+            <values>
+                <fullName>Implement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Measure</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PricePointSource__c</picklist>
+            <values>
+                <fullName>Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internal Estimate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail%2Fconsumer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vendor</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PrimaryCategory__c</picklist>
+            <values>
+                <fullName>Category1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Category2</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ReasonLost__c</picklist>
+            <values>
+                <fullName>Cannot meet distributor minimums</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer wants to expand number of suppliers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Due to Price %28gross%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Due to Price %28net%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Due to Product Quality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Distribution %28area%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Capacity to Sell %28volume%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not interested in the Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product not a match</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relationship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Execution Challenges</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stronger relationship with the competitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>We were not price competitive</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ReasonWon__c</picklist>
+            <values>
+                <fullName>Cannot meet distributor minimums</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer wants to expand number of suppliers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Due to Price %28gross%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Due to Price %28net%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Due to Product Quality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Distribution %28area%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Capacity to Sell %28volume%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not interested in the Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product not a match</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relationship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Execution Challenges</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stronger relationship with the competitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>We were not price competitive</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Tools__c</picklist>
+            <values>
+                <fullName>Tool A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tool B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tool C</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Existing Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Business</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>UnitOfMeasure</picklist>
+            <values>
+                <fullName>Kilogram %28kg%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Metric Ton %28mt%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ounce %28oz%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pound %28lb%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ton %28t%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>OPPORTUNITY.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OPPORTUNITY.CLOSE_DATE</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>OPPORTUNITY.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
+        <lookupFilterFields>OPPORTUNITY.NAME</lookupFilterFields>
+        <lookupFilterFields>ACCOUNT.NAME</lookupFilterFields>
+        <lookupPhoneDialogsAdditionalFields>OPPORTUNITY.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.STAGE_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.CLOSE_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+    <validationRules>
+        <fullName>Block_Closed_Won_with_Inactive_Products</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+       InactiveProducts2__c &gt; 0,
+   ISPICKVAL( StageName , &apos;Closed Won&apos;),
+    NOT(ISPICKVAL( PRIORVALUE(StageName), &apos;Closed Won&apos; ))
+   )</errorConditionFormula>
+        <errorDisplayField>StageName</errorDisplayField>
+        <errorMessage>Opportunity Validation Error:  Cannot update Stage to &quot;Closed Won
+ if there are INACTIVE Products associated with the Opportunity.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ClosedLostReason</fullName>
+        <active>true</active>
+        <description>User should be forced to enter a closed-lost reason when an opportunity is marked as closed</description>
+        <errorConditionFormula>ISPICKVAL(StageName, &apos;Closed Lost&apos;)  &amp;&amp;  ISPICKVAL( CloseReason__c ,&apos;&apos;)</errorConditionFormula>
+        <errorDisplayField>CloseReason__c</errorDisplayField>
+        <errorMessage>Opportunity Close Validation Error: Closed Reason required.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IdentifyQuantityOfDealThatWasWonLost</fullName>
+        <active>true</active>
+        <description>Identify the Quantity of the deal that was Won/Lost</description>
+        <errorConditionFormula>AND(
+	PartiallyWon__c,
+	ISBLANK( TotalOpportunityQuantity )
+)</errorConditionFormula>
+        <errorDisplayField>TotalOpportunityQuantity</errorDisplayField>
+        <errorMessage>Identify the Quantity of the deal that was Won/Lost.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Lock_Closed_Opps_from_Edit</fullName>
+        <active>true</active>
+        <description>Prevent Users from Editing previously Closed Opps.</description>
+        <errorConditionFormula>AND(
+   RecordType.Name = &quot;Closed Opportunity&quot;,
+   $Profile.Name &lt;&gt; &quot;System Administrator&quot;
+   )</errorConditionFormula>
+        <errorMessage>Opportunity Validation Error: Previously CLOSED Opportunities are LOCKED from further Edit.  You may wish to Clone the Opportunity.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Lock_Products_Closed_Won_Opps</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+   IsClosed ,
+   ISCHANGED( NumberOfProducts__c ),
+   $User.ProfileId &lt;&gt; &quot;00e4100000189Zr&quot;,  /* System Admin Profile */
+   $User.ProfileId &lt;&gt; &quot;00e4C000000HgpC&quot;   /* Group Coordinator Profile */
+   )</errorConditionFormula>
+        <errorMessage>Opportunity Product Validation Error:  Opportunity Products are LOCKED from edit on Closed Won Opportunities.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>OpportunityRestrictionToUniversalBillTo</fullName>
+        <active>false</active>
+        <errorConditionFormula>NOT(
+    AND(
+        Account.RecordType.Name = &apos;Sold To&apos;,
+        Account.Is_Universal__c = TRUE 
+   
+    )
+)</errorConditionFormula>
+        <errorMessage>Opportunity can be associated to Universal Bill To level only.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>OpportunityStageProcessValidation</fullName>
+        <active>true</active>
+        <errorConditionFormula>CASE( StageName , 
+&quot;Explore&quot;,1, 
+&quot;Discover&quot;,2, 
+&quot;Closed Won&quot;,3, 
+&quot;Closed Lost&quot;,4,0) 
+&lt; 
+CASE(PRIORVALUE(StageName) , 
+&quot;Explore&quot;,1, 
+&quot;Discover&quot;,2, 
+&quot;Closed Won&quot;,3, 
+&quot;Closed Lost&quot;,4,0)</errorConditionFormula>
+        <errorMessage>Opportunity Stage cannot changes to earlier stage</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RestrictOpportunityCreationFromLead</fullName>
+        <active>true</active>
+        <description>Opportunity cannot be created from Lead (i.e. lead conversion process ).</description>
+        <errorConditionFormula>AND(
+   ISNEW(), 
+   IsSourceLeadConversion__c 
+
+)</errorConditionFormula>
+        <errorMessage>Lead cannot be converted to Opportunity. Please keep opportunity selection blank.</errorMessage>
+    </validationRules>
+</CustomObject>

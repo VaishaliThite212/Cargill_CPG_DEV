@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>New</fullName>
+        <fields>Market_Channel__c</fields>
+        <label>New</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>AccountGlobalDescription__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.GlobalDescription__c</formula>
+        <label>Account Global Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Customer Profiles</relationshipLabel>
+        <relationshipName>Customer_Profiles</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Applications__c</fullName>
+        <externalId>false</externalId>
+        <label>Applications</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Value1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Value2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Brands__c</fullName>
+        <externalId>false</externalId>
+        <label>Brands</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Business__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>CargillBusiness</globalPicklist>
+        <label>Business</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Cargill_Ingredients_in_Top_Brands__c</fullName>
+        <externalId>false</externalId>
+        <label>Cargill Ingredients in Top Brands</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ConvenienceOpportunities__c</fullName>
+        <externalId>false</externalId>
+        <label>Convenience Opportunities</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CustomerDescription__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Overview</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>DevelopmentFocus__c</fullName>
+        <externalId>false</externalId>
+        <label>Development Focus</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Value1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Value2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Drivers__c</fullName>
+        <externalId>false</externalId>
+        <label>Drivers</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Lean &amp; Green</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Better Without</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Better With</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cleaner Label</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Differentiated Performance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Supplier/Service Performance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>HealthWellnessOpportunities__c</fullName>
+        <externalId>false</externalId>
+        <label>Health &amp; Wellness Opportunities</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LegacyRecordID__c</fullName>
+        <externalId>false</externalId>
+        <label>Legacy Record ID</label>
+        <length>30</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MarketShare__c</fullName>
+        <externalId>false</externalId>
+        <label>Market Share</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Market_Channel__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Account__r.Market_Channel__c)</formula>
+        <label>Market Channel</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Space__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Space</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Antibiotic Free</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Food with a Story</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sustainability</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Value Added</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Convenience</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Health &amp; Wellness</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sensory</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Value &amp; Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Customer_Profile</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PotentialTools__c</fullName>
+        <externalId>false</externalId>
+        <label>Potential Tools</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Customer Risk Managment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Trade &amp; Structured Finance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cargill Optimizing Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waste Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PreventMoreThanOneRecord__c</fullName>
+        <externalId>false</externalId>
+        <label>PreventMoreThanOneRecord</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PrimaryApplication__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary Application</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Bread/ bread products </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sweet Biscuits/Cookies </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Savory Biscuits/Crackers </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pastries/Sweet Goods </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mixes &amp; Doughs </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pasta </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dry Mixes </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Carbonated Soft Drinks </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Functional &amp; Flavored Water </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Juice, Juice Drinks, Nectars </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sports/Energy </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RTD Tea/Coffee </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Powdered /Dry Mixes </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Liquid Concentrates </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Beer </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wine, spirits and alc flavored drinks </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sugar Confectionery </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chewing Gums </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chocolate </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fillings, Coatings, Toppings </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ready Meals/Kits </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Soups </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sauces, Dressings &amp; Condiments </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Oils, Fats and Spreads </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Egg Products </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cheese </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Creams </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Liquid Creamers </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dairy Desserts </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dairy Drinks </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yogurt &amp; Quark </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Specialty Dairy &amp; Non-Dairy </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Frozen Desserts </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fillings &amp; Toppings </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fruit Preparations </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fruit Sauces </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Glazings, Icings &amp; Pipings </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jams &amp; Jellies </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reformed Fruit &amp; Vegetables </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Water Jellies </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fruit Desserts </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Syrups &amp; Ripples </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Solid </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Liquid </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dry </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Specialty </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cooked meats </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dry meats </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fresh-frozen meats </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Specialty &amp; meat Analogs </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Oral Care </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Skin and Sun Care </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hair Care </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bath and Body Care </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Color cosmetics </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wet pet food </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dry pet food </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Snack pet food </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Solid Dosage Forms </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Liquid Dosage Forms </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nutritional Supplements </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medicated confectionery </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Parenteral applications </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chips/Crisps </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Extruded Snacks </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tortilla / Corn Chips </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RTE/Breakfast Cereals </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Snack Bars </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Granola/Museli </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Breakfast/Cereal </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Energy snacks </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fish </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Feed </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industrial </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Food ingredients</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Value1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Value2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PrimaryCategory__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>M1 Product experience/High Vertical Integration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M2 Value – Product Innovation &amp; Supply Chain/ High Vertical Integration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M3 Low vertical B2C</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M4 Low Vertical integration B2B</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F1 Product Experience &amp; Value Differentiation/B2C – Scratch</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F2 Product Experience /B2C – Assembly &amp; B2C – Heat and Serve</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F3 Value Differentiation/ B2C – Assembly &amp; B2C – Heat and Serve</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F4 Product Experience/B2B – Move Product</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F5 Value Differentiation/ B2B – Move Product</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F6 Product Experience &amp; Value Differentiation/B2B – Manage Product</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F7 Product Experience &amp; Value Differentiation/Institution</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>R1  Product experience/High &amp; Medium In-house</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>R2 Value – Product Innovation/High In-House</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>R3 Value – Product Innovation/Medium In-House</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>R4 Product experience &amp; Value – Product Innovation/Low In-House</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>R5 Value – Supply Chain Innovation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>T Trade</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>PrimaryChannel__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary Channel</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Value1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Value2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ProductLines__c</fullName>
+        <description>This may be defined as Picklist or Lookup based on Cargill discussion around Product Hierarachy.</description>
+        <externalId>false</externalId>
+        <label>ProductLines</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>RDCapabilities__c</fullName>
+        <externalId>false</externalId>
+        <label>R&amp;D Capabilities</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Combination</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inhouse</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Limited</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Value1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Value2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>outsourced</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>RecordNumber__c</fullName>
+        <description>This is created for task 154</description>
+        <displayFormat>{000000}</displayFormat>
+        <externalId>false</externalId>
+        <label>Record Number</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>SensoryOpportunities__c</fullName>
+        <externalId>false</externalId>
+        <label>Sensory Opportunities</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>SpecialServices__c</fullName>
+        <externalId>false</externalId>
+        <label>Special Services</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Value1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Value2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SustainabilityOpportunities__c</fullName>
+        <externalId>false</externalId>
+        <label>Sustainability Opportunities</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ValueServiceOpportunities__c</fullName>
+        <externalId>false</externalId>
+        <label>Value &amp; Service Opportunities</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Way_Customer_Is_Organized__c</fullName>
+        <externalId>false</externalId>
+        <label>Way Customer Is Organized</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Customer Profile</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Customer Profile Name</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Customer Profile</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Account__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Business__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATED_DATE</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Account__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Business__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CREATED_DATE</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Account__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Business__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CREATED_DATE</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Account__c</searchFilterFields>
+        <searchFilterFields>Business__c</searchFilterFields>
+        <searchFilterFields>CREATED_DATE</searchFilterFields>
+        <searchResultsAdditionalFields>Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Business__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

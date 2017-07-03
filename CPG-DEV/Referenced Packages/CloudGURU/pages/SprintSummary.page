@@ -1,0 +1,95 @@
+<apex:page docType="html-5.0" standardController="impframework__Sprint__c" extensions="impframework.SprintSummaryController" sidebar="false" showheader="true" standardStylesheets="false" cache="true" tabStyle="CloudGURU__tab">
+    <script type="text/javascript">
+        window.onload = function(){
+            loadBurndownChart();
+            loadBurnupChart();
+        };
+        
+        function loadBurndownChart(){
+            var chart = new cfx.Chart();
+            var i = 0;
+            var items = new Array();
+
+            //Data
+            chart.getDataSourceSettings().getFields().clear();
+            var ideal = {!sprint.impframework__Sprint_Estimate__c};
+            var divisor = {!sprint.Sprint_Progress__r.size} - 1;
+            var projectedIdeal = 0;
+            var conditionPoint = 0;
+            var newDivisor = 1;
+            var j = 0;
+            <apex:repeat value="{!sprint.Sprint_Progress__r}" var="sprintProgress">
+                var sprintProgressDate = new Date("{!sprintProgress.impframework__Date__c}");
+                sprintProgressDate.setHours(0,0,0,0);
+                var today = new Date();
+                today.setHours(0,0,0,0);
+                var difference = sprintProgressDate - today;
+                
+                var effortRemaining = {!sprintProgress.impframework__Effort_Remaining__c};
+                if (difference >= 0){
+                    if (projectedIdeal == 0){
+                         conditionPoint = i + 1;
+                         projectedIdeal = effortRemaining * 0.99;
+                         newDivisor = divisor - i;
+                    }
+                    if (newDivisor == 0)
+                        effortRemaining = 0;
+                    else
+                        effortRemaining = projectedIdeal - (j * projectedIdeal/newDivisor);
+                    j++;
+                }
+                
+                items.push(
+                    getBurnDownItem(
+                        "Day " + i,
+                        ideal - (i * ideal/divisor),
+                        effortRemaining,
+                        {!sprintProgress.impframework__Stories_Completed__c}
+                    )
+                );
+                i++;
+            </apex:repeat>
+            loadBurndown(chart, items, conditionPoint, {!sprint.impframework__Baseline_Scope__c}, "Burndown", 'burndownChart');
+        }
+
+        function loadBurnupChart(){
+            var chart = new cfx.Chart();
+            var i = 0;
+            var items = new Array();
+
+            //Data
+            chart.getDataSourceSettings().getFields().clear();
+            var scope = {!sprint.impframework__Baseline_Scope__c};
+            var storiesCumulative = 0
+            <apex:repeat value="{!sprint.Sprint_Progress__r}" var="sprintProgress">
+                storiesCumulative = storiesCumulative + {!sprintProgress.impframework__Stories_Completed__c};
+                scope = scope + {!sprintProgress.impframework__Stories_Added__c} - {!sprintProgress.impframework__Stories_Removed__c};
+                
+                items.push(
+                    getBurnUpItem(
+                        "Day " + i,
+                        scope,
+                        storiesCumulative
+                    )
+                );
+                i++;
+            </apex:repeat>
+            
+            loadBurnUp(chart, items, "Burnup", 'burnUpChart');
+        }
+    </script>
+    <c:CG_PageTemplate currentTab="sprintSummary" header="false">
+        <div class="row main-row">
+            <div class="4u">
+                <section>
+                    <div id="burndownChart" class="chart"/>
+                </section>
+            </div>
+            <div class="4u">
+                <section>
+                    <div id="burnUpChart" class="chart"/>
+                </section>
+            </div>
+        </div>
+    </c:CG_PageTemplate>
+</apex:page>

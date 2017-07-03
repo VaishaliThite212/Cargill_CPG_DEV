@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Project</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Projects</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Plan --></label>
+        <name>AccountPlan__c</name>
+        <relationshipLabel><!-- Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Activity Date --></label>
+        <name>ActivityDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Margins --></label>
+        <name>ActualMargins__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Resource Cost --></label>
+        <name>ActualResourceCost__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Volume --></label>
+        <name>ActualVolume__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual Margin - Actual --></label>
+        <name>AnnualMarginActual__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual Margin - Estimated --></label>
+        <name>AnnualMarginEstimated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual Volume - Actual --></label>
+        <name>AnnualVolumeActual__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual Volume - Estimated --></label>
+        <name>AnnualVolumeEstimated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual Volume - Product Rollup (0-Year) --></label>
+        <name>AnnualVolumeProductRollup0Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual Volume - Product Rollup (1-Year) --></label>
+        <name>AnnualVolumeProductRollup1Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual Volume - Product Rollup (2-Year) --></label>
+        <name>Annual_Volume_Product_Rollup_2_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual Volume - Product Rollup (3-Year) --></label>
+        <name>Annual_Volume_Product_Rollup_3_Year__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date anticipated to move to Measure and have a contract --></help>
+        <label><!-- Anticipated Commercialization Date --></label>
+        <name>Anticipated_Commercialization_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business --></label>
+        <name>Business__c</name>
+        <relationshipLabel><!-- Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Campaign --></label>
+        <name>Campaign__c</name>
+        <relationshipLabel><!-- Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Cancelled Date --></label>
+        <name>Cancelled_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Clarizen Project Id --></label>
+        <name>Clarizen_Project_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Commercialization Date --></label>
+        <name>Commercialization_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Commercialization Date at Closed Won --></label>
+        <name>Commercialization_Date_at_Closed_Won__c</name>
+    </fields>
+    <fields>
+        <label><!-- Commercialization Date at Implement --></label>
+        <name>Commercialization_Date_at_Implement__c</name>
+    </fields>
+    <fields>
+        <label><!-- Commercialization Date at Measure --></label>
+        <name>Commercialization_Date_at_Measure__c</name>
+    </fields>
+    <fields>
+        <label><!-- CurrentUser --></label>
+        <name>CurrentUser__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days Until Commercialization --></label>
+        <name>Days_Until_Commercialization__c</name>
+    </fields>
+    <fields>
+        <label><!-- Develop Date --></label>
+        <name>DevelopDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Margins --></label>
+        <name>EstimatedMargins__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Resource Cost --></label>
+        <name>EstimatedResourceCost__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Volume --></label>
+        <name>EstimatedVolume__c</name>
+    </fields>
+    <fields>
+        <label><!-- Implement Date --></label>
+        <name>ImplementDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy Record ID --></label>
+        <name>LegacyRecordID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Measure Date --></label>
+        <name>MeasureDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next Steps --></label>
+        <name>Next_Steps__c</name>
+    </fields>
+    <fields>
+        <label><!-- Objective --></label>
+        <name>Objective__c</name>
+    </fields>
+    <fields>
+        <label><!-- On Hold Date --></label>
+        <name>On_Hold_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Close Date --></label>
+        <name>OpportunityCloseDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Record Type --></label>
+        <name>OpportunityRecordType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Space --></label>
+        <name>OpportunitySpace__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Stage --></label>
+        <name>Opportunity_Stage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Phase --></label>
+        <name>Phase__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Develop</masterLabel>
+            <translation><!-- Develop --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Explore</masterLabel>
+            <translation><!-- Explore --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feasibility</masterLabel>
+            <translation><!-- Feasibility --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ideation</masterLabel>
+            <translation><!-- Ideation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Implement</masterLabel>
+            <translation><!-- Implement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Measure</masterLabel>
+            <translation><!-- Measure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Planning</masterLabel>
+            <translation><!-- Planning --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Projected Annual Volume --></label>
+        <name>ProjectedAnnualVolume__c</name>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>Region__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stage --></label>
+        <name>Stage__c</name>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Go</masterLabel>
+            <translation><!-- Go --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold</masterLabel>
+            <translation><!-- On Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted for Approval</masterLabel>
+            <translation><!-- Submitted for Approval --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Total Project Volume CM --></label>
+        <name>Total_Project_Volume_CM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Project Volume --></label>
+        <name>Total_Project_Volume__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Projected CM (0-Year) --></label>
+        <name>Total_Projected_CM_0_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Projected CM (1-Year) --></label>
+        <name>Total_Projected_CM_1_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Projected CM (2-Year) --></label>
+        <name>Total_Projected_CM_2_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Projected CM (3-Year) --></label>
+        <name>Total_Projected_CM_3_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Projected Volume LB (0-Year) --></label>
+        <name>Total_Projected_Volume_LB_0_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Projected Volume LB (1-Year) --></label>
+        <name>Total_Projected_Volume_LB_1_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Projected Volume LB (2-Year) --></label>
+        <name>Total_Projected_Volume_LB_2_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Projected Volume LB (3-Year) --></label>
+        <name>Total_Projected_Volume_LB_3_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>D Complaint/IMPASS</masterLabel>
+            <translation><!-- D Complaint/IMPASS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>D Proactive</masterLabel>
+            <translation><!-- D Proactive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>D Problem</masterLabel>
+            <translation><!-- D Problem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>D Support</masterLabel>
+            <translation><!-- D Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IO Capacity</masterLabel>
+            <translation><!-- IO Capacity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IO Competitor Analysis</masterLabel>
+            <translation><!-- IO Competitor Analysis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IO Ingredient</masterLabel>
+            <translation><!-- IO Ingredient --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IO Knowledge</masterLabel>
+            <translation><!-- IO Knowledge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IO Out of Spec</masterLabel>
+            <translation><!-- IO Out of Spec --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IO PPD</masterLabel>
+            <translation><!-- IO PPD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IO Shelf Life</masterLabel>
+            <translation><!-- IO Shelf Life --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NBD CTS</masterLabel>
+            <translation><!-- NBD CTS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NBD Matching</masterLabel>
+            <translation><!-- NBD Matching --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NPSS Matching</masterLabel>
+            <translation><!-- NPSS Matching --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NPSS New</masterLabel>
+            <translation><!-- NPSS New --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- isApproved --></label>
+        <name>isApproved__c</name>
+    </fields>
+    <fields>
+        <label><!-- opportunity Stage --></label>
+        <name>opportunity_Stage1__c</name>
+    </fields>
+    <layouts>
+        <layout>Project Layout Approved</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Information --></label>
+            <section>Information</section>
+        </sections>
+        <sections>
+            <label><!-- Project Dates --></label>
+            <section>Project Dates</section>
+        </sections>
+        <sections>
+            <label><!-- Projected Volume &amp; Margins --></label>
+            <section>Projected Volume &amp; Margins</section>
+        </sections>
+        <sections>
+            <label><!-- Source Opportunity --></label>
+            <section>Source Opportunity</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Project Layout Draft</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Information --></label>
+            <section>Information</section>
+        </sections>
+        <sections>
+            <label><!-- Project Dates --></label>
+            <section>Project Dates</section>
+        </sections>
+        <sections>
+            <label><!-- Projected Volume &amp; Margins --></label>
+            <section>Projected Volume &amp; Margins</section>
+        </sections>
+        <sections>
+            <label><!-- Source Opportunity --></label>
+            <section>Source Opportunity</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Project (Approved) --></label>
+        <name>Project_Approved</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Project (Draft) --></label>
+        <name>Project_Draft</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Project (Submitted) --></label>
+        <name>Project_Submitted</name>
+    </recordTypes>
+    <sharingReasons>
+        <label><!-- Opportunity Team Member --></label>
+        <name>Opportunity_Team_Member</name>
+    </sharingReasons>
+    <sharingReasons>
+        <label><!-- Project Team Member --></label>
+        <name>Project_Team_Member</name>
+    </sharingReasons>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- If the related Opportunity is in Closed Won stage, then no update is allowed --></errorMessage>
+        <name>ProjectWithOpportunityStageClosedWon</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select the opportunity which has products associated with it. --></errorMessage>
+        <name>Project_with_Opportunit_with_no_Products</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Project Validation Error: Project Approval is required to advance Stage. --></errorMessage>
+        <name>Require_Approval_to_Advance_Stage</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Projects can only be created if the Opportunity ACCOUNT is a Prospect or Global Account or Regional Account Group Account Record Type. --></errorMessage>
+        <name>RestrictProjectCreationOnOppAccRecType</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Create_New_Project --></label>
+        <name>Create_New_Project</name>
+    </webLinks>
+</CustomObjectTranslation>

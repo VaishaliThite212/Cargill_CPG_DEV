@@ -1,0 +1,1027 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>AddProduct</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChoosePricebook</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditAllProduct</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>ActiveProduct2__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Active Product Checkbox for Development to update this field from PricebookEntry.Active field update.</description>
+        <externalId>false</externalId>
+        <label>Active Product</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ActualAnnualVolume0Year__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Project Product Field</description>
+        <externalId>false</externalId>
+        <label>Actual Annual Volume (0-Year)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ActualAnnualVolume1Year__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Project Product Field</description>
+        <externalId>false</externalId>
+        <label>Actual Annual Volume (1-Year)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ActualAnnualVolume2Year__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Project Product Field</description>
+        <externalId>false</externalId>
+        <label>Actual Annual Volume (2-Year)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ActualAnnualVolume3Year__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Project Product Field</description>
+        <externalId>false</externalId>
+        <label>Actual Annual Volume (3-Year)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ActualAnnualVolumeCM0Year__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Project Product Field</description>
+        <externalId>false</externalId>
+        <label>Actual Annual Volume CM (0-Year)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ActualAnnualVolumeCM1Year__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Project Product Field</description>
+        <externalId>false</externalId>
+        <label>Actual Annual Volume CM (1-Year)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ActualAnnualVolumeCM2Year__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Project Product Field</description>
+        <externalId>false</externalId>
+        <label>Actual Annual Volume CM (2-Year)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ActualAnnualVolumeCM3Year__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Project Product Field</description>
+        <externalId>false</externalId>
+        <label>Actual Annual Volume CM (3-Year)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Application__c</fullName>
+        <externalId>false</externalId>
+        <label>Application</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Bread/ bread products</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sweet Biscuits/Cookies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Savory Biscuits/Crackers</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pastries/Sweet Goods</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mixes &amp; Doughs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pasta</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dry Mixes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Carbonated Soft Drinks</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Functional &amp; Flavored Water</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Juice, Juice Drinks, Nectars</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sports/Energy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RTD Tea/Coffee</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Powdered /Dry Mixes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Liquid Concentrates</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Beer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wine, spirits and alc flavored drinks</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sugar Confectionery</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chewing Gums</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chocolate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fillings, Coatings, Toppings</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ready Meals/Kits</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Soups</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sauces, Dressings &amp; Condiments</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Oils, Fats and Spreads</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Egg Products</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cheese</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Creams</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Liquid Creamers</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dairy Desserts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dairy Drinks</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yogurt &amp; Quark</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Specialty Dairy &amp; Non-Dairy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Frozen Desserts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fillings &amp; Toppings</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fruit Preparations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fruit Sauces</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Glazings, Icings &amp; Pipings</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jams &amp; Jellies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reformed Fruit &amp; Vegetables</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Water Jellies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fruit Desserts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Syrups &amp; Ripples</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Solid</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Liquid</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Specialty</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cooked meats</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dry meats</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fresh-frozen meats</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Specialty &amp; meat Analogs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Oral Care</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Skin and Sun Care</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hair Care</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bath and Body Care</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Color cosmetics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wet pet food</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dry pet food</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Snack pet food</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Solid Dosage Forms</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Liquid Dosage Forms</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nutritional Supplements</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medicated confectionery</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Parenteral applications</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chips/Crisps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Extruded Snacks</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tortilla / Corn Chips</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RTE/Breakfast Cereals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Snack Bars</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Granola/Museli</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Breakfast/Cereal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Energy snacks</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fish</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Feed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industrial</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Food ingredients</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Bakery</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Beverage</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Confectionery</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Convenience foods</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dairy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fruit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Infant &amp; baby food</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Meat</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal care</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pet food</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pharma</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Snacks &amp; cereals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Feed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industrial</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Food ingredients</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Test 2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Competitor_Accounts__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Competitor Accounts</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.RecordType.Name</field>
+                <operation>equals</operation>
+                <value>Competitor</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+    </fields>
+    <fields>
+        <fullName>Discount</fullName>
+    </fields>
+    <fields>
+        <fullName>ExtendedFloorPrice__c</fullName>
+        <description>Pricing Guidance Floor Price * Quantity</description>
+        <externalId>false</externalId>
+        <formula>PricingGuildanceFloorPrice__c   *  Quantity</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Pricing Guidance Floor Price * Quantity</inlineHelpText>
+        <label>Extended Floor Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ExtendedStartPrice__c</fullName>
+        <description>Price Guidance Start Price * Product Quantity</description>
+        <externalId>false</externalId>
+        <formula>PricingGuidanceStartPrice__c   * Quantity</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Price Guidance Start Price * Product Quantity</inlineHelpText>
+        <label>Extended Start Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ExtendedTargetPrice__c</fullName>
+        <description>Pricing Guidance Target Price * Quantity</description>
+        <externalId>false</externalId>
+        <formula>PricingGuidanceTargetPrice__c  * Quantity</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Pricing Guidance Target Price * Quantity</inlineHelpText>
+        <label>Extended Target Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Floor__c</fullName>
+        <description>The lowest price at which this item should be sold under the current conditions</description>
+        <externalId>false</externalId>
+        <label>Floor</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>IfLostCompetitorLostTo__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>If Lost, Competitor Lost To</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Opportunity Product (If Lost, Competitor Lost To)</relationshipLabel>
+        <relationshipName>Opportunity_Product2</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>IfWonCompetitorWonAgainst__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>If Won, Competitor Won Against</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Opportunity Product (If Won, Competitor Won Against)</relationshipLabel>
+        <relationshipName>Opportunity_Product1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>KGUnitPrice__c</fullName>
+        <description>Field is created as a part of Cargill Leap Project</description>
+        <externalId>false</externalId>
+        <formula>CASE(UnitOfMeasure__c,
+   &quot;Pound (lb)&quot;, TotalPrice / KGUnitQuantity__c, 
+   &quot;Kilogram (kg)&quot;, UnitPrice, 
+   &quot;Hundred Weight (CWT)&quot;, TotalPrice /(KGUnitQuantity__c * 50.8023),
+   &quot;Metric Ton (MT)&quot;, TotalPrice / (KGUnitQuantity__c * 2205),
+   &quot;Each (EA)&quot;, IF(PricebookEntry.Product2.EAtoKGConversionRate__c &lt;&gt; 0, TotalPrice / PricebookEntry.Product2.EAtoKGConversionRate__c,0),
+   &quot;Gallon (GAL)&quot;, IF(PricebookEntry.Product2.GALtoKGConversionRate__c &lt;&gt; 0, TotalPrice /  PricebookEntry.Product2.GALtoKGConversionRate__c, 0),
+   &quot;Case&quot;, IF(PricebookEntry.Product2.CASEtoKGConversionRate__c &lt;&gt; 0,TotalPrice / PricebookEntry.Product2.CASEtoKGConversionRate__c,0),
+   &quot;Liter&quot;, IF(PricebookEntry.Product2.LITERtoKGConversionRate__c &lt;&gt; 0, Quantity * PricebookEntry.Product2.LITERtoKGConversionRate__c, 0),
+   0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Kilogram (kg) Unit Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>KGUnitQuantity__c</fullName>
+        <description>Field is created as a part of Cargill Leap Project</description>
+        <externalId>false</externalId>
+        <formula>CASE(UnitOfMeasure__c,
+   &quot;Pound (lb)&quot;, Quantity * 2.20462, 
+   &quot;Kilogram (kg)&quot;, Quantity, 
+   &quot;Hundred Weight (CWT)&quot;, Quantity * 50.8023,
+   &quot;Metric Ton (MT)&quot;, Quantity * 2205,
+   &quot;Each (EA)&quot;, Quantity * PricebookEntry.Product2.EAtoKGConversionRate__c,
+   &quot;Gallon (GAL)&quot;, Quantity * PricebookEntry.Product2.GALtoKGConversionRate__c,
+   &quot;Case&quot;, Quantity * PricebookEntry.Product2.CASEtoKGConversionRate__c,
+   &quot;Liter&quot;, Quantity * PricebookEntry.Product2.LITERtoKGConversionRate__c,
+   0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Kilogram (kg) Unit Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LBUnitPrice__c</fullName>
+        <description>Field is created as a part of Cargill Leap Project</description>
+        <externalId>false</externalId>
+        <formula>CASE(UnitOfMeasure__c,
+   &quot;Pound (lb)&quot;, UnitPrice, 
+   &quot;Kilogram (kg)&quot;, TotalPrice / KGUnitQuantity__c, 
+   &quot;Hundred Weight (CWT)&quot;, TotalPrice /(KGUnitQuantity__c *100),
+   &quot;Metric Ton (MT)&quot;, TotalPrice / (KGUnitQuantity__c * 1000),
+   &quot;Each (EA)&quot;, 
+      IF(
+      PricebookEntry.Product2.EAtoLBConversionRate__c &lt;&gt; 0,
+      TotalPrice / PricebookEntry.Product2.EAtoLBConversionRate__c,
+      0),
+   &quot;Gallon (GAL)&quot;,
+      IF(
+      PricebookEntry.Product2.GALtoLBConversionRate__c &lt;&gt; 0, 
+      TotalPrice /  PricebookEntry.Product2.GALtoLBConversionRate__c,
+      0),
+   &quot;Case&quot;, 
+       IF(
+       PricebookEntry.Product2.CASEtoLBConversionRate__c &lt;&gt; 0, 
+       TotalPrice / 
+       PricebookEntry.Product2.CASEtoLBConversionRate__c,
+       0),
+   &quot;Liter&quot;, 
+        IF(
+        PricebookEntry.Product2.LITERtoLBConversionRate__c &lt;&gt;0,
+        Quantity *  
+        PricebookEntry.Product2.LITERtoLBConversionRate__c,
+        0),
+   0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Pound (lb) Unit Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LBUnitQuantity__c</fullName>
+        <description>Field is created as a part of Cargill Leap Project</description>
+        <externalId>false</externalId>
+        <formula>CASE(UnitOfMeasure__c,
+   &quot;Pound (lb)&quot;, Quantity, 
+   &quot;Kilogram (kg)&quot;, Quantity * 0.453592, 
+   &quot;Hundred Weight (CWT)&quot;, Quantity * 100,
+   &quot;Metric Ton (MT)&quot;, Quantity * 1000,
+   &quot;Each (EA)&quot;, Quantity * PricebookEntry.Product2.EAtoLBConversionRate__c,
+   &quot;Gallon (GAL)&quot;, Quantity * PricebookEntry.Product2.GALtoLBConversionRate__c,
+   &quot;Case&quot;, Quantity * PricebookEntry.Product2.CASEtoLBConversionRate__c,
+   &quot;Liter&quot;, Quantity * PricebookEntry.Product2.LITERtoLBConversionRate__c,
+   0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Pound (lb) Unit Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ListPrice</fullName>
+    </fields>
+    <fields>
+        <fullName>Margin__c</fullName>
+        <externalId>false</externalId>
+        <formula>TotalPrice - Quantity * ( PricebookEntry.Product2.FixedCost__c + PricebookEntry.Product2.VariableCost__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Margin</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OpportunityId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Payment_Terms__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Payment_Terms</globalPicklist>
+        <label>Payment Terms</label>
+        <required>false</required>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>PricingGuidanceStartPrice__c</fullName>
+        <description>Defaulted from Pricebook Entry upon Opportunity Product CREATE.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Defaulted from Pricebook Entry upon Opportunity Product CREATE.</inlineHelpText>
+        <label>Pricing Guidance: Start Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>PricingGuidanceTargetPrice__c</fullName>
+        <description>Defaulted from Pricebook Entry upon Opportunity Product CREATE.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Defaulted from Pricebook Entry upon Opportunity Product CREATE.</inlineHelpText>
+        <label>Pricing Guidance: Target Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>PricingGuildanceFloorPrice__c</fullName>
+        <description>Defaulted from Pricebook Entry upon Opportunity Product CREATE.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Defaulted from Pricebook Entry upon Opportunity Product CREATE.</inlineHelpText>
+        <label>Pricing Guildance: Floor Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Product2Id</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ProductCode</fullName>
+    </fields>
+    <fields>
+        <fullName>ProductWeightQuantityImperial__c</fullName>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Product2.ProductWeightQuantityImperial__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Weight Quantity (Imperial)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProductWeightQuantityMetric__c</fullName>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Product2.ProductWeightQuantityMetric__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Weight Quantity (Metric)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProductWeightUnitOfMeasureImperial__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(PricebookEntry.Product2.ProductWeightUnitOfMeasureImperial__c)</formula>
+        <label>Product Weight Unit of Measure(Imperial)</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProductWeightUnitOfMeasureMetric__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(PricebookEntry.Product2.ProductWeightUnitOfMeasureMetric__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Weight Unit of Measure (Metric)</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Project_Product_Id__c</fullName>
+        <externalId>true</externalId>
+        <label>Project Product Id</label>
+        <length>25</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProjectedAnnualVolume0Year__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Project Product Field</description>
+        <externalId>false</externalId>
+        <label>Projected Annual Volume (0-Year)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProjectedAnnualVolume1Year__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Project Product Field</description>
+        <externalId>false</externalId>
+        <label>Projected Annual Volume (1-Year)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProjectedAnnualVolume2Year__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Project Product Field</description>
+        <externalId>false</externalId>
+        <label>Projected Annual Volume (2-Year)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProjectedAnnualVolume3Year__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Project Product Field</description>
+        <externalId>false</externalId>
+        <label>Projected Annual Volume (3-Year)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProjectedAnnualVolumeCM0Year__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Project Product Field</description>
+        <externalId>false</externalId>
+        <label>Projected Annual Volume CM (0-Year)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProjectedAnnualVolumeCM1Year__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Project Product Field</description>
+        <externalId>false</externalId>
+        <label>Projected Annual Volume CM (1-Year)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProjectedAnnualVolumeCM2Year__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Project Product Field</description>
+        <externalId>false</externalId>
+        <label>Projected Annual Volume CM (2-Year)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProjectedAnnualVolumeCM3Yearr__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Project Product Field</description>
+        <externalId>false</externalId>
+        <label>Projected Annual Volume CM (3-Year)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quantity</fullName>
+    </fields>
+    <fields>
+        <fullName>Renewal_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Win/Loss Reason</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Lost - Price</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lost - Product Functionality</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lost - Product Discontinuation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lost - Customer Lost Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lost - Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ServiceDate</fullName>
+    </fields>
+    <fields>
+        <fullName>Start__c</fullName>
+        <description>The List Price should be the highest of the range</description>
+        <externalId>false</externalId>
+        <label>Start</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Subtotal</fullName>
+    </fields>
+    <fields>
+        <fullName>Target__c</fullName>
+        <description>The ideal price for the item based on configurable conditions</description>
+        <externalId>false</externalId>
+        <label>Target</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>TotalPrice</fullName>
+    </fields>
+    <fields>
+        <fullName>UnitOfMeasure__c</fullName>
+        <description>Field is created as a part of Cargill Leap Project</description>
+        <externalId>false</externalId>
+        <globalPicklist>Unit_of_Measure_Combined</globalPicklist>
+        <label>Unit of Measure</label>
+        <required>false</required>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>UnitPrice</fullName>
+    </fields>
+    <validationRules>
+        <fullName>Opp_Product_LOCKED_on_Closed_Won_Opps</fullName>
+        <active>true</active>
+        <description>Lock Opportunity Products on Closed Won Opp with Processed Contracts.</description>
+        <errorConditionFormula>AND(ISPICKVAL(Opportunity.StageName, &quot;Closed Won&quot;), 
+NOT(OR($Profile.Name  =  &quot;System Administrator&quot;, $Profile.Name  =  &quot;Group Coordinator&quot;))
+)</errorConditionFormula>
+        <errorMessage>Closed Won Opportunities not eligible for EDIT of Opportunity Products.</errorMessage>
+    </validationRules>
+</CustomObject>
