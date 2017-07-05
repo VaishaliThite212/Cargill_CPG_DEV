@@ -233,4 +233,16 @@
         <searchResultsAdditionalFields>Description__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>RestrictStrategicObjectiveNameUpdate</fullName>
+        <active>true</active>
+        <description>Strategic Objective Name cannot be updated. It can be editable only at the time of creation.</description>
+        <errorConditionFormula>AND( 
+NOT(ISNEW()), 
+ISCHANGED(Name), 
+$Profile.Name &lt;&gt; &apos;System Administrator&apos; 
+)</errorConditionFormula>
+        <errorDisplayField>Name</errorDisplayField>
+        <errorMessage>Strategic Objective Name cannot be changed.</errorMessage>
+    </validationRules>
 </CustomObject>

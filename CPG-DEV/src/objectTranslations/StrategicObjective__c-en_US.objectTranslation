@@ -67,4 +67,8 @@
         </sections>
     </layouts>
     <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Strategic Objective Name cannot be changed. --></errorMessage>
+        <name>RestrictStrategicObjectiveNameUpdate</name>
+    </validationRules>
 </CustomObjectTranslation>

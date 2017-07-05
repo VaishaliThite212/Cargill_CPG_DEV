@@ -89,4 +89,8 @@
         <errorMessage><!-- Meeting Date is required to advance Status to &quot;Complete&quot; or &quot;Closed&quot; --></errorMessage>
         <name>Customer_Meeting_Date_Blank_Rule</name>
     </validationRules>
+    <validationRules>
+        <errorMessage><!-- Customer Meeting Report Name cannot be changed. --></errorMessage>
+        <name>RestrictCustomerMeetingReportNameUpdate</name>
+    </validationRules>
 </CustomObjectTranslation>

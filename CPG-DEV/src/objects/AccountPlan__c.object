@@ -400,6 +400,18 @@
         <errorConditionFormula>AND( Account__r.RecordType.Name &lt;&gt; &apos;Global Account&apos;, Account__r.RecordType.Name &lt;&gt; &apos;Prospect&apos;, Account__r.RecordType.Name &lt;&gt; &apos;Country Account Group&apos;, Account__r.RecordType.Name &lt;&gt; &apos;Sold To&apos;)</errorConditionFormula>
         <errorMessage>Account Plan can only be created if the related account record type is &quot;Prospect or Global Account or Country Account Group or Sold To&quot;.</errorMessage>
     </validationRules>
+    <validationRules>
+        <fullName>RestrictAccountPlanNameUpdate</fullName>
+        <active>true</active>
+        <description>Account Plan Name cannot be updated. It can be editable only at the time of creation.</description>
+        <errorConditionFormula>AND(
+ NOT(ISNEW()),
+ ISCHANGED(Name),
+ $Profile.Name  &lt;&gt; &apos;System Administrator&apos;
+)</errorConditionFormula>
+        <errorDisplayField>Name</errorDisplayField>
+        <errorMessage>Account Plan Name cannot be changed.</errorMessage>
+    </validationRules>
     <webLinks>
         <fullName>Clone_Account_Plan</fullName>
         <availability>online</availability>

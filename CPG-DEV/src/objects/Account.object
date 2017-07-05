@@ -4654,6 +4654,30 @@
         <searchResultsAdditionalFields>LegacyRecordID__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>LegacyAccount_MarketChannelReadOnly</fullName>
+        <active>true</active>
+        <description>Cannot modify  migrated Legacy Account market channel</description>
+        <errorConditionFormula>AND(
+NOT($RecordType.Name= &quot;Prospect&quot;), 
+ NOT($Setup.Integration_profile__c.SkipValidationProfiles__c), ISCHANGED(  Market_Channel__c  ),
+NOT( ISBLANK( PRIORVALUE(Market_Channel__c ) ) ) 
+)</errorConditionFormula>
+        <errorDisplayField>Market_Channel__c</errorDisplayField>
+        <errorMessage>Market Channel for existing Account cannot be modified.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LegacyAccount_NameReadOnly</fullName>
+        <active>true</active>
+        <description>Cannot modify  migrated Legacy Account Name</description>
+        <errorConditionFormula>AND(
+NOT($RecordType.Name = &quot;Prospect&quot;), 
+NOT($Setup.Integration_profile__c.SkipValidationProfiles__c), ISCHANGED( Name ) ,
+NOT(  ISBLANK( PRIORVALUE(Name ) ) ) 
+)</errorConditionFormula>
+        <errorDisplayField>Name</errorDisplayField>
+        <errorMessage>Account Name for existing Account cannot be modified.</errorMessage>
+    </validationRules>
     <webLinks>
         <fullName>GoogleMaps</fullName>
         <availability>online</availability>
