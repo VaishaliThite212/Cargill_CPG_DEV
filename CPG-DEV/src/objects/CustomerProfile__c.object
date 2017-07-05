@@ -968,4 +968,16 @@
         <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>RestrictCustomerProfileNameUpdate</fullName>
+        <active>true</active>
+        <description>Customer Profile Name cannot be updated. It can be editable only at the time of creation.</description>
+        <errorConditionFormula>AND( 
+NOT(ISNEW()), 
+ISCHANGED(Name), 
+$Profile.Name &lt;&gt; &apos;System Administrator&apos; 
+)</errorConditionFormula>
+        <errorDisplayField>Name</errorDisplayField>
+        <errorMessage>Customer Profile Name cannot be changed.</errorMessage>
+    </validationRules>
 </CustomObject>

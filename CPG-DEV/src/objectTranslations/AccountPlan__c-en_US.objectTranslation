@@ -143,6 +143,10 @@
         <errorMessage><!-- Account Plan can only be created if the related account record type is &quot;Prospect or Global Account or Country Account Group or Sold To&quot;. --></errorMessage>
         <name>RestrictAccountPlanCreationOnAccRecType</name>
     </validationRules>
+    <validationRules>
+        <errorMessage><!-- Account Plan Name cannot be changed. --></errorMessage>
+        <name>RestrictAccountPlanNameUpdate</name>
+    </validationRules>
     <webLinks>
         <label><!-- Clone_Account_Plan --></label>
         <name>Clone_Account_Plan</name>

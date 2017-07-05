@@ -2881,4 +2881,15 @@ CASE(PRIORVALUE(StageName) ,
 )</errorConditionFormula>
         <errorMessage>Lead cannot be converted to Opportunity. Please keep opportunity selection blank.</errorMessage>
     </validationRules>
+    <validationRules>
+        <fullName>RestrictOpportunityNameUpdate</fullName>
+        <active>true</active>
+        <description>Opportunity Name cannot be updated. It can be editable only at the time of creation.</description>
+        <errorConditionFormula>AND(
+NOT(ISNEW()),
+ISCHANGED(Name),
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;
+)</errorConditionFormula>
+        <errorMessage>Opportunity Name cannot be changed.</errorMessage>
+    </validationRules>
 </CustomObject>
