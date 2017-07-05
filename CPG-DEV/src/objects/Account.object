@@ -4657,7 +4657,7 @@
     <validationRules>
         <fullName>LegacyAccount_MarketChannelReadOnly</fullName>
         <active>true</active>
-        <description>Cannot modify  migrated Legacy Account market channel</description>
+        <description>Cannot modify existing Account market channel</description>
         <errorConditionFormula>AND(
 NOT($RecordType.Name= &quot;Prospect&quot;), 
  NOT($Setup.Integration_profile__c.SkipValidationProfiles__c), ISCHANGED(  Market_Channel__c  ),
@@ -4669,7 +4669,7 @@ NOT( ISBLANK( PRIORVALUE(Market_Channel__c ) ) )
     <validationRules>
         <fullName>LegacyAccount_NameReadOnly</fullName>
         <active>true</active>
-        <description>Cannot modify  migrated Legacy Account Name</description>
+        <description>Cannot modify existing Account Name</description>
         <errorConditionFormula>AND(
 NOT($RecordType.Name = &quot;Prospect&quot;), 
 NOT($Setup.Integration_profile__c.SkipValidationProfiles__c), ISCHANGED( Name ) ,
